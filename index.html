@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国ウェブサイト案内</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* 头部导航样式 */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        #header.scroll {
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e53935;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        /* 导航菜单样式 */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item a:hover, .nav-item a.active {
+            color: #e53935;
+            background-color: #fef0f0;
+        }
+
+        /* 主内容区 */
+        #mainContent {
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 30px;
+            color: #333;
+            font-size: 28px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e53935;
+        }
+
+        /* 网站卡片样式 */
+        .site-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .site-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .site-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .site-card-content {
+            padding: 20px;
+        }
+
+        .site-card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-card-title i {
+            color: #e53935;
+            margin-right: 8px;
+        }
+
+        .site-card-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .site-card-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            color: #555;
+            font-size: 12px;
+            border-radius: 20px;
+        }
+
+        /* 详细页样式 */
+        .detail-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .detail-page.show {
+            display: flex;
+        }
+
+        .detail-content {
+            background-color: #fff;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #e53935;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .detail-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .detail-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-title i {
+            color: #e53935;
+            margin-right: 10px;
+        }
+
+        .detail-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #fef0f0;
+            color: #e53935;
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .detail-desc {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .detail-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e53935;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .detail-link:hover {
+            background-color: #d32f2f;
+        }
+
+        /* 网站介绍专用页面 */
+        .about-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 3000;
+            display: none;
+            overflow-y: auto;
+            padding: 120px 20px 60px;
+        }
+        .about-page.show {
+            display: block;
+        }
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #e53935;
+        }
+        .about-text {
+            font-size: 17px;
+            line-height: 2;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .about-close {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 28px;
+            color: #e53935;
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 3001;
+        }
+
+        /* 页脚样式 */
+        #mainFooter {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #e53935;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* 回到顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #e53935;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                margin: 5px 10px;
+            }
+
+            .site-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #mainContent {
+                padding-top: 150px;
+            }
+
+            .detail-img {
+                height: 200px;
+            }
+
+            .detail-title {
+                font-size: 20px;
+            }
+
+            .detail-desc {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏最后一项我已经加好了：サイト紹介 -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo"><i class="fas fa-globe-asia"></i> 中国ウェブサイト案内</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" data-cate="all" class="active">すべて</a></li>
+                    <li class="nav-item"><a href="#" data-cate="video">動画エンタテインメント</a></li>
+                    <li class="nav-item"><a href="#" data-cate="music">音楽ストリーミング</a></li>
+                    <li class="nav-item"><a href="#" data-cate="shopping">ネットショッピング</a></li>
+                    <li class="nav-item"><a href="#" data-cate="social">ソーシャルメディア</a></li>
+                    <li class="nav-item"><a href="#" data-cate="map">地図・ナビゲーション</a></li>
+                    <!-- 👇 这里就是新加的 网站介绍 导航按钮 -->
+                    <li class="nav-item"><a href="#" id="openAbout">サイト紹介</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容（不变） -->
+    <main id="mainContent" class="container">
+        <section id="video" class="site-section">
+            <h2 class="section-title">動画エンタテインメント</h2>
+            <div class="site-grid">
+                <div class="site-card" data-detail="bilibili">
+                    <img src="bilibili.png" alt="Bilibili" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-video"></i> Bilibili (ビリビリ)</h3>
+                        <p class="site-card-desc">中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。</p>
+                        <span class="site-card-tag">動画共有</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="douyin">
+                    <img src="douyin.png" alt="抖音" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-music"></i> 抖音 (Douyin/TikTok)</h3>
+                        <p class="site-card-desc">中国で最も多くのユーザーを擁し、最も広く普及しているプラットフォームであり、ネットショッピングとライブコマース機能を両立しています。現在、収益価値創出能力が最も高いプラットフォームです。</p>
+                        <span class="site-card-tag">ショート動画</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="site-section">
+            <h2 class="section-title">音楽ストリーミング</h2>
+            <div class="site-grid">
+                <div class="site-card" data-detail="qqmusic">
+                    <img src="qqyinyue.jpg" alt="QQ音乐" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-music"></i> QQ音楽</h3>
+                        <p class="site-card-desc">テンセントが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
+                        <span class="site-card-tag">音楽再生</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="neteasemusic">
+                    <img src="wangyiyun.png" alt="网易云音乐" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-headphones"></i> 网易云音乐</h3>
+                        <p class="site-card-desc">ネイズが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
+                        <span class="site-card-tag">音楽コミュニティ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shopping" class="site-section">
+            <h2 class="section-title">ネットショッピング</h2>
+            <div class="site-grid">
+                <div class="site-card" data-detail="taobao">
+                    <img src="taobao.png" alt="淘宝" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-shopping-cart"></i> 淘宝 (Taobao)</h3>
+                        <p class="site-card-desc">アリババが設立した電子商取引（EC）プラットフォームで、アマゾンに類似しており、品揃えが極めて豊富です。
+</p>
+                        <span class="site-card-tag">オンラインショッピング</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="jd">
+                    <img src="jingdong.jpg" alt="京东" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-box"></i> 京东 (JD.com)</h3>
+                        <p class="site-card-desc">B2C型の大手ECサイト。自社物流網で迅速な配送。</p>
+                        <span class="site-card-tag">総合ECサイト</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="xianyu">
+                    <img src="xianyu.jpg" alt="闲鱼" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-recycle"></i> 闲鱼 (Xianyu)</h3>
+                        <p class="site-card-desc">タオバオ傘下の中国大手中古取引プラットフォームで、日本のメルカリに類似しています。</p>
+                        <span class="site-card-tag">フリマサービス</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="pdd">
+                    <img src="pinduoudo.jpg" alt="拼多多" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-users"></i> 拼多多 (Pinduoduo)</h3>
+                        <p class="site-card-desc">世界的 EC プラットフォーム Temu の中国本家</p>
+                        <span class="site-card-tag">グループ購入</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="site-section">
+            <h2 class="section-title">ソーシャルメディア</h2>
+            <div class="site-grid">
+                <div class="site-card" data-detail="weibo">
+                    <img src="weibo.png" alt="微博" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-comment"></i> 微博 (Weibo)</h3>
+                        <p class="site-card-desc">中国版ツイッター。最新ニュースやトレンドが速く伝播。</p>
+                        <span class="site-card-tag">マイクロブログ</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="xiaohongshu">
+                    <img src="xiaohongshu.png" alt="小红书" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-book"></i> 小红书 (Xiaohongshu/RED)</h3>
+                        <p class="site-card-desc">生活スタイルや購入情報の共有プラットフォーム。</p>
+                        <span class="site-card-tag">ライフスタイル</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="site-section">
+            <h2 class="section-title">地図・ナビゲーション</h2>
+            <div class="site-grid">
+                <div class="site-card" data-detail="amap">
+                    <img src="gaode.png" alt="高德地图" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-map-marker-alt"></i> 高德地图 (Amap)</h3>
+                        <p class="site-card-desc">アリババ傘下の地図サービス。リアルタイム交通情報。</p>
+                        <span class="site-card-tag">地図サービス</span>
+                    </div>
+                </div>
+                <div class="site-card" data-detail="baidumap">
+                    <img src="baiduditu.jpg" alt="百度地图" class="site-card-img">
+                    <div class="site-card-content">
+                        <h3 class="site-card-title"><i class="fas fa-map"></i> 百度地图 (Baidu Map)</h3>
+                        <p class="site-card-desc">百度が提供する地図サービス。検索エンジンと連携。</p>
+                        <span class="site-card-tag">ナビゲーション</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 👇 👇 👇 这里是【网站介绍】独立页面 👇 👇 👇 -->
+    <div class="about-page" id="aboutPage">
+        <div class="about-close" id="closeAbout"><i class="fas fa-times"></i></div>
+        <div class="about-container">
+            <h1 class="about-title">サイト紹介</h1>
+            <p class="about-text">今後、さらなるサイト情報を順次追加・更新してまいります。</p>
+            <p class="about-text">現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。</p>
+            <p class="about-text">本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。</p>
+            <p class="about-text">現在、サイト内に乗っている企業からの広告を掲載しておらず、中国文化の対外発信を目的としています。</p>
+	    <p class="about-text">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
+            <p class="about-text">ご意見・ご要望またはビジネス関連のお問い合わせは、こちら（tuiochi@petalmail.com）までご連絡ください。</p>
+        </div>
+    </div>
+
+    <!-- 详细页 -->
+    <div class="detail-page" id="detailPage">
+        <div class="detail-content">
+            <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+            <img src="" alt="" class="detail-img" id="detailImg">
+            <h2 class="detail-title" id="detailTitle"></h2>
+            <span class="detail-tag" id="detailTag"></span>
+            <p class="detail-desc" id="detailDesc"></p>
+            <a href="#" target="_blank" class="detail-link" id="detailLink"><i class="fas fa-external-link-alt"></i> 公式サイトを訪問</a>
+        </div>
+    </div>
+
+    <footer id="mainFooter">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-home"></i> 詳細は「サイト紹介」ページで</a></li>
+                    <li><a href="#"><i class="fas fa-info"></i> </a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                </ul>
+                <p class="copyright">© 2025 中国ウェブサイト案内</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航滚动
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) header.classList.add('scroll');
+                else header.classList.remove('scroll');
+            });
+
+            // 回到顶部
+            const backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', function() {
+                backToTop.classList.toggle('show', window.scrollY > 300);
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+            // 导航分类
+            const navItems = document.querySelectorAll('.nav-item a');
+            const sections = document.querySelectorAll('.site-section');
+            const siteCards = document.querySelectorAll('.site-card');
+            showAllContent();
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    const cate = this.getAttribute('data-cate');
+                    if (cate === 'all') showAllContent();
+                    else {
+                        sections.forEach(s => s.style.display = 'none');
+                        siteCards.forEach(c => c.style.display = 'none');
+                        const target = document.getElementById(cate);
+                        if (target) {
+                            target.style.display = 'block';
+                            target.scrollIntoView({ behavior:'smooth' });
+                        }
+                        siteCards.forEach(c => {
+                            if (c.closest('.site-section').id === cate) c.style.display = 'block';
+                        });
+                    }
+                });
+            });
+
+            function showAllContent() {
+                sections.forEach(s => s.style.display = 'block');
+                siteCards.forEach(c => c.style.display = 'block');
+                window.scrollTo({ top:0, behavior:'smooth' });
+            }
+
+            // 详细页
+            const detailPage = document.getElementById('detailPage');
+            const closeBtn = document.getElementById('closeBtn');
+            const detailImg = document.getElementById('detailImg');
+            const detailTitle = document.getElementById('detailTitle');
+            const detailTag = document.getElementById('detailTag');
+            const detailDesc = document.getElementById('detailDesc');
+            const detailLink = document.getElementById('detailLink');
+
+            const siteDetails = {
+                bilibili:{img:'bilibili.png',title:'Bilibili',tag:'動画共有',desc:'利用方法：「百大 UP 主」で検索すると、各カテゴリの精選されたクリエイターがまとめられており、最初の探索におすすめです。',link:'https://www.bilibili.com/'},
+                douyin:{img:'douyin.png',title:'抖音',tag:'ショート動画',desc:'各階層の人々の利用習慣を調査したり、EC ライブ配信を研究したりするのに最適なプラットフォームです。',link:'https://www.douyin.com/'},
+                qqmusic:{img:'qqyinyue.jpg',title:'QQ音楽',tag:'音楽',desc:'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',link:'https://y.qq.com/'},
+                neteasemusic:{img:'wangyiyun.png',title:'网易云音楽',tag:'音楽コミュニティ',desc:'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',link:'https://music.163.com/'},
+                taobao:{img:'taobao.png',title:'淘宝',tag:'ECサイト',desc:'各種軽工業製品を取り扱っており、メーカーと直接連絡を取ることができます。',link:'https://www.taobao.com/'},
+                jd:{img:'jingdong.jpg',title:'京东',tag:'ECサイト',desc:'各種公式グッズ及びコラボ商品の多くがここで発売・発表されます。',link:'https://www.jd.com/'},
+                xianyu:{img:'xianyu.jpg',title:'闲鱼',tag:'フリマ',desc:'個人間（C to C）での一方的な取引・購入に適して，会話する際は各自で翻訳ツールが必要。',link:'https://2.taobao.com/'},
+                pdd:{img:'pinduoudo.jpg',title:'拼多多',tag:'グループ購入',desc:'検索できる商品はほぼ全ネット最安値となっています。',link:'https://www.pinduoduo.com/'},
+                weibo:{img:'weobo.png',title:'微博',tag:'ソーシャル',desc:'各種企業や個人が情報を発信するアカウントですが、連絡を取るには別の方法を探す必要があります。',link:'https://weibo.com/'},
+                xiaohongshu:{img:'xiaohongshu.png',title:'小红书',tag:'ライフスタイル',desc:'個人からの投稿が中心で、旅行情報など非公式の情報も豊富。問い合わせも比較的簡単に行えます。',link:'https://www.xiaohongshu.com/'},
+                amap:{img:'gaode.png',title:'高德地図',tag:'地図',desc:'アリババの地図・ナビサービス。',link:'https://amap.com/'},
+                baidumap:{img:'baiduditu.jpg',title:'百度地図',tag:'地図',desc:'検索エンジンと連携した地図サービス。',link:'https://map.baidu.com/'}
+            };
+
+            siteCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const key = this.getAttribute('data-detail');
+                    const d = siteDetails[key];
+                    detailImg.src = d.img;
+                    detailTitle.innerHTML = d.title;
+                    detailTag.textContent = d.tag;
+                    detailDesc.textContent = d.desc;
+                    detailLink.href = d.link;
+                    detailPage.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                detailPage.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            detailPage.addEventListener('click', e => {
+                if (e.target === detailPage) {
+                    detailPage.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // ==============================================
+            // 👇 👇 👇 【网站介绍】打开/关闭 功能 👇 👇 👇
+            // ==============================================
+            const openAbout = document.getElementById('openAbout');
+            const aboutPage = document.getElementById('aboutPage');
+            const closeAbout = document.getElementById('closeAbout');
+
+            openAbout.addEventListener('click', function(e){
+                e.preventDefault();
+                aboutPage.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            closeAbout.addEventListener('click', function(){
+                aboutPage.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            aboutPage.addEventListener('click', function(e){
+                if(e.target === aboutPage){
+                    aboutPage.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
