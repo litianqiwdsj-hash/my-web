@@ -1,45 +1,144 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中国ウェブサイト案内</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #e53935;
+            --primary-dark: #c62828;
+            --primary-light: #ffebee;
+            --primary-glow: rgba(229, 57, 53, 0.25);
+            --bg: #f4f6fb;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-muted: #6b7280;
+            --border: #e8ecf4;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 6px 24px rgba(0,0,0,0.10);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.14);
+            --radius: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* 头部导航样式 */
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
+        }
+
+        /* ========== HERO BANNER ========== */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(229,57,53,0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(229,57,53,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(229,57,53,0.15);
+            border: 1px solid rgba(229,57,53,0.35);
+            color: #ff6b6b;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #e53935, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.6);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ========== HEADER / NAV ========== */
         #header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 1px 0 var(--border), var(--shadow-sm);
             z-index: 1000;
-            padding: 15px 0;
-            transition: all 0.3s ease;
+            padding: 0;
+            transition: var(--transition);
         }
 
         #header.scroll {
-            padding: 10px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
         }
 
         .container {
-            width: 90%;
+            width: 92%;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -48,58 +147,95 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 68px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e53935;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
+            gap: 10px;
+            letter-spacing: -0.3px;
         }
 
-        .logo i {
-            margin-right: 10px;
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 4px 12px var(--primary-glow);
         }
 
-        /* 导航菜单样式 */
+        /* ========== NAV MENU ========== */
         .nav-menu {
             display: flex;
             list-style: none;
-        }
-
-        .nav-item {
-            margin: 0 15px;
+            gap: 4px;
+            align-items: center;
         }
 
         .nav-item a {
             text-decoration: none;
-            color: #555;
+            color: var(--text-muted);
             font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
         }
 
-        .nav-item a:hover, .nav-item a.active {
-            color: #e53935;
-            background-color: #fef0f0;
+        .nav-item a:hover {
+            color: var(--primary);
+            background: var(--primary-light);
         }
 
-        /* 主内容区 */
+        .nav-item a.active {
+            color: var(--primary);
+            background: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .nav-item.special a {
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-item.special a:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        /* ========== MAIN CONTENT ========== */
         #mainContent {
-            padding-top: 100px;
-            padding-bottom: 60px;
+            padding-top: 68px;
+            padding-bottom: 80px;
         }
 
+        /* ========== SECTION TITLE ========== */
         .section-title {
             text-align: center;
-            margin: 40px 0 30px;
-            color: #333;
-            font-size: 28px;
+            margin: 56px 0 32px;
+            color: var(--text);
+            font-size: 26px;
+            font-weight: 800;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+            letter-spacing: -0.3px;
         }
 
         .section-title::after {
@@ -108,37 +244,110 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #e53935;
+            width: 48px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #ff6b6b);
+            border-radius: 2px;
         }
 
-        /* 网站卡片样式 */
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: -20px;
+            margin-bottom: 32px;
+        }
+
+        /* ========== SITE GRID ========== */
         .site-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 0;
         }
 
+        /* ========== SITE CARD ========== */
         .site-card {
-            background-color: #fff;
-            border-radius: 10px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: var(--transition);
             cursor: pointer;
+            position: relative;
+        }
+
+        .site-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius);
+            border: 2px solid transparent;
+            transition: var(--transition);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .site-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .site-card:hover::before {
+            border-color: var(--primary-light);
+        }
+
+        .site-card-img-wrap {
+            position: relative;
+            overflow: hidden;
+            height: 180px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
         }
 
         .site-card-img {
             width: 100%;
-            height: 180px;
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .site-card:hover .site-card-img {
+            transform: scale(1.06);
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5) 100%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .site-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-visit-btn {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: white;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .site-card:hover .card-visit-btn {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .site-card-content {
@@ -146,41 +355,77 @@
         }
 
         .site-card-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
             display: flex;
             align-items: center;
+            gap: 8px;
         }
 
-        .site-card-title i {
-            color: #e53935;
-            margin-right: 8px;
+        .card-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 13px;
+            flex-shrink: 0;
         }
 
         .site-card-desc {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.65;
+            margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .site-card-tag {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #f0f0f0;
-            color: #555;
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            background: var(--bg);
+            color: var(--text-muted);
             font-size: 12px;
+            font-weight: 500;
             border-radius: 20px;
+            border: 1px solid var(--border);
         }
 
-        /* 详细页样式 */
+        .card-arrow {
+            color: var(--text-muted);
+            font-size: 12px;
+            transition: var(--transition);
+        }
+
+        .site-card:hover .card-arrow {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+        /* ========== DETAIL MODAL ========== */
         .detail-page {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background: rgba(15,15,30,0.75);
+            backdrop-filter: blur(8px);
             z-index: 2000;
             display: none;
             justify-content: center;
@@ -191,187 +436,397 @@
 
         .detail-page.show {
             display: flex;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .detail-content {
-            background-color: #fff;
-            border-radius: 10px;
-            max-width: 800px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            max-width: 720px;
             width: 100%;
-            padding: 30px;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            color: #e53935;
-            cursor: pointer;
-            background: none;
-            border: none;
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .detail-img-wrap {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
         }
 
         .detail-img {
             width: 100%;
-            height: 300px;
+            height: 100%;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        }
+
+        .detail-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.95);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text);
+            font-size: 14px;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .detail-body {
+            padding: 28px 32px 32px;
+        }
+
+        .detail-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .detail-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            flex-shrink: 0;
         }
 
         .detail-title {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .detail-title i {
-            color: #e53935;
-            margin-right: 10px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 4px;
+            line-height: 1.3;
         }
 
         .detail-tag {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: #fef0f0;
-            color: #e53935;
-            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
             border-radius: 20px;
-            margin-bottom: 20px;
+        }
+
+        .detail-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 20px 0;
         }
 
         .detail-desc {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.85;
+            margin-bottom: 24px;
         }
 
         .detail-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #e53935;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 28px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px var(--primary-glow);
         }
 
         .detail-link:hover {
-            background-color: #d32f2f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--primary-glow);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         }
 
-        /* 网站介绍专用页面 */
+        /* ========== ABOUT PAGE ========== */
         .about-page {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #fff;
+            background: var(--bg);
             z-index: 3000;
             display: none;
             overflow-y: auto;
-            padding: 120px 20px 60px;
         }
+
         .about-page.show {
             display: block;
+            animation: fadeIn 0.25s ease;
         }
-        .about-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .about-title {
+
+        .about-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            padding: 100px 20px 60px;
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #e53935;
+            position: relative;
+            overflow: hidden;
         }
-        .about-text {
-            font-size: 17px;
-            line-height: 2;
-            color: #333;
-            margin-bottom: 20px;
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(229,57,53,0.12) 0%, transparent 70%);
+            border-radius: 50%;
         }
+
+        .about-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .about-subtitle {
+            color: rgba(255,255,255,0.55);
+            font-size: 16px;
+            position: relative;
+        }
+
         .about-close {
             position: fixed;
-            top: 30px;
-            right: 30px;
-            font-size: 28px;
-            color: #e53935;
-            background: #fff;
-            width: 50px;
-            height: 50px;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
             z-index: 3001;
+            color: var(--text);
+            font-size: 16px;
+            transition: var(--transition);
         }
 
-        /* 页脚样式 */
-        #mainFooter {
-            background-color: #333;
-            color: #fff;
-            padding: 30px 0;
+        .about-close:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .about-container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .about-card-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .about-card-text {
+            flex: 1;
+        }
+
+        .about-card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .about-text {
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--text-muted);
+        }
+
+        .about-contact {
+            background: linear-gradient(135deg, var(--primary-light), #fff5f5);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(229,57,53,0.15);
             text-align: center;
         }
 
-        .footer-content {
-            margin-bottom: 20px;
+        .about-contact-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .about-contact-email {
+            font-size: 15px;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .about-contact-email a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .about-contact-email a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== FOOTER ========== */
+        #mainFooter {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 48px 0 32px;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
             list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .footer-links li {
-            margin: 0 10px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: #ccc;
+            color: rgba(255,255,255,0.55);
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-size: 14px;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .footer-links a:hover {
-            color: #e53935;
+            color: white;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,0.08);
         }
 
         .copyright {
-            color: #999;
-            font-size: 14px;
+            color: rgba(255,255,255,0.35);
+            font-size: 13px;
         }
 
-        /* 回到顶部按钮 */
+        /* ========== BACK TO TOP ========== */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: #e53935;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
             color: #fff;
-            border-radius: 50%;
+            border-radius: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px var(--primary-glow);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             z-index: 999;
+            font-size: 15px;
         }
 
         .back-to-top.show {
@@ -379,230 +834,929 @@
             visibility: visible;
         }
 
-        /* 响应式设计 */
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px var(--primary-glow);
+        }
+
+        /* ========== CATEGORY PILLS ========== */
+        .category-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 32px 0 0;
+        }
+
+        /* ========== STATS BAR ========== */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ========== NEWS COLUMN ========== */
+        #news {
+            margin-top: 48px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 22px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .news-card-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 18px 20px 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(229,57,53,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .news-platform-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .news-platform-tag.taobao { background: rgba(255,106,0,0.2); color: #ff8c42; border: 1px solid rgba(255,106,0,0.3); }
+        .news-platform-tag.bilibili { background: rgba(0,161,214,0.2); color: #4fc3f7; border: 1px solid rgba(0,161,214,0.3); }
+        .news-platform-tag.douyin { background: rgba(255,255,255,0.12); color: #e0e0e0; border: 1px solid rgba(255,255,255,0.2); }
+        .news-platform-tag.weibo { background: rgba(255,102,0,0.2); color: #ff8c42; border: 1px solid rgba(255,102,0,0.3); }
+        .news-platform-tag.jd { background: rgba(229,57,53,0.2); color: #ef9a9a; border: 1px solid rgba(229,57,53,0.3); }
+        .news-platform-tag.general { background: rgba(255,255,255,0.1); color: #bdbdbd; border: 1px solid rgba(255,255,255,0.15); }
+
+        .news-badge-new {
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            animation: pulseBadge 2s infinite;
+        }
+
+        @keyframes pulseBadge {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(229,57,53,0.5); }
+            50% { box-shadow: 0 0 0 5px rgba(229,57,53,0); }
+        }
+
+        .news-date {
+            margin-left: auto;
+            color: rgba(255,255,255,0.4);
+            font-size: 11px;
+        }
+
+        .news-card-body {
+            padding: 18px 20px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .news-excerpt {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .news-card-footer {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .news-category-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .news-read-more {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .news-read-more:hover {
+            gap: 7px;
+        }
+
+        /* News full modal */
+        .news-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(15,15,30,0.75);
+            backdrop-filter: blur(8px);
+            z-index: 2500;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .news-modal.show {
+            display: flex;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .news-modal-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            max-width: 680px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .news-modal-img-wrap {
+            width: 100%;
+            max-height: 320px;
+            overflow: hidden;
+            background: #0f0f1e;
+        }
+        .news-modal-img-wrap img {
+            width: 100%;
+            height: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-modal-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 32px 36px 28px;
+            position: relative;
+        }
+
+        .news-modal-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .news-modal-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .news-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.12);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .news-modal-close:hover {
+            background: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .news-modal-body {
+            padding: 28px 36px 36px;
+        }
+
+        .news-modal-body p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 14px;
+        }
+
+        .news-modal-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-modal-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .news-highlight-box {
+            background: var(--primary-light);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .news-modal-header { padding: 24px 20px 20px; }
+            .news-modal-body { padding: 20px; }
+            .news-modal-title { font-size: 18px; }
+        }
+
+        /* ========== LANG SWITCH ========== */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3px;
+            gap: 2px;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            padding: 5px 13px;
+            border-radius: 16px;
+            border: none;
+            background: transparent;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+            line-height: 1;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 2px 8px var(--primary-glow);
+        }
+
+        .lang-btn:not(.active):hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .nav-menu {
+                gap: 2px;
+            }
+            .nav-item a {
+                padding: 7px 10px;
+                font-size: 13px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
+                height: auto;
+                padding: 14px 0;
+                gap: 12px;
+            }
+
+            #header {
+                position: fixed;
+                top: 0;
             }
 
             .nav-menu {
-                margin-top: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .nav-item {
-                margin: 5px 10px;
+            .nav-item a {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            #mainContent {
+                padding-top: 120px;
             }
 
             .site-grid {
                 grid-template-columns: 1fr;
             }
 
-            #mainContent {
-                padding-top: 150px;
-            }
-
-            .detail-img {
+            .detail-img-wrap {
                 height: 200px;
             }
 
-            .detail-title {
-                font-size: 20px;
+            .detail-body {
+                padding: 20px;
             }
 
-            .detail-desc {
-                font-size: 14px;
+            .detail-title {
+                font-size: 18px;
+            }
+
+            .hero {
+                padding: 140px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .stats-bar {
+                gap: 24px;
+            }
+
+            .about-card {
+                flex-direction: column;
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 22px;
+            }
+
+            .site-card-img-wrap {
+                height: 160px;
+            }
+
+            .about-title {
+                font-size: 28px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 导航栏最后一项我已经加好了：サイト紹介 -->
     <header id="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo"><i class="fas fa-globe-asia"></i> 中国ウェブサイト案内</a>
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fas fa-globe-asia"></i></div>
+                    中国ウェブサイト案内
+                </a>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" data-cate="all" class="active">すべて</a></li>
-                    <li class="nav-item"><a href="#" data-cate="video">動画エンタテインメント</a></li>
-                    <li class="nav-item"><a href="#" data-cate="music">音楽ストリーミング</a></li>
-                    <li class="nav-item"><a href="#" data-cate="shopping">ネットショッピング</a></li>
-                    <li class="nav-item"><a href="#" data-cate="social">ソーシャルメディア</a></li>
-                    <li class="nav-item"><a href="#" data-cate="map">地図・ナビゲーション</a></li>
-                    <!-- 👇 这里就是新加的 网站介绍 导航按钮 -->
-                    <li class="nav-item"><a href="#" id="openAbout">サイト紹介</a></li>
+                    <li class="nav-item"><a href="#" data-cate="all" class="active"><i class="fas fa-th"></i> <span data-i18n="nav_all">すべて</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="video"><i class="fas fa-play"></i> <span data-i18n="nav_video">動画</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="music"><i class="fas fa-music"></i> <span data-i18n="nav_music">音楽</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="shopping"><i class="fas fa-shopping-bag"></i> <span data-i18n="nav_shopping">ショッピング</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="social"><i class="fas fa-users"></i> <span data-i18n="nav_social">ソーシャル</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="map"><i class="fas fa-map-marked-alt"></i> <span data-i18n="nav_map">地図</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="news"><i class="fas fa-newspaper"></i> <span data-i18n="nav_news">最新情報</span></a></li>
+                    <li class="nav-item special"><a href="#" id="openAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
                 </ul>
+                <!-- Language Switch -->
+                <div class="lang-switch" id="langSwitch">
+                    <button class="lang-btn active" data-lang="ja">JA</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- 主内容（不变） -->
+    <!-- HERO -->
+    <div class="hero" id="heroSection">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span data-i18n="hero_badge">中国トップサービスを厳選紹介</span>
+                </div>
+                <h1><span data-i18n="hero_title">中国の人気<span>ウェブサービス</span>を<br>日本語でわかりやすく</span></h1>
+                <p data-i18n="hero_sub">動画・音楽・ショッピング・SNS・地図など<br>あらゆるカテゴリを網羅した総合ガイド</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-num">12+</div>
+                <div class="stat-label" data-i18n="stat_services">掲載サービス</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">5</div>
+                <div class="stat-label" data-i18n="stat_categories">カテゴリー</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-label" data-i18n="stat_lang">日本語対応</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
     <main id="mainContent" class="container">
+
+        <!-- NEWS COLUMN -->
+        <section id="news" class="site-section">
+            <h2 class="section-title" data-i18n="sec_news">最新情報コラム</h2>
+            <p class="section-subtitle" data-i18n="sec_news_sub">各プラットフォームの注目ニュース・限定情報を随時更新</p>
+            <div class="news-grid">
+
+                <!-- Article: Wuthering Waves Birthday Event -->
+                <div class="news-card" data-news="news_birthday">
+                    <div class="news-card-header" style="position:relative;">
+                        <!-- IMG_REPLACE_BIRTHDAY: replace src with actual image path -->
+                        <img src="ww530.jpg" alt="Wuthering Waves Birthday" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
+                            <span class="news-badge-new">NEW</span>
+                            <span class="news-date">2026.05.30</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_birthday_title">鸣潮生日会即将于5月30日18:00开始</h3>
+                        <p class="news-excerpt" data-i18n="news_birthday_excerpt">2026鸣潮生日会将于5月30日18:00（北京时间）在Bilibili以视频形式播出。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_event">イベント</span></span>
+                            <span class="news-read-more" data-news="news_birthday"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article: Wuthering Waves x Razer Denia Collaboration -->
+                <div class="news-card" data-news="news_wuthering">
+                    <div class="news-card-header" style="position:relative;">
+                        <!-- IMG_REPLACE_WUTHERING: replace src with actual image path -->
+                        <img src="razerww.jpg" alt="Wuthering x Razer" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag taobao"><i class="fas fa-shopping-cart"></i> 淘宝</span>
+                            <span class="news-badge-new">NEW</span>
+                            <span class="news-date">2026.05.26</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_wuthering_title">鸣潮x雷蛇 达妮娅联动商品已上线</h3>
+                        <p class="news-excerpt" data-i18n="news_wuthering_excerpt">鸣潮与雷蛇的达妮娅联名商品已在淘宝开启预售。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_shopping">ショッピング</span></span>
+                            <span class="news-read-more" data-news="news_wuthering"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article: Niko Bilibili Live Stream -->
+                <div class="news-card" data-news="news_niko">
+                    <div class="news-card-header" style="position:relative;">
+                        <!-- ★ 图片替换位置：把下面 src 中的占位图路径换成实际新闻图片路径即可 ★ -->
+                        <img src="niko.jpg" alt="Niko live stream" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
+                            <span class="news-badge-new">NEW</span>
+                            <span class="news-date">2026.05.26</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_niko_title">Niko即将于bilibili进行独家直播</h3>
+                        <p class="news-excerpt" data-i18n="news_niko_excerpt">来自CS战队Falcons的Niko即将在bilibili进行独家直播，时间为5月26日17:00（北京时间）。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_live">直播</span></span>
+                            <span class="news-read-more" data-news="news_niko"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section id="video" class="site-section">
-            <h2 class="section-title">動画エンタテインメント</h2>
+            <h2 class="section-title" data-i18n="sec_video">動画エンタテインメント</h2>
+            <p class="section-subtitle" data-i18n="sec_video_sub">中国を代表する動画・短動画プラットフォーム</p>
             <div class="site-grid">
                 <div class="site-card" data-detail="bilibili">
-                    <img src="bilibili.png" alt="Bilibili" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="bilibili.png" alt="Bilibili" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-video"></i> Bilibili (ビリビリ)</h3>
-                        <p class="site-card-desc">中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。</p>
-                        <span class="site-card-tag">動画共有</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-video"></i></div>
+                            Bilibili (ビリビリ)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="bili_desc">中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="bili_tag">動画共有</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="douyin">
-                    <img src="douyin.png" alt="抖音" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="douyin.png" alt="抖音" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-music"></i> 抖音 (Douyin/TikTok)</h3>
-                        <p class="site-card-desc">中国で最も多くのユーザーを擁し、最も広く普及しているプラットフォームであり、ネットショッピングとライブコマース機能を両立しています。現在、収益価値創出能力が最も高いプラットフォームです。</p>
-                        <span class="site-card-tag">ショート動画</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-music"></i></div>
+                            抖音 (Douyin/TikTok)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="douyin_desc">中国で最も多くのユーザーを擁し、最も広く普及しているプラットフォームであり、ネットショッピングとライブコマース機能を両立しています。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="douyin_tag">ショート動画</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="music" class="site-section">
-            <h2 class="section-title">音楽ストリーミング</h2>
+            <h2 class="section-title" data-i18n="sec_music">音楽ストリーミング</h2>
+            <p class="section-subtitle" data-i18n="sec_music_sub">中国の主要音楽プラットフォーム</p>
             <div class="site-grid">
                 <div class="site-card" data-detail="qqmusic">
-                    <img src="qqyinyue.jpg" alt="QQ音乐" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="qqyinyue.jpg" alt="QQ音乐" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-music"></i> QQ音楽</h3>
-                        <p class="site-card-desc">テンセントが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
-                        <span class="site-card-tag">音楽再生</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-music"></i></div>
+                            QQ音楽
+                        </h3>
+                        <p class="site-card-desc" data-i18n="qqmusic_desc">テンセントが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="qqmusic_tag">音楽再生</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="neteasemusic">
-                    <img src="wangyiyun.png" alt="网易云音乐" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="wangyiyun.png" alt="网易云音乐" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-headphones"></i> 网易云音乐</h3>
-                        <p class="site-card-desc">ネイズが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
-                        <span class="site-card-tag">音楽コミュニティ</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-headphones"></i></div>
+                            网易云音乐
+                        </h3>
+                        <p class="site-card-desc" data-i18n="netease_desc">ネイズが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="netease_tag">音楽コミュニティ</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="shopping" class="site-section">
-            <h2 class="section-title">ネットショッピング</h2>
+            <h2 class="section-title" data-i18n="sec_shopping">ネットショッピング</h2>
+            <p class="section-subtitle" data-i18n="sec_shopping_sub">中国の主要ECプラットフォーム一覧</p>
             <div class="site-grid">
                 <div class="site-card" data-detail="taobao">
-                    <img src="taobao.png" alt="淘宝" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="taobao.png" alt="淘宝" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-shopping-cart"></i> 淘宝 (Taobao)</h3>
-                        <p class="site-card-desc">アリババが設立した電子商取引（EC）プラットフォームで、アマゾンに類似しており、品揃えが極めて豊富です。
-</p>
-                        <span class="site-card-tag">オンラインショッピング</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                            淘宝 (Taobao)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="taobao_desc">アリババが設立した電子商取引（EC）プラットフォームで、アマゾンに類似しており、品揃えが極めて豊富です。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="taobao_tag">オンラインショッピング</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="jd">
-                    <img src="jingdong.jpg" alt="京东" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="jingdong.jpg" alt="京东" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-box"></i> 京东 (JD.com)</h3>
-                        <p class="site-card-desc">B2C型の大手ECサイト。自社物流網で迅速な配送。</p>
-                        <span class="site-card-tag">総合ECサイト</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-box"></i></div>
+                            京东 (JD.com)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="jd_desc">B2C型の大手ECサイト。自社物流網で迅速な配送。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="jd_tag">総合ECサイト</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="xianyu">
-                    <img src="xianyu.jpg" alt="闲鱼" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="xianyu.jpg" alt="闲鱼" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-recycle"></i> 闲鱼 (Xianyu)</h3>
-                        <p class="site-card-desc">タオバオ傘下の中国大手中古取引プラットフォームで、日本のメルカリに類似しています。</p>
-                        <span class="site-card-tag">フリマサービス</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-recycle"></i></div>
+                            闲鱼 (Xianyu)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="xianyu_desc">タオバオ傘下の中国大手中古取引プラットフォームで、日本のメルカリに類似しています。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="xianyu_tag">フリマサービス</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="pdd">
-                    <img src="pinduoudo.jpg" alt="拼多多" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="pinduoudo.jpg" alt="拼多多" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-users"></i> 拼多多 (Pinduoduo)</h3>
-                        <p class="site-card-desc">世界的 EC プラットフォーム Temu の中国本家</p>
-                        <span class="site-card-tag">グループ購入</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-users"></i></div>
+                            拼多多 (Pinduoduo)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="pdd_desc">世界的ECプラットフォーム Temu の中国本家。グループ購入で最安値を実現。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="pdd_tag">グループ購入</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="social" class="site-section">
-            <h2 class="section-title">ソーシャルメディア</h2>
+            <h2 class="section-title" data-i18n="sec_social">ソーシャルメディア</h2>
+            <p class="section-subtitle" data-i18n="sec_social_sub">中国の主要SNSプラットフォーム</p>
             <div class="site-grid">
                 <div class="site-card" data-detail="weibo">
-                    <img src="weibo.png" alt="微博" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="weibo.png" alt="微博" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-comment"></i> 微博 (Weibo)</h3>
-                        <p class="site-card-desc">中国版ツイッター。最新ニュースやトレンドが速く伝播。</p>
-                        <span class="site-card-tag">マイクロブログ</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-comment"></i></div>
+                            微博 (Weibo)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="weibo_desc">中国版ツイッター。最新ニュースやトレンドが速く伝播。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="weibo_tag">マイクロブログ</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="xiaohongshu">
-                    <img src="xiaohongshu.png" alt="小红书" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="xiaohongshu.png" alt="小红书" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-book"></i> 小红书 (Xiaohongshu/RED)</h3>
-                        <p class="site-card-desc">生活スタイルや購入情報の共有プラットフォーム。</p>
-                        <span class="site-card-tag">ライフスタイル</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-book"></i></div>
+                            小红书 (Xiaohongshu/RED)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="xhs_desc">生活スタイルや購入情報の共有プラットフォーム。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="xhs_tag">ライフスタイル</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="map" class="site-section">
-            <h2 class="section-title">地図・ナビゲーション</h2>
+            <h2 class="section-title" data-i18n="sec_map">地図・ナビゲーション</h2>
+            <p class="section-subtitle" data-i18n="sec_map_sub">中国の主要マップサービス</p>
             <div class="site-grid">
                 <div class="site-card" data-detail="amap">
-                    <img src="gaode.png" alt="高德地图" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="gaode.png" alt="高德地图" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-map-marker-alt"></i> 高德地图 (Amap)</h3>
-                        <p class="site-card-desc">アリババ傘下の地図サービス。リアルタイム交通情報。</p>
-                        <span class="site-card-tag">地図サービス</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            高德地图 (Amap)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="amap_desc">アリババ傘下の地図サービス。リアルタイム交通情報。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="amap_tag">地図サービス</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="site-card" data-detail="baidumap">
-                    <img src="baiduditu.jpg" alt="百度地图" class="site-card-img">
+                    <div class="site-card-img-wrap">
+                        <img src="baiduditu.jpg" alt="百度地图" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
                     <div class="site-card-content">
-                        <h3 class="site-card-title"><i class="fas fa-map"></i> 百度地图 (Baidu Map)</h3>
-                        <p class="site-card-desc">百度が提供する地図サービス。検索エンジンと連携。</p>
-                        <span class="site-card-tag">ナビゲーション</span>
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-map"></i></div>
+                            百度地图 (Baidu Map)
+                        </h3>
+                        <p class="site-card-desc" data-i18n="baidu_desc">百度が提供する地図サービス。検索エンジンと連携。</p>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="baidu_tag">ナビゲーション</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 👇 👇 👇 这里是【网站介绍】独立页面 👇 👇 👇 -->
-    <div class="about-page" id="aboutPage">
-        <div class="about-close" id="closeAbout"><i class="fas fa-times"></i></div>
-        <div class="about-container">
-            <h1 class="about-title">サイト紹介</h1>
-            <p class="about-text">今後、さらなるサイト情報を順次追加・更新してまいります。</p>
-            <p class="about-text">現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。</p>
-            <p class="about-text">本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。</p>
-            <p class="about-text">現在、サイト内に乗っている企業からの広告を掲載しておらず、中国文化の対外発信を目的としています。</p>
-	    <p class="about-text">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
-            <p class="about-text">ご意見・ご要望またはビジネス関連のお問い合わせは、こちら（tuiochi@petalmail.com）までご連絡ください。</p>
+    <!-- NEWS MODAL -->
+    <div class="news-modal" id="newsModal">
+        <div class="news-modal-content" id="newsModalContent">
+            <div class="news-modal-header" id="newsModalHeader">
+                <button class="news-modal-close" id="closeNewsModal"><i class="fas fa-times"></i></button>
+                <div class="news-modal-meta" id="newsModalMeta"></div>
+                <h2 class="news-modal-title" id="newsModalTitle"></h2>
+            </div>
+            <!-- ★ 图片替换位置：把下面 src 中的占位路径换成实际新闻图片路径即可 ★ -->
+            <div class="news-modal-img-wrap" id="newsModalImgWrap" style="display:none;">
+                <img src="" alt="" id="newsModalImg" style="width:100%;max-height:320px;object-fit:cover;">
+            </div>
+            <div class="news-modal-body" id="newsModalBody"></div>
         </div>
     </div>
 
-    <!-- 详细页 -->
+    <!-- ABOUT PAGE -->
+    <div class="about-page" id="aboutPage">
+        <div class="about-close" id="closeAbout"><i class="fas fa-times"></i></div>
+        <div class="about-hero">
+            <h1 class="about-title" data-i18n="about_title">サイト紹介</h1>
+            <p class="about-subtitle" data-i18n="about_subtitle">中国ウェブサービス総合ガイド</p>
+        </div>
+        <div class="about-container">
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="about-card-text">
+                    <div class="about-card-title" data-i18n="about_c1_title">サイト概要</div>
+                    <p class="about-text" data-i18n="about_c1_text">本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。中国の主要ウェブサービスを日本語でわかりやすく紹介しています。</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-flask"></i></div>
+                <div class="about-card-text">
+                    <div class="about-card-title" data-i18n="about_c2_title">現在の状況</div>
+                    <p class="about-text" data-i18n="about_c2_text">現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。今後、さらなるサイト情報を順次追加・更新してまいります。</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-bullhorn"></i></div>
+                <div class="about-card-text">
+                    <div class="about-card-title" data-i18n="about_c3_title">広告・スポンサー</div>
+                    <p class="about-text" data-i18n="about_c3_text">現在、サイト内に掲載企業からの広告は一切掲載しておらず、中国文化の対外発信を純粋な目的として運営しています。</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon"><i class="fas fa-sync-alt"></i></div>
+                <div class="about-card-text">
+                    <div class="about-card-title" data-i18n="about_c4_title">更新方針</div>
+                    <p class="about-text" data-i18n="about_c4_text">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
+                </div>
+            </div>
+            <div class="about-contact">
+                <div class="about-contact-title"><i class="fas fa-envelope"></i> <span data-i18n="about_contact_title">お問い合わせ</span></div>
+                <p class="about-contact-email"><span data-i18n="about_contact_text">ご意見・ご要望またはビジネス関連のお問い合わせは</span><br><a href="mailto:tuiochi@petalmail.com">tuiochi@petalmail.com</a> <span data-i18n="about_contact_suffix">までご連絡ください。</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAIL MODAL -->
     <div class="detail-page" id="detailPage">
         <div class="detail-content">
             <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
-            <img src="" alt="" class="detail-img" id="detailImg">
-            <h2 class="detail-title" id="detailTitle"></h2>
-            <span class="detail-tag" id="detailTag"></span>
-            <p class="detail-desc" id="detailDesc"></p>
-            <a href="#" target="_blank" class="detail-link" id="detailLink"><i class="fas fa-external-link-alt"></i> 公式サイトを訪問</a>
+            <div class="detail-img-wrap">
+                <img src="" alt="" class="detail-img" id="detailImg">
+                <div class="detail-img-overlay"></div>
+            </div>
+            <div class="detail-body">
+                <div class="detail-header">
+                    <div class="detail-icon" id="detailIcon"><i class="fas fa-globe"></i></div>
+                    <div>
+                        <h2 class="detail-title" id="detailTitle"></h2>
+                        <span class="detail-tag" id="detailTag"></span>
+                    </div>
+                </div>
+                <div class="detail-divider"></div>
+                <p class="detail-desc" id="detailDesc"></p>
+                <a href="#" target="_blank" class="detail-link" id="detailLink">
+                    <i class="fas fa-external-link-alt"></i> <span id="detailLinkText" data-i18n="detail_visit">公式サイトを訪問</span>
+                </a>
+            </div>
         </div>
     </div>
 
     <footer id="mainFooter">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon"><i class="fas fa-globe-asia" style="color:white"></i></div>
+                    <span data-i18n="site_title">中国ウェブサイト案内</span>
+                </div>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-home"></i> 詳細は「サイト紹介」ページで</a></li>
-                    <li><a href="#"><i class="fas fa-info"></i> </a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+                    <li><a href="#" id="footerAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
+                    <li><a href="mailto:tuiochi@petalmail.com"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">お問い合わせ</span></a></li>
                 </ul>
-                <p class="copyright">© 2025 中国ウェブサイト案内</p>
+                <div class="footer-divider"></div>
+                <p class="copyright" data-i18n="footer_copy">© 2025 中国ウェブサイト案内 — 中国文化の対外発信を目的として運営</p>
             </div>
         </div>
     </footer>
@@ -610,7 +1764,281 @@
     <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
 
     <script>
+        // ==========================================
+        // i18n 翻译字典
+        // ==========================================
+        const i18n = {
+            ja: {
+                site_title: '中国ウェブサイト案内',
+                nav_all: 'すべて',
+                nav_news: '最新情報',
+                nav_video: '動画',
+                nav_music: '音楽',
+                nav_shopping: 'ショッピング',
+                nav_social: 'ソーシャル',
+                nav_map: '地図',
+                nav_about: 'サイト紹介',
+                hero_badge: '中国トップサービスを厳選紹介',
+                hero_title: '中国の人気<span>ウェブサービス</span>を<br>日本語でわかりやすく',
+                hero_sub: '動画・音楽・ショッピング・SNS・地図など<br>あらゆるカテゴリを網羅した総合ガイド',
+                stat_services: '掲載サービス',
+                stat_categories: 'カテゴリー',
+                stat_lang: '日本語対応',
+                card_detail: '詳細を見る',
+                detail_visit: '公式サイトを訪問',
+                // news section
+                sec_news: '最新情報コラム',
+                sec_news_sub: '各プラットフォームの注目ニュース・限定情報を随時更新',
+                news_cate_shopping: 'ショッピング',
+                news_cate_video: '動画',
+                news_cate_ecommerce: 'Eコマース',
+                news_cate_live: 'ライブ配信',
+                news_cate_event: 'イベント',
+                news_birthday_title: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）よリ開始',
+                news_birthday_excerpt: '2026年の鳴潮誕生日イベントが、5月30日18:00（北京時間）よリ Bilibili にて動画形式で配信されます。18:00・18:30・19:00 の3回に分けて順次公開されます。',
+                news_wuthering_title: '鳴潮（Wuthering Waves）× Razer コラボ商品が発売開始',
+                news_wuthering_excerpt: '鳴潮と Razer のコラボレーションによる「ダーニャ」モデル商品が、淘宝（タオバオ）にて予約販売を開始しました。中国国外への配送に対応していないため、ご興味のある方は公式サイトにて商品詳細および価格を事前にご確認ください。',
+                news_niko_title: 'Niko が Bilibili で独占ライブ配信を行います',
+                news_niko_excerpt: 'CS チーム「Falcons」所属の Niko が、5月26日17:00（北京時間）に Bilibili で独占ライブ配信を行います。ぜひお見逃しなく！',
+                news_readmore: '続きを読む',
+                // sections
+                sec_video: '動画エンタテインメント',
+                sec_video_sub: '中国を代表する動画・短動画プラットフォーム',
+                sec_music: '音楽ストリーミング',
+                sec_music_sub: '中国の主要音楽プラットフォーム',
+                sec_shopping: 'ネットショッピング',
+                sec_shopping_sub: '中国の主要ECプラットフォーム一覧',
+                sec_social: 'ソーシャルメディア',
+                sec_social_sub: '中国の主要SNSプラットフォーム',
+                sec_map: '地図・ナビゲーション',
+                sec_map_sub: '中国の主要マップサービス',
+                // cards
+                bili_desc: '中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。',
+                bili_tag: '動画共有',
+                douyin_desc: '中国で最も多くのユーザーを擁し、最も広く普及しているプラットフォームであり、ネットショッピングとライブコマース機能を両立しています。',
+                douyin_tag: 'ショート動画',
+                qqmusic_desc: 'テンセントが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。',
+                qqmusic_tag: '音楽再生',
+                netease_desc: 'ネイズが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。',
+                netease_tag: '音楽コミュニティ',
+                taobao_desc: 'アリババが設立した電子商取引（EC）プラットフォームで、アマゾンに類似しており、品揃えが極めて豊富です。',
+                taobao_tag: 'オンラインショッピング',
+                jd_desc: 'B2C型の大手ECサイト。自社物流網で迅速な配送。',
+                jd_tag: '総合ECサイト',
+                xianyu_desc: 'タオバオ傘下の中国大手中古取引プラットフォームで、日本のメルカリに類似しています。',
+                xianyu_tag: 'フリマサービス',
+                pdd_desc: '世界的ECプラットフォーム Temu の中国本家。グループ購入で最安値を実現。',
+                pdd_tag: 'グループ購入',
+                weibo_desc: '中国版ツイッター。最新ニュースやトレンドが速く伝播。',
+                weibo_tag: 'マイクロブログ',
+                xhs_desc: '生活スタイルや購入情報の共有プラットフォーム。',
+                xhs_tag: 'ライフスタイル',
+                amap_desc: 'アリババ傘下の地図サービス。リアルタイム交通情報。',
+                amap_tag: '地図サービス',
+                baidu_desc: '百度が提供する地図サービス。検索エンジンと連携。',
+                baidu_tag: 'ナビゲーション',
+                // about
+                about_title: 'サイト紹介',
+                about_subtitle: '中国ウェブサービス総合ガイド',
+                about_c1_title: 'サイト概要',
+                about_c1_text: '本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。中国の主要ウェブサービスを日本語でわかりやすく紹介しています。',
+                about_c2_title: '現在の状況',
+                about_c2_text: '現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。今後、さらなるサイト情報を順次追加・更新してまいります。',
+                about_c3_title: '広告・スポンサー',
+                about_c3_text: '現在、サイト内に掲載企業からの広告は一切掲載しておらず、中国文化の対外発信を純粋な目的として運営しています。',
+                about_c4_title: '更新方針',
+                about_c4_text: 'サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。',
+                about_contact_title: 'お問い合わせ',
+                about_contact_text: 'ご意見・ご要望またはビジネス関連のお問い合わせは',
+                about_contact_suffix: 'までご連絡ください。',
+                // footer
+                footer_contact: 'お問い合わせ',
+                footer_copy: '© 2025 中国ウェブサイト案内 — 中国文化の対外発信を目的として運営',
+                // detail modal
+                detail_titles: {
+                    bilibili: 'Bilibili (ビリビリ)', douyin: '抖音 (Douyin/TikTok)',
+                    qqmusic: 'QQ音楽', neteasemusic: '网易云音楽',
+                    taobao: '淘宝 (Taobao)', jd: '京东 (JD.com)',
+                    xianyu: '闲鱼 (Xianyu)', pdd: '拼多多 (Pinduoduo)',
+                    weibo: '微博 (Weibo)', xiaohongshu: '小红书 (Xiaohongshu/RED)',
+                    amap: '高德地図 (Amap)', baidumap: '百度地図 (Baidu Map)'
+                },
+                detail_tags: {
+                    bilibili: '動画共有', douyin: 'ショート動画',
+                    qqmusic: '音楽', neteasemusic: '音楽コミュニティ',
+                    taobao: 'ECサイト', jd: 'ECサイト',
+                    xianyu: 'フリマ', pdd: 'グループ購入',
+                    weibo: 'ソーシャル', xiaohongshu: 'ライフスタイル',
+                    amap: '地図', baidumap: '地図'
+                },
+                detail_descs: {
+                    bilibili: '利用方法：「百大 UP 主」で検索すると、各カテゴリの精選されたクリエイターがまとめられており、最初の探索におすすめです。',
+                    douyin: '各階層の人々の利用習慣を調査したり、EC ライブ配信を研究したりするのに最適なプラットフォームです。',
+                    qqmusic: 'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',
+                    neteasemusic: 'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',
+                    taobao: '各種軽工業製品を取り扱っており、メーカーと直接連絡を取ることができます。',
+                    jd: '各種公式グッズ及びコラボ商品の多くがここで発売・発表されます。',
+                    xianyu: '個人間（C to C）での一方的な取引・購入に適して，会話する際は各自で翻訳ツールが必要。',
+                    pdd: '検索できる商品はほぼ全ネット最安値となっています。',
+                    weibo: '各種企業や個人が情報を発信するアカウントですが、連絡を取るには別の方法を探す必要があります。',
+                    xiaohongshu: '個人からの投稿が中心で、旅行情報など非公式の情報も豊富。問い合わせも比較的簡単に行えます。',
+                    amap: 'アリババの地図・ナビサービス。',
+                    baidumap: '検索エンジンと連携した地図サービス。'
+                }
+            },
+            en: {
+                site_title: 'China Website Guide',
+                nav_all: 'All',
+                nav_news: 'Latest',
+                nav_video: 'Video',
+                nav_music: 'Music',
+                nav_shopping: 'Shopping',
+                nav_social: 'Social',
+                nav_map: 'Maps',
+                nav_about: 'About',
+                hero_badge: 'Curated Top Chinese Services',
+                hero_title: 'Explore China\'s Most Popular<br><span>Web Services</span> in English',
+                hero_sub: 'Your comprehensive guide to video, music,<br>shopping, social media & maps',
+                stat_services: 'Services Listed',
+                stat_categories: 'Categories',
+                stat_lang: 'English Support',
+                card_detail: 'View Details',
+                detail_visit: 'Visit Official Site',
+                // news section
+                sec_news: 'Latest Updates',
+                sec_news_sub: 'Fresh news, exclusive finds & platform highlights — updated regularly',
+                news_cate_shopping: 'Shopping',
+                news_cate_video: 'Video',
+                news_cate_ecommerce: 'E-Commerce',
+                news_cate_live: 'Live Stream',
+                news_cate_event: 'Event',
+                news_birthday_title: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
+                news_birthday_excerpt: 'The 2026 Wuthering Waves Birthday Event will be streamed on Bilibili in video format, released in three segments at 18:00, 18:30, and 19:00 (Beijing Time).',
+                news_wuthering_title: 'Wuthering Waves × Razer Collaboration Merch Now Available',
+                news_wuthering_excerpt: 'The Wuthering Waves × Razer "Denia" collaboration merchandise is now available for pre-order on Taobao. Since Taobao does not support international shipping, please visit the official website to check product details and pricing in advance.',
+                news_niko_title: 'Niko to Host Exclusive Live Stream on Bilibili',
+                news_niko_excerpt: 'Niko from CS team Falcons will host an exclusive live stream on Bilibili at 17:00 (Beijing Time), May 26. Don\'t miss it!',
+                news_readmore: 'Read more',
+                // sections
+                sec_video: 'Video Entertainment',
+                sec_video_sub: 'China\'s leading video & short-video platforms',
+                sec_music: 'Music Streaming',
+                sec_music_sub: 'Major music platforms in China',
+                sec_shopping: 'Online Shopping',
+                sec_shopping_sub: 'Top e-commerce platforms in China',
+                sec_social: 'Social Media',
+                sec_social_sub: 'Major social media platforms in China',
+                sec_map: 'Maps & Navigation',
+                sec_map_sub: 'Leading map services in China',
+                // cards
+                bili_desc: 'China\'s most diverse video platform covering anime, education, gaming, music and more.',
+                bili_tag: 'Video Sharing',
+                douyin_desc: 'China\'s largest short-video platform with e-commerce and live-streaming commerce features.',
+                douyin_tag: 'Short Video',
+                qqmusic_desc: 'Tencent\'s popular music platform with an extensive licensed music library.',
+                qqmusic_tag: 'Music Player',
+                netease_desc: 'NetEase\'s popular music platform with a large licensed library and active community.',
+                netease_tag: 'Music Community',
+                taobao_desc: 'Alibaba\'s C2C e-commerce platform, similar to Amazon, with an enormous product selection.',
+                taobao_tag: 'Online Shopping',
+                jd_desc: 'Major B2C e-commerce site with its own logistics network for fast delivery.',
+                jd_tag: 'General E-Commerce',
+                xianyu_desc: 'Alibaba\'s second-hand marketplace, similar to Mercari. Great for C2C deals.',
+                xianyu_tag: 'Second-Hand Market',
+                pdd_desc: 'The Chinese origin of global platform Temu. Group-buying model for lowest prices.',
+                pdd_tag: 'Group Buying',
+                weibo_desc: 'China\'s Twitter equivalent. Breaking news and trending topics spread fast here.',
+                weibo_tag: 'Microblog',
+                xhs_desc: 'Lifestyle and product-sharing platform, similar to Instagram meets Pinterest.',
+                xhs_tag: 'Lifestyle',
+                amap_desc: 'Alibaba\'s map service with real-time traffic information.',
+                amap_tag: 'Map Service',
+                baidu_desc: 'Baidu\'s map service, integrated with its powerful search engine.',
+                baidu_tag: 'Navigation',
+                // about
+                about_title: 'About This Site',
+                about_subtitle: 'Comprehensive Guide to Chinese Web Services',
+                about_c1_title: 'Overview',
+                about_c1_text: 'This site is operated for those interested in Chinese local life, culture, and information. We introduce major Chinese web services in an easy-to-understand format.',
+                about_c2_title: 'Current Status',
+                about_c2_text: 'This site is currently in beta. All content is not yet in its final form. We will continue to add and update service information.',
+                about_c3_title: 'Advertising & Sponsors',
+                about_c3_text: 'We do not carry any advertisements from featured companies. The site is operated purely for the purpose of promoting Chinese culture internationally.',
+                about_c4_title: 'Update Policy',
+                about_c4_text: 'We update this site regularly. We welcome any feedback or suggestions you may have.',
+                about_contact_title: 'Contact Us',
+                about_contact_text: 'For inquiries, feedback, or business-related questions, please reach out to us at',
+                about_contact_suffix: '',
+                // footer
+                footer_contact: 'Contact',
+                footer_copy: '© 2025 China Website Guide — Promoting Chinese culture internationally',
+                // detail modal
+                detail_titles: {
+                    bilibili: 'Bilibili', douyin: 'Douyin (TikTok China)',
+                    qqmusic: 'QQ Music', neteasemusic: 'NetEase Cloud Music',
+                    taobao: 'Taobao', jd: 'JD.com',
+                    xianyu: 'Xianyu (Idle Fish)', pdd: 'Pinduoduo',
+                    weibo: 'Weibo', xiaohongshu: 'Xiaohongshu (RED)',
+                    amap: 'Amap (Gaode Maps)', baidumap: 'Baidu Maps'
+                },
+                detail_tags: {
+                    bilibili: 'Video Sharing', douyin: 'Short Video',
+                    qqmusic: 'Music', neteasemusic: 'Music Community',
+                    taobao: 'E-Commerce', jd: 'E-Commerce',
+                    xianyu: 'Second-Hand', pdd: 'Group Buying',
+                    weibo: 'Social', xiaohongshu: 'Lifestyle',
+                    amap: 'Maps', baidumap: 'Maps'
+                },
+                detail_descs: {
+                    bilibili: 'Tip: Search "百大UP主" (Top 100 Creators) to discover curated creators across all categories — a great starting point.',
+                    douyin: 'Great platform for researching consumer behavior at all demographics, as well as live e-commerce streaming.',
+                    qqmusic: 'Note: Login with a related account is required to play music. Downloading the client provides a smoother experience.',
+                    neteasemusic: 'Note: Login with a related account is required to play music. Downloading the client provides a smoother experience.',
+                    taobao: 'Handles a wide variety of light industrial goods. You can contact manufacturers directly.',
+                    jd: 'Most official merchandise and collaboration products are released and sold here first.',
+                    xianyu: 'Best for one-way C2C transactions. A translation tool will be needed when chatting with sellers.',
+                    pdd: 'Products here are often the cheapest available online.',
+                    weibo: 'Companies and individuals post information here, but reaching out may require other channels.',
+                    xiaohongshu: 'Dominated by personal posts with rich unofficial info like travel tips. Inquiries are relatively easy.',
+                    amap: 'Alibaba\'s map and navigation service.',
+                    baidumap: 'Baidu\'s map service, integrated with their search engine.'
+                }
+            }
+        };
+
+        let currentLang = 'ja';
+
+        function applyLang(lang) {
+            currentLang = lang;
+            const t = i18n[lang];
+            document.getElementById('htmlRoot').setAttribute('lang', lang === 'ja' ? 'ja' : 'en');
+            document.title = t.site_title + (lang === 'ja' ? '' : ' | China Website Guide');
+
+            // Update all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            // Update lang switch buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+        }
+
+        // 立即执行初始语言设置（脚本在 </body> 前，DOM 已就绪）
+        applyLang('ja');
+
         document.addEventListener('DOMContentLoaded', function() {
+            // Lang switch
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    applyLang(this.getAttribute('data-lang'));
+                });
+            });
+
             // 导航滚动
             const header = document.getElementById('header');
             window.addEventListener('scroll', function() {
@@ -626,9 +2054,10 @@
             backToTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
 
             // 导航分类
-            const navItems = document.querySelectorAll('.nav-item a');
+            const navItems = document.querySelectorAll('.nav-item a[data-cate]');
             const sections = document.querySelectorAll('.site-section');
-            const siteCards = document.querySelectorAll('.site-card');
+            const heroSection = document.getElementById('heroSection');
+
             showAllContent();
 
             navItems.forEach(item => {
@@ -639,27 +2068,39 @@
                     const cate = this.getAttribute('data-cate');
                     if (cate === 'all') showAllContent();
                     else {
+                        heroSection.style.display = 'none';
                         sections.forEach(s => s.style.display = 'none');
-                        siteCards.forEach(c => c.style.display = 'none');
                         const target = document.getElementById(cate);
                         if (target) {
                             target.style.display = 'block';
-                            target.scrollIntoView({ behavior:'smooth' });
+                            window.scrollTo({ top:0, behavior:'smooth' });
                         }
-                        siteCards.forEach(c => {
-                            if (c.closest('.site-section').id === cate) c.style.display = 'block';
-                        });
                     }
                 });
             });
 
             function showAllContent() {
+                heroSection.style.display = '';
                 sections.forEach(s => s.style.display = 'block');
-                siteCards.forEach(c => c.style.display = 'block');
                 window.scrollTo({ top:0, behavior:'smooth' });
             }
 
-            // 详细页
+            // 详细页数据 (base data, text comes from i18n)
+            const siteBase = {
+                bilibili:{img:'bilibili.png',icon:'fas fa-video',link:'https://www.bilibili.com/'},
+                douyin:{img:'douyin.png',icon:'fas fa-music',link:'https://www.douyin.com/'},
+                qqmusic:{img:'qqyinyue.jpg',icon:'fas fa-music',link:'https://y.qq.com/'},
+                neteasemusic:{img:'wangyiyun.png',icon:'fas fa-headphones',link:'https://music.163.com/'},
+                taobao:{img:'taobao.png',icon:'fas fa-shopping-cart',link:'https://www.taobao.com/'},
+                jd:{img:'jingdong.jpg',icon:'fas fa-box',link:'https://www.jd.com/'},
+                xianyu:{img:'xianyu.jpg',icon:'fas fa-recycle',link:'https://2.taobao.com/'},
+                pdd:{img:'pinduoudo.jpg',icon:'fas fa-users',link:'https://www.pinduoduo.com/'},
+                weibo:{img:'weobo.png',icon:'fas fa-comment',link:'https://weibo.com/'},
+                xiaohongshu:{img:'xiaohongshu.png',icon:'fas fa-book',link:'https://www.xiaohongshu.com/'},
+                amap:{img:'gaode.png',icon:'fas fa-map-marker-alt',link:'https://amap.com/'},
+                baidumap:{img:'baiduditu.jpg',icon:'fas fa-map',link:'https://map.baidu.com/'}
+            };
+
             const detailPage = document.getElementById('detailPage');
             const closeBtn = document.getElementById('closeBtn');
             const detailImg = document.getElementById('detailImg');
@@ -667,31 +2108,21 @@
             const detailTag = document.getElementById('detailTag');
             const detailDesc = document.getElementById('detailDesc');
             const detailLink = document.getElementById('detailLink');
+            const detailIcon = document.getElementById('detailIcon');
 
-            const siteDetails = {
-                bilibili:{img:'bilibili.png',title:'Bilibili',tag:'動画共有',desc:'利用方法：「百大 UP 主」で検索すると、各カテゴリの精選されたクリエイターがまとめられており、最初の探索におすすめです。',link:'https://www.bilibili.com/'},
-                douyin:{img:'douyin.png',title:'抖音',tag:'ショート動画',desc:'各階層の人々の利用習慣を調査したり、EC ライブ配信を研究したりするのに最適なプラットフォームです。',link:'https://www.douyin.com/'},
-                qqmusic:{img:'qqyinyue.jpg',title:'QQ音楽',tag:'音楽',desc:'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',link:'https://y.qq.com/'},
-                neteasemusic:{img:'wangyiyun.png',title:'网易云音楽',tag:'音楽コミュニティ',desc:'ご注意：音楽を再生するには関連アカウントでのログインが必要。クライアントをダウンロードしていただくと、より便利にご利用いただけます。',link:'https://music.163.com/'},
-                taobao:{img:'taobao.png',title:'淘宝',tag:'ECサイト',desc:'各種軽工業製品を取り扱っており、メーカーと直接連絡を取ることができます。',link:'https://www.taobao.com/'},
-                jd:{img:'jingdong.jpg',title:'京东',tag:'ECサイト',desc:'各種公式グッズ及びコラボ商品の多くがここで発売・発表されます。',link:'https://www.jd.com/'},
-                xianyu:{img:'xianyu.jpg',title:'闲鱼',tag:'フリマ',desc:'個人間（C to C）での一方的な取引・購入に適して，会話する際は各自で翻訳ツールが必要。',link:'https://2.taobao.com/'},
-                pdd:{img:'pinduoudo.jpg',title:'拼多多',tag:'グループ購入',desc:'検索できる商品はほぼ全ネット最安値となっています。',link:'https://www.pinduoduo.com/'},
-                weibo:{img:'weobo.png',title:'微博',tag:'ソーシャル',desc:'各種企業や個人が情報を発信するアカウントですが、連絡を取るには別の方法を探す必要があります。',link:'https://weibo.com/'},
-                xiaohongshu:{img:'xiaohongshu.png',title:'小红书',tag:'ライフスタイル',desc:'個人からの投稿が中心で、旅行情報など非公式の情報も豊富。問い合わせも比較的簡単に行えます。',link:'https://www.xiaohongshu.com/'},
-                amap:{img:'gaode.png',title:'高德地図',tag:'地図',desc:'アリババの地図・ナビサービス。',link:'https://amap.com/'},
-                baidumap:{img:'baiduditu.jpg',title:'百度地図',tag:'地図',desc:'検索エンジンと連携した地図サービス。',link:'https://map.baidu.com/'}
-            };
-
-            siteCards.forEach(card => {
+            document.querySelectorAll('.site-card').forEach(card => {
                 card.addEventListener('click', function() {
                     const key = this.getAttribute('data-detail');
-                    const d = siteDetails[key];
-                    detailImg.src = d.img;
-                    detailTitle.innerHTML = d.title;
-                    detailTag.textContent = d.tag;
-                    detailDesc.textContent = d.desc;
-                    detailLink.href = d.link;
+                    const base = siteBase[key];
+                    if (!base) return;
+                    const t = i18n[currentLang];
+                    detailImg.src = base.img;
+                    detailTitle.textContent = t.detail_titles[key] || key;
+                    detailTag.textContent = t.detail_tags[key] || '';
+                    detailDesc.textContent = t.detail_descs[key] || '';
+                    detailLink.href = base.link;
+                    document.getElementById('detailLinkText').textContent = t.detail_visit;
+                    detailIcon.innerHTML = '<i class="' + base.icon + '"></i>';
                     detailPage.classList.add('show');
                     document.body.style.overflow = 'hidden';
                 });
@@ -708,28 +2139,148 @@
                 }
             });
 
-            // ==============================================
-            // 👇 👇 👇 【网站介绍】打开/关闭 功能 👇 👇 👇
-            // ==============================================
-            const openAbout = document.getElementById('openAbout');
-            const aboutPage = document.getElementById('aboutPage');
-            const closeAbout = document.getElementById('closeAbout');
+            // News modal data
+            const newsData = {
+                news_birthday: {
+                    platform: 'bilibili',
+                    platformIcon: 'fas fa-video',
+                    platformLabel_ja: 'Bilibili',
+                    platformLabel_en: 'Bilibili',
+                    date: '2026.05.30',
+                    isNew: true,
+                    // IMG_REPLACE_BIRTHDAY: replace img_src value with actual image path
+                    img_src: 'ww530.jpg',
+                    title_ja: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）より開始',
+                    title_en: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
+                    body_ja: `<p>『<strong>鳴潮（Wuthering Waves）</strong>』の2026年誕生日イベントが、<strong>5月30日 18:00（北京時間）</strong>より <strong>Bilibili</strong> にて動画形式で配信されます。</p>
+<div class="news-highlight-box">📺 配信プラットフォーム：Bilibili<br>🕒 配信時間：18:00／18:30／19:00（北京時間）<br>📦 形式：動画配信（3回に分けて順次公開）</div>
+<p>イベント内容は、ゲーム内限定誕生日アイテムの発表、開発チームよりの感謝メッセージ、今後のアプデート予告なとが予定されており、国内外のプレイヤーから大きな注目を集めています。</p>
+<p>視聴は以下の公式Bilibiliフェスティバルページからアクセスしてください。ログイン不要で、一部コンテンツはゲスト視聴も可能です。</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/festival/2026wutheringwavesbirthday?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(0,161,214,0.35)\\';" onmouseout="this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-tv"></i> Bilibili で視聴する</a></p>`,
+                    body_en: `<p>The <strong>2026 Wuthering Waves Birthday Event</strong> will be streamed on <strong>Bilibili</strong> in video format, starting at <strong>18:00 (Beijing Time), May 30</strong>.</p>
+<div class="news-highlight-box">📺 Platform: Bilibili<br>🕒 Showtimes: 18:00 / 18:30 / 19:00 (Beijing Time)<br>📦 Format: Video stream (released in 3 segments)</div>
+<p>The event will feature exclusive in-game birthday items, a thank-you message from the dev team, and upcoming update previews — drawing huge attention from players around the world.</p>
+<p>You can access the stream via the official Bilibili festival page below. No login is required, and guest viewing is available for part of the content.</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/festival/2026wutheringwavesbirthday?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(0,161,214,0.35)\\';" onmouseout="this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-tv"></i> Watch on Bilibili</a></p>`
+                },
+                news_wuthering: {
+                    platform: 'taobao',
+                    platformIcon: 'fas fa-shopping-cart',
+                    platformLabel_ja: '淘宝',
+                    platformLabel_en: 'Taobao',
+                    date: '2026.05.26',
+                    isNew: true,
+                    // IMG_REPLACE_WUTHERING: replace img_src value with actual image path
+                    img_src: 'razerww.jpg',
+                    title_ja: '鳴潮（Wuthering Waves）× Razer コラボ商品が発売開始',
+                    title_en: 'Wuthering Waves × Razer Collaboration Merch Now Available',
+                    body_ja: `<p>『<strong>鳴潮（Wuthering Waves）</strong>』と『<strong>Razer（レーザー）</strong>』のコラボレーションによる、キャラクター「<strong>ダーニャ（Denia）</strong>」モデルの联名商品が、<strong>淘宝（タオバオ）</strong>にて予約販売を開始しました。</p>
+<div class="news-highlight-box">🛍️ 販売プラットフォーム：淘宝（Taobao）<br>🎮 商品：ダーニャ × Razer コラボグッズ<br>⚠️ 注意：淘宝は海外配送に対応していません</div>
+<p>淘宝では国際配送に対応していない商品がほとんどのため、実際に購入を検討されている方は、まず<strong>公式サイトにて商品の詳細および価格をご確認になることをおすすめします</strong>。</p>
+<p>『鳴潮』の公式サイトは以下のリンクからアクセス可能です。商品ラインナップ、価格、発送時期などの最新情報をチェックできます。</p>
+<p style="margin-top:18px;"><a href="https://market.m.taobao.com/app/tb-shop/shop-page-webapp/pages/custom-page/index.html?spm=pc_detail.30350276.202205.1.535f18eaAM1vF2&shopId=168991713&sellerId=2211491648200&pageId=470358752&pathInfo=shop/activity2&isShopDomain=true" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\'translateY(-2px)\';this.style.boxShadow=\'0 6px 20px rgba(0,161,214,0.35)\';" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'none\';"><i class="fas fa-globe"></i> 鳴潮公式サイトを見る</a></p>`,
+                    body_en: `<p>The collaboration merchandise featuring <strong>Denia</strong> from <strong>Wuthering Waves</strong> and <strong>Razer</strong> is now available for pre-order on <strong>Taobao</strong>.</p>
+<div class="news-highlight-box">🛍️ Platform: Taobao (China only)<br>🎮 Product: Denia × Razer collaboration goods<br>⚠️ Note: Taobao does not support international shipping</div>
+<p>Most items on Taobao do not support international shipping. If you are considering purchasing, we strongly recommend <strong>checking the official Wuthering Waves website first for detailed product information and pricing.</strong></p>
+<p>You can visit the official Wuthering Waves website via the link below to check the latest updates on product lineup, pricing, and release schedule.</p>
+<p style="margin-top:18px;"><a href="https://wutheringwaves.kurogames.com/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\'translateY(-2px)\';this.style.boxShadow=\'0 6px 20px rgba(0,161,214,0.35)\';" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'none\';"><i class="fas fa-globe"></i> Visit Wuthering Waves Official Site</a></p>`
+                },
+                news_niko: {
+                    platform: 'bilibili',
+                    platformIcon: 'fas fa-video',
+                    platformLabel_ja: 'Bilibili',
+                    platformLabel_en: 'Bilibili',
+                    date: '2026.05.26',
+                    isNew: true,
+                    // ★ 图片替换位置：把下面 img_src 的值换成实际新闻图片路径即可 ★
+                    img_src: 'niko.jpg',
+                    title_ja: 'Niko が Bilibili で独占ライブ配信を行います',
+                    title_en: 'Niko to Host Exclusive Live Stream on Bilibili',
+                    body_ja: `<p>CS チーム「<strong>Falcons</strong>」に所属する Niko が、<strong>5月26日 17:00（北京時間）</strong>に Bilibili で独占ライブ配信を行います。</p>
+<div class="news-highlight-box">📺 配信日時：2026年5月26日 17:00（北京時間）<br>🎮 出演：Niko（Falcons）<br>📡 配信プラットフォーム：Bilibili</div>
+<p>本配信は Bilibili 独占での実施となります。Niko 本人によるゲームプレイ、ファンとの交流、Q&A コーナーなどが予定されており、国内外のファンから大きな注目を集めています。</p>
+<p>視聴は以下の公式リンクからアクセスしてください。Bilibili アカウントをお持ちでない方も、一部コンテンツはゲスト視聴が可能です。</p>
+<p style="margin-top:18px;"><a href="https://live.bilibili.com/1951478491?broadcast_type=0&is_room_feed=0&spm_id_from=333.1387.to_live_room.0.click&live_from=86002" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-tv"></i> Bilibili で視聴する</a></p>`,
+                    body_en: `<p>Niko from CS team <strong>Falcons</strong> will host an exclusive live stream on <strong>Bilibili at 17:00 (Beijing Time), May 26, 2026.</strong></p>
+<div class="news-highlight-box">📺 Date & Time: May 26, 2026 at 17:00 (Beijing Time)<br>🎮 Cast: Niko (Falcons)<br>📡 Platform: Bilibili</div>
+<p>This stream is exclusive to Bilibili. It will feature Niko's gameplay, fan interactions, a Q&A session, and more — drawing huge attention from fans around the world.</p>
+<p>You can access the stream via the official link below. Even without a Bilibili account, guest viewing is available for part of the content.</p>
+<p style="margin-top:18px;"><a href="https://live.bilibili.com/1951478491?broadcast_type=0&is_room_feed=0&spm_id_from=333.1387.to_live_room.0.click&live_from=86002" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-tv"></i> Watch on Bilibili</a></p>`
+                }
+            };
 
-            openAbout.addEventListener('click', function(e){
-                e.preventDefault();
-                aboutPage.classList.add('show');
+            // News modal logic
+            const newsModal = document.getElementById('newsModal');
+            const newsModalTitle = document.getElementById('newsModalTitle');
+            const newsModalMeta = document.getElementById('newsModalMeta');
+            const newsModalBody = document.getElementById('newsModalBody');
+            const newsModalImgWrap = document.getElementById('newsModalImgWrap');
+            const newsModalImg = document.getElementById('newsModalImg');
+            const closeNewsModal = document.getElementById('closeNewsModal');
+
+            function openNewsModal(key) {
+                const d = newsData[key];
+                if (!d) return;
+                const isJa = currentLang === 'ja';
+                const platformLabel = isJa ? d.platformLabel_ja : d.platformLabel_en;
+
+                newsModalMeta.innerHTML = `<span class="news-platform-tag ${d.platform}"><i class="${d.platformIcon}"></i> ${platformLabel}</span>
+                    ${d.isNew ? '<span class="news-badge-new">NEW</span>' : ''}
+                    <span class="news-date" style="color:rgba(255,255,255,0.5);font-size:12px;">${d.date}</span>`;
+                newsModalTitle.textContent = isJa ? d.title_ja : d.title_en;
+
+                // 图片处理
+                if (d.img_src) {
+                    newsModalImg.src = d.img_src;
+                    newsModalImgWrap.style.display = 'block';
+                } else {
+                    newsModalImgWrap.style.display = 'none';
+                }
+
+                newsModalBody.innerHTML = isJa ? d.body_ja : d.body_en;
+                newsModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
+            }
+
+            document.querySelectorAll('.news-read-more, .news-card').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const key = this.getAttribute('data-news');
+                    if (key) openNewsModal(key);
+                });
             });
-            closeAbout.addEventListener('click', function(){
-                aboutPage.classList.remove('show');
+
+            closeNewsModal.addEventListener('click', () => {
+                newsModal.classList.remove('show');
                 document.body.style.overflow = 'auto';
             });
-            aboutPage.addEventListener('click', function(e){
-                if(e.target === aboutPage){
-                    aboutPage.classList.remove('show');
+            newsModal.addEventListener('click', e => {
+                if (e.target === newsModal) {
+                    newsModal.classList.remove('show');
                     document.body.style.overflow = 'auto';
                 }
             });
+
+            // About page
+            const openAbout = document.getElementById('openAbout');
+            const footerAbout = document.getElementById('footerAbout');
+            const aboutPage = document.getElementById('aboutPage');
+            const closeAbout = document.getElementById('closeAbout');
+
+            function openAboutPage(e) {
+                e.preventDefault();
+                aboutPage.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeAboutPage() {
+                aboutPage.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+
+            openAbout.addEventListener('click', openAboutPage);
+            if (footerAbout) footerAbout.addEventListener('click', openAboutPage);
+            closeAbout.addEventListener('click', closeAboutPage);
         });
     </script>
 </body>
