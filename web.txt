@@ -1342,6 +1342,27 @@
             <p class="section-subtitle" data-i18n="sec_news_sub">各プラットフォームの注目ニュース・限定情報を随時更新</p>
             <div class="news-grid">
 
+                <!-- Article: miHoYo Official Merch Store (Permanent) -->
+                <div class="news-card" data-news="news_mihoyogift">
+                    <div class="news-card-header" style="position:relative;">
+                        <!-- IMG_REPLACE_MIHOYOGIFT: replace src with actual image path if needed -->
+                        <img src="mihoyogift.jpg" alt="miHoYo Gift" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag taobao"><i class="fas fa-shopping-cart"></i> miHoYo Gift</span>
+                            <span class="news-badge-new" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">常驻</span>
+                            <span class="news-date">常設</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_mihoyogift_title">米哈游周边通贩（常驻）</h3>
+                        <p class="news-excerpt" data-i18n="news_mihoyogift_excerpt">米哈游系列所有官方周边的购买渠道，也可通过淘宝搜索"miHoYo旗舰店"购买。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_shopping">ショッピング</span></span>
+                            <span class="news-read-more" data-news="news_mihoyogift"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Article: Wuthering Waves Birthday Event -->
                 <div class="news-card" data-news="news_birthday">
                     <div class="news-card-header" style="position:relative;">
@@ -1794,6 +1815,8 @@
                 news_cate_ecommerce: 'Eコマース',
                 news_cate_live: 'ライブ配信',
                 news_cate_event: 'イベント',
+                news_mihoyogift_title: 'miHoYo 公式グッズ通販（常設）',
+                news_mihoyogift_excerpt: '原神・崩壊シリーズなど miHoYo 全タイトルの公式グッズを購入できます。淘宝（タオバオ）では「miHoYo旗艦店」で検索しても購入可能です。なお、中国国外への配送には対応していない場合があります。',
                 news_birthday_title: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）よリ開始',
                 news_birthday_excerpt: '2026年の鳴潮誕生日イベントが、5月30日18:00（北京時間）よリ Bilibili にて動画形式で配信されます。18:00・18:30・19:00 の3回に分けて順次公開されます。',
                 news_wuthering_title: '鳴潮（Wuthering Waves）× Razer コラボ商品が発売開始',
@@ -1912,6 +1935,8 @@
                 news_cate_ecommerce: 'E-Commerce',
                 news_cate_live: 'Live Stream',
                 news_cate_event: 'Event',
+                news_mihoyogift_title: 'miHoYo Official Merch Store (Permanent)',
+                news_mihoyogift_excerpt: 'The official destination for all miHoYo merchandise — including Genshin Impact, Honkai series, and more. You can also search "miHoYo旗舰店" on Taobao. Note: international shipping may not be available.',
                 news_birthday_title: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
                 news_birthday_excerpt: 'The 2026 Wuthering Waves Birthday Event will be streamed on Bilibili in video format, released in three segments at 18:00, 18:30, and 19:00 (Beijing Time).',
                 news_wuthering_title: 'Wuthering Waves × Razer Collaboration Merch Now Available',
@@ -2141,13 +2166,35 @@
 
             // News modal data
             const newsData = {
+                news_mihoyogift: {
+                    platform: 'taobao',
+                    platformIcon: 'fas fa-shopping-cart',
+                    platformLabel_ja: 'miHoYo Gift',
+                    platformLabel_en: 'miHoYo Gift',
+                    date: '常設',
+                    isNew: false,
+                    // IMG_REPLACE_MIHOYOGIFT: replace img_src value with actual image path if needed
+                    img_src: 'mihoyogift.jpg',
+                    title_ja: 'miHoYo 公式グッズ通販（常設）',
+                    title_en: 'miHoYo Official Merch Store (Permanent)',
+                    body_ja: `<p><strong>miHoYo（米哈游）</strong> の全シリーズ——『原神』『崩壊：スターレイル』『崩壊3rd』『ゼンレスゾーンゼロ』などの<strong>公式グッズ</strong>を購入できる公式通販サイトです。</p>
+<div class="news-highlight-box">🛍️ 対応シリーズ：原神 / 崩壊：スターレイル / 崩壊3rd / ゼンレスゾーンゼロ など<br>🏪 淘宝での購入：「miHoYo旗艦店」で検索<br>⚠️ 注意：中国国外への配送に対応していない場合があります</div>
+<p>miHoYo 公式グッズストアでは、キャラクターフィギュア、アクリルスタンド、アパレル、限定コラボアイテムなど、幅広い商品を取り扱っています。</p>
+<p>中国国外から購入を希望される場合は、配送ポリシーを事前にご確認いただくか、日本への転送サービスをご利用いただくことをおすすめします。</p>
+<p style="margin-top:18px;"><a href="https://www.mihoyogift.com" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(109,40,217,0.4)\\';\" onmouseout=\"this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-shopping-bag"></i> miHoYo Gift 公式サイトを見る</a></p>`,
+                    body_en: `<p><strong>miHoYo's official merchandise store</strong> — your one-stop shop for all official goods from <strong>Genshin Impact, Honkai: Star Rail, Honkai Impact 3rd, Zenless Zone Zero</strong>, and more.</p>
+<div class="news-highlight-box">🛍️ Supported titles: Genshin Impact / Honkai: Star Rail / Honkai Impact 3rd / Zenless Zone Zero & more<br>🏪 Also on Taobao: search "miHoYo旗舰店"<br>⚠️ Note: International shipping may not be available</div>
+<p>The official miHoYo gift store carries a wide range of products — character figures, acrylic stands, apparel, limited edition collaborations, and more.</p>
+<p>If you're outside China, we recommend checking the shipping policy first, or consider using a forwarding service to receive items internationally.</p>
+<p style="margin-top:18px;"><a href="https://www.mihoyogift.com" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(109,40,217,0.4)\\';\" onmouseout=\"this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-shopping-bag"></i> Visit miHoYo Gift Official Site</a></p>`
+                },
                 news_birthday: {
                     platform: 'bilibili',
                     platformIcon: 'fas fa-video',
                     platformLabel_ja: 'Bilibili',
                     platformLabel_en: 'Bilibili',
                     date: '2026.05.30',
-                    isNew: true,
+                    isNew: false,
                     // IMG_REPLACE_BIRTHDAY: replace img_src value with actual image path
                     img_src: 'ww530.jpg',
                     title_ja: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）より開始',
@@ -2169,7 +2216,7 @@
                     platformLabel_ja: '淘宝',
                     platformLabel_en: 'Taobao',
                     date: '2026.05.26',
-                    isNew: true,
+                    isNew: false,
                     // IMG_REPLACE_WUTHERING: replace img_src value with actual image path
                     img_src: 'razerww.jpg',
                     title_ja: '鳴潮（Wuthering Waves）× Razer コラボ商品が発売開始',
@@ -2191,7 +2238,7 @@
                     platformLabel_ja: 'Bilibili',
                     platformLabel_en: 'Bilibili',
                     date: '2026.05.26',
-                    isNew: true,
+                    isNew: false,
                     // ★ 图片替换位置：把下面 img_src 的值换成实际新闻图片路径即可 ★
                     img_src: 'niko.jpg',
                     title_ja: 'Niko が Bilibili で独占ライブ配信を行います',
