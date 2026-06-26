@@ -377,7 +377,6 @@
             flex-shrink: 0;
         }
 
-        .site-card-desc {
             color: var(--text-muted);
             font-size: 13.5px;
             line-height: 1.65;
@@ -1150,6 +1149,112 @@
             .news-modal-title { font-size: 18px; }
         }
 
+        /* ========== TUTORIAL MODAL ========== */
+        .tutorial-modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(15,15,30,0.75);
+            backdrop-filter: blur(8px);
+            z-index: 2600;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 20px 20px;
+            overflow-y: auto;
+        }
+        .tutorial-modal.show {
+            display: flex;
+            animation: fadeIn 0.2s ease;
+        }
+        .tutorial-modal-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            max-width: 680px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+            animation: slideUp 0.3s cubic-bezier(0.4,0,0.2,1);
+            margin-bottom: 40px;
+        }
+        .tutorial-modal-header {
+            background: linear-gradient(135deg,#00a1d6 0%,#0073b1 100%);
+            padding: 28px 32px 24px;
+            position: relative;
+        }
+        .tutorial-modal-close {
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 34px; height: 34px;
+            background: rgba(255,255,255,0.18);
+            border: none; border-radius: 50%;
+            color: white; font-size: 13px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .tutorial-modal-close:hover { background: rgba(255,255,255,0.35); }
+        .tutorial-modal-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            margin: 0;
+            line-height: 1.35;
+        }
+        .tutorial-modal-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .tutorial-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.82);
+        }
+        .tutorial-meta-item i { font-size: 12px; opacity: 0.75; }
+        .tutorial-meta-item a {
+            color: rgba(255,255,255,0.92);
+            text-decoration: underline;
+            word-break: break-all;
+        }
+        .tutorial-meta-item a:hover { color: #fff; }
+        .tutorial-modal-body {
+            padding: 28px 32px 32px;
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+        .tutorial-modal-body p { margin-bottom: 14px; }
+        .tutorial-modal-body h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #87ceeb;
+            margin: 20px 0 8px;
+        }
+        .tutorial-modal-body ol, .tutorial-modal-body ul {
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        .tutorial-modal-body li { margin-bottom: 6px; }
+        .tutorial-modal-body img {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 10px;
+            margin: 10px 0 16px;
+            display: block;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .tutorial-modal { padding: 40px 12px 12px; }
+            .tutorial-modal-header { padding: 20px 18px 16px; }
+            .tutorial-modal-body { padding: 18px; }
+            .tutorial-modal-title { font-size: 17px; }
+        }
+
         /* ========== LANG SWITCH ========== */
         .lang-switch {
             display: flex;
@@ -1363,23 +1468,23 @@
                     </div>
                 </div>
 
-                <!-- Article: Wuthering Waves Birthday Event -->
-                <div class="news-card" data-news="news_birthday">
+                <!-- Article: Wuthering Waves x Jingdezhen Collaboration -->
+                <div class="news-card" data-news="news_jdz">
                     <div class="news-card-header" style="position:relative;">
-                        <!-- IMG_REPLACE_BIRTHDAY: replace src with actual image path -->
-                        <img src="ww530.jpg" alt="Wuthering Waves Birthday" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <!-- IMG_REPLACE_JDZ: replace src with actual image path -->
+                        <img src="wwjdz.jpg" alt="Wuthering Waves x Jingdezhen" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
                         <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
                             <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
                             <span class="news-badge-new">NEW</span>
-                            <span class="news-date">2026.05.30</span>
+                            <span class="news-date">2026.06.26</span>
                         </div>
                     </div>
                     <div class="news-card-body">
-                        <h3 class="news-title" data-i18n="news_birthday_title">鸣潮生日会即将于5月30日18:00开始</h3>
-                        <p class="news-excerpt" data-i18n="news_birthday_excerpt">2026鸣潮生日会将于5月30日18:00（北京时间）在Bilibili以视频形式播出。</p>
+                        <h3 class="news-title" data-i18n="news_jdz_title">鸣潮 x 景德镇 特别合作</h3>
+                        <p class="news-excerpt" data-i18n="news_jdz_excerpt">鸣潮与景德镇瓷厂特别合作开启，千年瓷都的皇家御用瓷器工艺与鸣潮世界观相融合。</p>
                         <div class="news-card-footer">
-                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_event">イベント</span></span>
-                            <span class="news-read-more" data-news="news_birthday"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_collab">コラボ</span></span>
+                            <span class="news-read-more" data-news="news_jdz"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </div>
                 </div>
@@ -1405,27 +1510,6 @@
                     </div>
                 </div>
 
-                <!-- Article: Niko Bilibili Live Stream -->
-                <div class="news-card" data-news="news_niko">
-                    <div class="news-card-header" style="position:relative;">
-                        <!-- ★ 图片替换位置：把下面 src 中的占位图路径换成实际新闻图片路径即可 ★ -->
-                        <img src="niko.jpg" alt="Niko live stream" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
-                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
-                            <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
-                            <span class="news-badge-new">NEW</span>
-                            <span class="news-date">2026.05.26</span>
-                        </div>
-                    </div>
-                    <div class="news-card-body">
-                        <h3 class="news-title" data-i18n="news_niko_title">Niko即将于bilibili进行独家直播</h3>
-                        <p class="news-excerpt" data-i18n="news_niko_excerpt">来自CS战队Falcons的Niko即将在bilibili进行独家直播，时间为5月26日17:00（北京时间）。</p>
-                        <div class="news-card-footer">
-                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_live">直播</span></span>
-                            <span class="news-read-more" data-news="news_niko"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -1444,7 +1528,6 @@
                             <div class="card-icon"><i class="fas fa-video"></i></div>
                             Bilibili (ビリビリ)
                         </h3>
-                        <p class="site-card-desc" data-i18n="bili_desc">中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="bili_tag">動画共有</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1462,9 +1545,27 @@
                             <div class="card-icon"><i class="fas fa-music"></i></div>
                             抖音 (Douyin/TikTok)
                         </h3>
-                        <p class="site-card-desc" data-i18n="douyin_desc">中国で最も多くのユーザーを擁し、最も広く普及しているプラットフォームであり、ネットショッピングとライブコマース機能を両立しています。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="douyin_tag">ショート動画</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tutorial Card: Bilibili Guide -->
+                <div class="site-card tutorial-trigger" data-tutorial="bilibili_guide">
+                    <div class="site-card-img-wrap" style="background:linear-gradient(135deg,#00a1d6 0%,#0073b1 100%);display:flex;align-items:center;justify-content:center;">
+                        <div style="font-size:56px;color:rgba(255,255,255,0.9);"><i class="fas fa-book-open"></i></div>
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon" style="background:#e0f7ff;color:#00a1d6;"><i class="fas fa-book-open"></i></div>
+                            <span data-i18n="tut_bili_card_title">Bilibiliの簡易使用教程</span>
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="tut_bili_card_tag">使い方ガイド</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
                         </div>
                     </div>
@@ -1487,7 +1588,6 @@
                             <div class="card-icon"><i class="fas fa-music"></i></div>
                             QQ音楽
                         </h3>
-                        <p class="site-card-desc" data-i18n="qqmusic_desc">テンセントが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="qqmusic_tag">音楽再生</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1505,7 +1605,6 @@
                             <div class="card-icon"><i class="fas fa-headphones"></i></div>
                             网易云音乐
                         </h3>
-                        <p class="site-card-desc" data-i18n="netease_desc">ネイズが設立した中国の人気音楽プラットフォームで、豊富な著作権楽曲を保有しています。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="netease_tag">音楽コミュニティ</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1530,7 +1629,6 @@
                             <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
                             淘宝 (Taobao)
                         </h3>
-                        <p class="site-card-desc" data-i18n="taobao_desc">アリババが設立した電子商取引（EC）プラットフォームで、アマゾンに類似しており、品揃えが極めて豊富です。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="taobao_tag">オンラインショッピング</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1548,7 +1646,6 @@
                             <div class="card-icon"><i class="fas fa-box"></i></div>
                             京东 (JD.com)
                         </h3>
-                        <p class="site-card-desc" data-i18n="jd_desc">B2C型の大手ECサイト。自社物流網で迅速な配送。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="jd_tag">総合ECサイト</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1566,7 +1663,6 @@
                             <div class="card-icon"><i class="fas fa-recycle"></i></div>
                             闲鱼 (Xianyu)
                         </h3>
-                        <p class="site-card-desc" data-i18n="xianyu_desc">タオバオ傘下の中国大手中古取引プラットフォームで、日本のメルカリに類似しています。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="xianyu_tag">フリマサービス</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1584,7 +1680,6 @@
                             <div class="card-icon"><i class="fas fa-users"></i></div>
                             拼多多 (Pinduoduo)
                         </h3>
-                        <p class="site-card-desc" data-i18n="pdd_desc">世界的ECプラットフォーム Temu の中国本家。グループ購入で最安値を実現。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="pdd_tag">グループ購入</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1609,7 +1704,6 @@
                             <div class="card-icon"><i class="fas fa-comment"></i></div>
                             微博 (Weibo)
                         </h3>
-                        <p class="site-card-desc" data-i18n="weibo_desc">中国版ツイッター。最新ニュースやトレンドが速く伝播。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="weibo_tag">マイクロブログ</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1627,7 +1721,6 @@
                             <div class="card-icon"><i class="fas fa-book"></i></div>
                             小红书 (Xiaohongshu/RED)
                         </h3>
-                        <p class="site-card-desc" data-i18n="xhs_desc">生活スタイルや購入情報の共有プラットフォーム。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="xhs_tag">ライフスタイル</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1652,7 +1745,6 @@
                             <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
                             高德地图 (Amap)
                         </h3>
-                        <p class="site-card-desc" data-i18n="amap_desc">アリババ傘下の地図サービス。リアルタイム交通情報。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="amap_tag">地図サービス</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1670,7 +1762,6 @@
                             <div class="card-icon"><i class="fas fa-map"></i></div>
                             百度地图 (Baidu Map)
                         </h3>
-                        <p class="site-card-desc" data-i18n="baidu_desc">百度が提供する地図サービス。検索エンジンと連携。</p>
                         <div class="card-footer">
                             <span class="site-card-tag" data-i18n="baidu_tag">ナビゲーション</span>
                             <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
@@ -1765,6 +1856,18 @@
         </div>
     </div>
 
+    <!-- TUTORIAL MODAL -->
+    <div class="tutorial-modal" id="tutorialModal">
+        <div class="tutorial-modal-content">
+            <div class="tutorial-modal-header">
+                <button class="tutorial-modal-close" id="closeTutorialModal"><i class="fas fa-times"></i></button>
+                <h2 class="tutorial-modal-title" id="tutorialModalTitle"></h2>
+                <div class="tutorial-modal-meta" id="tutorialModalMeta"></div>
+            </div>
+            <div class="tutorial-modal-body" id="tutorialModalBody"></div>
+        </div>
+    </div>
+
     <footer id="mainFooter">
         <div class="container">
             <div class="footer-inner">
@@ -1815,14 +1918,13 @@
                 news_cate_ecommerce: 'Eコマース',
                 news_cate_live: 'ライブ配信',
                 news_cate_event: 'イベント',
+                news_cate_collab: 'コラボ',
                 news_mihoyogift_title: 'miHoYo 公式グッズ通販（常設）',
                 news_mihoyogift_excerpt: '原神・崩壊シリーズなど miHoYo 全タイトルの公式グッズを購入できます。淘宝（タオバオ）では「miHoYo旗艦店」で検索しても購入可能です。なお、中国国外への配送には対応していない場合があります。',
-                news_birthday_title: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）よリ開始',
-                news_birthday_excerpt: '2026年の鳴潮誕生日イベントが、5月30日18:00（北京時間）よリ Bilibili にて動画形式で配信されます。18:00・18:30・19:00 の3回に分けて順次公開されます。',
+                news_jdz_title: '鳴潮 × 景徳鎮 特別コラボレーション',
+                news_jdz_excerpt: '鳴潮と景徳鎮窯の特別コラボレーションがスタート。千年の歴史を持つ「磁器の都」の皇室御用達の技と鳴潮の世界観が融合。',
                 news_wuthering_title: '鳴潮（Wuthering Waves）× Razer コラボ商品が発売開始',
                 news_wuthering_excerpt: '鳴潮と Razer のコラボレーションによる「ダーニャ」モデル商品が、淘宝（タオバオ）にて予約販売を開始しました。中国国外への配送に対応していないため、ご興味のある方は公式サイトにて商品詳細および価格を事前にご確認ください。',
-                news_niko_title: 'Niko が Bilibili で独占ライブ配信を行います',
-                news_niko_excerpt: 'CS チーム「Falcons」所属の Niko が、5月26日17:00（北京時間）に Bilibili で独占ライブ配信を行います。ぜひお見逃しなく！',
                 news_readmore: '続きを読む',
                 // sections
                 sec_video: '動画エンタテインメント',
@@ -1860,6 +1962,10 @@
                 amap_tag: '地図サービス',
                 baidu_desc: '百度が提供する地図サービス。検索エンジンと連携。',
                 baidu_tag: 'ナビゲーション',
+                // tutorial card
+                tut_bili_card_title: 'Bilibiliの簡易使用教程',
+                tut_bili_card_desc: 'Bilibiliの基本的な使い方をわかりやすくまとめたガイドです。アカウント登録から動画視聴まで解説しています。',
+                tut_bili_card_tag: '使い方ガイド',
                 // about
                 about_title: 'サイト紹介',
                 about_subtitle: '中国ウェブサービス総合ガイド',
@@ -1935,6 +2041,7 @@
                 news_cate_ecommerce: 'E-Commerce',
                 news_cate_live: 'Live Stream',
                 news_cate_event: 'Event',
+                news_cate_collab: 'Collaboration',
                 news_mihoyogift_title: 'miHoYo Official Merch Store (Permanent)',
                 news_mihoyogift_excerpt: 'The official destination for all miHoYo merchandise — including Genshin Impact, Honkai series, and more. You can also search "miHoYo旗舰店" on Taobao. Note: international shipping may not be available.',
                 news_birthday_title: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
@@ -1943,6 +2050,8 @@
                 news_wuthering_excerpt: 'The Wuthering Waves × Razer "Denia" collaboration merchandise is now available for pre-order on Taobao. Since Taobao does not support international shipping, please visit the official website to check product details and pricing in advance.',
                 news_niko_title: 'Niko to Host Exclusive Live Stream on Bilibili',
                 news_niko_excerpt: 'Niko from CS team Falcons will host an exclusive live stream on Bilibili at 17:00 (Beijing Time), May 26. Don\'t miss it!',
+                news_jdz_title: 'Wuthering Waves × Jingdezhen Special Collaboration',
+                news_jdz_excerpt: 'A special collaboration between Wuthering Waves and Jingdezhen porcelain factory begins, fusing over a millennium of imperial porcelain craftsmanship with the world of Wuthering Waves.',
                 news_readmore: 'Read more',
                 // sections
                 sec_video: 'Video Entertainment',
@@ -1980,6 +2089,10 @@
                 amap_tag: 'Map Service',
                 baidu_desc: 'Baidu\'s map service, integrated with its powerful search engine.',
                 baidu_tag: 'Navigation',
+                // tutorial card
+                tut_bili_card_title: 'Bilibili Quick Start Guide',
+                tut_bili_card_desc: 'A beginner-friendly guide to using Bilibili. Covers account registration, video browsing, and more.',
+                tut_bili_card_tag: 'How-to Guide',
                 // about
                 about_title: 'About This Site',
                 about_subtitle: 'Comprehensive Guide to Chinese Web Services',
@@ -2164,6 +2277,124 @@
                 }
             });
 
+            // ==========================================
+            // TUTORIAL MODAL
+            // ==========================================
+            const tutorialData = {
+                bilibili_guide: {
+                    website: 'https://www.bilibili.com/',
+                    updated_ja: '2026年6月26日',
+                    updated_en: 'June 26, 2026',
+                    title_ja: 'Bilibiliの簡易使用教程',
+                    title_en: 'Bilibili Quick Start Guide',
+                    body_ja: `
+                        <h4>初期ページ</h4>
+                        <p>Bilibiliのウェブサイトにアクセスすると、これが初期画面になります。まず最初に行うべきことは、アカウントの登録とログインです。ログインすると、より高画質で視聴でき、視聴履歴も残るようになります。</p>
+                        <!-- IMG_REPLACE_BILI1: replace src with actual screenshot path -->
+                        <img src="bili1.jpg" alt="Bilibili初期画面">
+
+                        <h4>登録・ログイン</h4>
+                        <p>画面上部中央の検索バーの右側に、青い「登录」（ログイン）ボタンがあります。</p>
+                        <!-- IMG_REPLACE_BILI2: replace src with actual screenshot path -->
+                        <img src="bili2.jpg" alt="ログイン画面">
+                        <p>これが登録・ログイン画面です。お持ちの国・地域の携帯電話番号を選択し、認証コードを取得して登録できます。登録が成功すると、自動的にアカウントにログインされます。</p>
+
+                        <h4>動画プレイヤーの設定</h4>
+                        <p>動画を開くと、下部に以下のようなコントロールバーが表示されます。</p>
+                        <!-- IMG_REPLACE_BILI3: replace src with actual screenshot path -->
+                        <img src="bili3.jpg" alt="動画プレイヤーコントロール">
+                        <p><strong>青線部分</strong>（左から順に）：画質、再生速度、字幕（ある場合）、音量、再生設定、ピクチャーインピクチャー、ワイドスクリーン、ウェブ全画面、全画面モード</p>
+                        <p><strong>赤線部分</strong>：現在の同時視聴者数、弾幕（コメント）のオン/オフ、弾幕設定、弾幕入力欄（※新規登録アカウントは別途手続きが必要）</p>
+                        <p><strong>黄線部分</strong>：いいね、コイン投げ（Bilibili独自機能、いいねよりも価値が高い）、お気に入り、シェア</p>
+
+                        <h4>アカウントのアップグレード</h4>
+                        <p>新規登録したアカウントでは弾幕を送信できません。この機能を使うには、アカウントをアップグレードする必要があります。</p>
+                        <p>メイン画面で、ログインアイコンがあなたのアカウントのアバターに変わっています。アバターの上にマウスを置くと新しいエリアが表示されるので、「答题转正直升lv.1」（クイズで正式会員昇格）をクリックします。</p>
+                        <!-- IMG_REPLACE_BILI4: replace src with actual screenshot path -->
+                        <img src="bili4.jpg" alt="アカウントアップグレード画面1">
+                        <!-- IMG_REPLACE_BILI5: replace src with actual screenshot path -->
+                        <img src="bili5.jpg" alt="アカウントアップグレード画面2">
+                        <p>クイズ画面が表示されます。ただし、この部分は中国人にとっても難しいため、赤線部分から招待コード（邀请码）を入力することもできます。</p>
+                        <p>ただし招待コードは、アカウントレベルがlv.5以上のユーザーが申請する必要があります。必要な場合はお気軽にお問い合わせください。</p>
+                        <p>これらの手順を完了すると、アカウントは正式アカウントになります。その後のログインや動画視聴によってアカウントレベルが上がっていきます。</p>
+
+                        <p style="margin-top:20px;padding:14px 16px;background:rgba(135,206,235,0.1);border-radius:8px;border-left:3px solid #87ceeb;font-size:14px;">💡 新たな質問がある場合は、お気軽にお問い合わせください。今後もこのコラムを継続的に更新していきます。</p>`,
+                    body_en: `
+                        <h4>Initial Page</h4>
+                        <p>When you visit Bilibili's website, this is your initial interface. The first thing you should do is register and log in to your account. Once logged in, you can enjoy higher video quality and keep track of your watch history.</p>
+                        <!-- IMG_REPLACE_BILI1: replace src with actual screenshot path -->
+                        <img src="bili1.jpg" alt="Bilibili initial page">
+
+                        <h4>Registration & Login</h4>
+                        <p>At the top center of the page, to the right of the search bar, you'll find the blue "登录" (Login) button.</p>
+                        <!-- IMG_REPLACE_BILI2: replace src with actual screenshot path -->
+                        <img src="bili2.jpg" alt="Login interface">
+                        <p>This is the registration/login interface. You can select your country/region phone number to receive a verification code and complete registration. Once registration is successful, you'll be automatically logged in.</p>
+
+                        <h4>Video Player Settings</h4>
+                        <p>After opening a video, you'll see the following control bar below the player.</p>
+                        <!-- IMG_REPLACE_BILI3: replace src with actual screenshot path -->
+                        <img src="bili3.jpg" alt="Video player controls">
+                        <p><strong>Blue line</strong> (left to right): Video quality, playback speed, subtitles (if available), volume, playback settings, picture-in-picture, widescreen mode, web fullscreen, fullscreen mode</p>
+                        <p><strong>Red line</strong>: Current concurrent viewers, danmaku (comments) toggle, danmaku settings, danmaku input bar (※ newly registered accounts require additional steps)</p>
+                        <p><strong>Yellow line</strong>: Like, coin toss (Bilibili's unique feature — more valuable than a like), favorite, share</p>
+
+                        <h4>Account Upgrade</h4>
+                        <p>Newly registered accounts cannot send danmaku. To use this feature, you need to upgrade your account first.</p>
+                        <p>On the main interface, the login icon has now been replaced with your account avatar. Hover your mouse over the avatar to reveal a new area, then click "答题转正直升lv.1" (Quiz to become a full member at lv.1).</p>
+                        <!-- IMG_REPLACE_BILI4: replace src with actual screenshot path -->
+                        <img src="bili4.jpg" alt="Account upgrade screen 1">
+                        <!-- IMG_REPLACE_BILI5: replace src with actual screenshot path -->
+                        <img src="bili5.jpg" alt="Account upgrade screen 2">
+                        <p>A quiz interface will appear. However, this section is challenging even for Chinese users, so you can also enter an invitation code via the red line area.</p>
+                        <p>Note: Invitation codes require an account at lv.5 or above to apply. Feel free to contact me if you need one.</p>
+                        <p>After completing these steps, your account becomes a full member account. Subsequent logins and video watching will further increase your account level.</p>
+
+                        <p style="margin-top:20px;padding:14px 16px;background:rgba(135,206,235,0.1);border-radius:8px;border-left:3px solid #87ceeb;font-size:14px;">💡 If you have any new questions, feel free to contact me. I will continue to update this column in the future.</p>`
+                }
+            };
+
+            const tutorialModal = document.getElementById('tutorialModal');
+            const tutorialModalTitle = document.getElementById('tutorialModalTitle');
+            const tutorialModalMeta = document.getElementById('tutorialModalMeta');
+            const tutorialModalBody = document.getElementById('tutorialModalBody');
+            const closeTutorialModal = document.getElementById('closeTutorialModal');
+
+            function openTutorialModal(key) {
+                const d = tutorialData[key];
+                if (!d) return;
+                const isJa = currentLang === 'ja';
+                tutorialModalTitle.textContent = isJa ? d.title_ja : d.title_en;
+                tutorialModalMeta.innerHTML = `
+                    <span class="tutorial-meta-item"><i class="fas fa-globe"></i>
+                        <a href="${d.website}" target="_blank">${d.website}</a>
+                    </span>
+                    <span class="tutorial-meta-item"><i class="fas fa-calendar-alt"></i>
+                        ${isJa ? '更新日：' + d.updated_ja : 'Updated: ' + d.updated_en}
+                    </span>`;
+                tutorialModalBody.innerHTML = isJa ? d.body_ja : d.body_en;
+                tutorialModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            document.querySelectorAll('.tutorial-trigger').forEach(card => {
+                card.addEventListener('click', function() {
+                    const key = this.getAttribute('data-tutorial');
+                    openTutorialModal(key);
+                });
+            });
+
+            closeTutorialModal.addEventListener('click', () => {
+                tutorialModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            tutorialModal.addEventListener('click', e => {
+                if (e.target === tutorialModal) {
+                    tutorialModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
             // News modal data
             const newsData = {
                 news_mihoyogift: {
@@ -2188,28 +2419,6 @@
 <p>If you're outside China, we recommend checking the shipping policy first, or consider using a forwarding service to receive items internationally.</p>
 <p style="margin-top:18px;"><a href="https://www.mihoyogift.com" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(109,40,217,0.4)\\';\" onmouseout=\"this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-shopping-bag"></i> Visit miHoYo Gift Official Site</a></p>`
                 },
-                news_birthday: {
-                    platform: 'bilibili',
-                    platformIcon: 'fas fa-video',
-                    platformLabel_ja: 'Bilibili',
-                    platformLabel_en: 'Bilibili',
-                    date: '2026.05.30',
-                    isNew: false,
-                    // IMG_REPLACE_BIRTHDAY: replace img_src value with actual image path
-                    img_src: 'ww530.jpg',
-                    title_ja: '鳴潮（Wuthering Waves）誕生日イベントが5月30日18:00（北京時間）より開始',
-                    title_en: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
-                    body_ja: `<p>『<strong>鳴潮（Wuthering Waves）</strong>』の2026年誕生日イベントが、<strong>5月30日 18:00（北京時間）</strong>より <strong>Bilibili</strong> にて動画形式で配信されます。</p>
-<div class="news-highlight-box">📺 配信プラットフォーム：Bilibili<br>🕒 配信時間：18:00／18:30／19:00（北京時間）<br>📦 形式：動画配信（3回に分けて順次公開）</div>
-<p>イベント内容は、ゲーム内限定誕生日アイテムの発表、開発チームよりの感謝メッセージ、今後のアプデート予告なとが予定されており、国内外のプレイヤーから大きな注目を集めています。</p>
-<p>視聴は以下の公式Bilibiliフェスティバルページからアクセスしてください。ログイン不要で、一部コンテンツはゲスト視聴も可能です。</p>
-<p style="margin-top:18px;"><a href="https://www.bilibili.com/festival/2026wutheringwavesbirthday?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(0,161,214,0.35)\\';" onmouseout="this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-tv"></i> Bilibili で視聴する</a></p>`,
-                    body_en: `<p>The <strong>2026 Wuthering Waves Birthday Event</strong> will be streamed on <strong>Bilibili</strong> in video format, starting at <strong>18:00 (Beijing Time), May 30</strong>.</p>
-<div class="news-highlight-box">📺 Platform: Bilibili<br>🕒 Showtimes: 18:00 / 18:30 / 19:00 (Beijing Time)<br>📦 Format: Video stream (released in 3 segments)</div>
-<p>The event will feature exclusive in-game birthday items, a thank-you message from the dev team, and upcoming update previews — drawing huge attention from players around the world.</p>
-<p>You can access the stream via the official Bilibili festival page below. No login is required, and guest viewing is available for part of the content.</p>
-<p style="margin-top:18px;"><a href="https://www.bilibili.com/festival/2026wutheringwavesbirthday?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(0,161,214,0.35)\\';" onmouseout="this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-tv"></i> Watch on Bilibili</a></p>`
-                },
                 news_wuthering: {
                     platform: 'taobao',
                     platformIcon: 'fas fa-shopping-cart',
@@ -2232,27 +2441,25 @@
 <p>You can visit the official Wuthering Waves website via the link below to check the latest updates on product lineup, pricing, and release schedule.</p>
 <p style="margin-top:18px;"><a href="https://wutheringwaves.kurogames.com/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\'translateY(-2px)\';this.style.boxShadow=\'0 6px 20px rgba(0,161,214,0.35)\';" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'none\';"><i class="fas fa-globe"></i> Visit Wuthering Waves Official Site</a></p>`
                 },
-                news_niko: {
+                news_jdz: {
                     platform: 'bilibili',
                     platformIcon: 'fas fa-video',
                     platformLabel_ja: 'Bilibili',
                     platformLabel_en: 'Bilibili',
-                    date: '2026.05.26',
-                    isNew: false,
-                    // ★ 图片替换位置：把下面 img_src 的值换成实际新闻图片路径即可 ★
-                    img_src: 'niko.jpg',
-                    title_ja: 'Niko が Bilibili で独占ライブ配信を行います',
-                    title_en: 'Niko to Host Exclusive Live Stream on Bilibili',
-                    body_ja: `<p>CS チーム「<strong>Falcons</strong>」に所属する Niko が、<strong>5月26日 17:00（北京時間）</strong>に Bilibili で独占ライブ配信を行います。</p>
-<div class="news-highlight-box">📺 配信日時：2026年5月26日 17:00（北京時間）<br>🎮 出演：Niko（Falcons）<br>📡 配信プラットフォーム：Bilibili</div>
-<p>本配信は Bilibili 独占での実施となります。Niko 本人によるゲームプレイ、ファンとの交流、Q&A コーナーなどが予定されており、国内外のファンから大きな注目を集めています。</p>
-<p>視聴は以下の公式リンクからアクセスしてください。Bilibili アカウントをお持ちでない方も、一部コンテンツはゲスト視聴が可能です。</p>
-<p style="margin-top:18px;"><a href="https://live.bilibili.com/1951478491?broadcast_type=0&is_room_feed=0&spm_id_from=333.1387.to_live_room.0.click&live_from=86002" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-tv"></i> Bilibili で視聴する</a></p>`,
-                    body_en: `<p>Niko from CS team <strong>Falcons</strong> will host an exclusive live stream on <strong>Bilibili at 17:00 (Beijing Time), May 26, 2026.</strong></p>
-<div class="news-highlight-box">📺 Date & Time: May 26, 2026 at 17:00 (Beijing Time)<br>🎮 Cast: Niko (Falcons)<br>📡 Platform: Bilibili</div>
-<p>This stream is exclusive to Bilibili. It will feature Niko's gameplay, fan interactions, a Q&A session, and more — drawing huge attention from fans around the world.</p>
-<p>You can access the stream via the official link below. Even without a Bilibili account, guest viewing is available for part of the content.</p>
-<p style="margin-top:18px;"><a href="https://live.bilibili.com/1951478491?broadcast_type=0&is_room_feed=0&spm_id_from=333.1387.to_live_room.0.click&live_from=86002" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-tv"></i> Watch on Bilibili</a></p>`
+                    date: '2026.06.26',
+                    isNew: true,
+                    // IMG_REPLACE_JDZ: replace img_src value with actual image path
+                    img_src: 'wwjdz.jpg',
+                    title_ja: '鳴潮 × 景徳鎮 特別コラボレーション',
+                    title_en: 'Wuthering Waves × Jingdezhen Special Collaboration',
+                    body_ja: `<p>『<strong>鳴潮（Wuthering Waves）</strong>』と<strong>景徳鎮（けいとちん）窯</strong>の特別コラボレーションがスタートしました。</p>
+<p>景徳鎮は<strong>1,000年以上</strong>の製磁の歴史を持ち、中国で最も名高い「<strong>磁器の都</strong>」として知られています。古来より<strong>皇室御用達</strong>の磁器産地であり、中国陶磁の最高水準を代表してきました。</p>
+<p>今回の特別コラボレーションでは、景徳鎮の伝統的な製磁技術と鳴潮の世界観が融合。ゲームのキャラクターや世界観をモチーフにした精緻な磁器アートが制作されています。</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/opus/1217439137579139073?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-globe"></i> Bilibili で詳細を見る</a></p>`,
+                    body_en: `<p>A special collaboration between <strong>Wuthering Waves</strong> and the <strong>Jingdezhen porcelain factory</strong> has officially begun.</p>
+<p>Jingdezhen boasts over <strong>1,000 years</strong> of porcelain-making history and is renowned as China's most celebrated "<strong>Porcelain Capital</strong>." Since ancient times, it has been the production site for imperial porcelain, representing the highest standard of Chinese ceramics.</p>
+<p>This special collaboration fuses Jingdezhen's traditional porcelain craftsmanship with the world of Wuthering Waves, creating exquisite porcelain art inspired by the game's characters and lore.</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/opus/1217439137579139073?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-globe"></i> View Details on Bilibili</a></p>`
                 }
             };
 
