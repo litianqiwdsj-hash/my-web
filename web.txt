@@ -1240,6 +1240,14 @@
             margin-bottom: 14px;
         }
         .tutorial-modal-body li { margin-bottom: 6px; }
+        .tutorial-modal-body img {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 10px;
+            margin: 10px 0 16px;
+            display: block;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
         @media (max-width: 768px) {
             .tutorial-modal { padding: 40px 12px 12px; }
             .tutorial-modal-header { padding: 20px 18px 16px; }
@@ -2275,62 +2283,74 @@
             const tutorialData = {
                 bilibili_guide: {
                     website: 'https://www.bilibili.com/',
-                    updated_ja: '2026年6月17日',
-                    updated_en: 'June 17, 2026',
+                    updated_ja: '2026年6月26日',
+                    updated_en: 'June 26, 2026',
                     title_ja: 'Bilibiliの簡易使用教程',
                     title_en: 'Bilibili Quick Start Guide',
                     body_ja: `
-                        <h4>Bilibiliとは？</h4>
-                        <p>Bilibili（ビリビリ、B站）は中国最大の動画共有プラットフォームです。アニメ・ゲーム・知識・音楽・Vlogなど幅広いジャンルをカバーしており、日本のニコニコ動画に似た弾幕（コメント）機能が特徴です。</p>
+                        <h4>初期ページ</h4>
+                        <p>Bilibiliのウェブサイトにアクセスすると、これが初期画面になります。まず最初に行うべきことは、アカウントの登録とログインです。ログインすると、より高画質で視聴でき、視聴履歴も残るようになります。</p>
+                        <!-- IMG_REPLACE_BILI1: replace src with actual screenshot path -->
+                        <img src="bili1.jpg" alt="Bilibili初期画面">
 
-                        <h4>アカウント登録</h4>
-                        <ol>
-                            <li><a href="https://www.bilibili.com/" target="_blank" style="color:#00a1d6;">bilibili.com</a> にアクセスし、右上の「登录」（ログイン）をクリック</li>
-                            <li>「注册」（新規登録）を選択</li>
-                            <li>携帯番号またはメールアドレスを入力して登録</li>
-                            <li>SMS認証コードを入力して完了</li>
-                        </ol>
-                        <p>※ 中国国内の携帯番号がなくてもメールアドレスで登録可能です。</p>
+                        <h4>登録・ログイン</h4>
+                        <p>画面上部中央の検索バーの右側に、青い「登录」（ログイン）ボタンがあります。</p>
+                        <!-- IMG_REPLACE_BILI2: replace src with actual screenshot path -->
+                        <img src="bili2.jpg" alt="ログイン画面">
+                        <p>これが登録・ログイン画面です。お持ちの国・地域の携帯電話番号を選択し、認証コードを取得して登録できます。登録が成功すると、自動的にアカウントにログインされます。</p>
 
-                        <h4>動画の検索・視聴</h4>
-                        <ol>
-                            <li>上部の検索バーにキーワードを入力（日本語・英語・中国語対応）</li>
-                            <li>カテゴリは上部ナビ「番剧」（アニメ）、「游戏」（ゲーム）などから選択</li>
-                            <li>動画をクリックして視聴開始。画面上を流れる弾幕はリアルタイムコメント</li>
-                        </ol>
+                        <h4>動画プレイヤーの設定</h4>
+                        <p>動画を開くと、下部に以下のようなコントロールバーが表示されます。</p>
+                        <!-- IMG_REPLACE_BILI3: replace src with actual screenshot path -->
+                        <img src="bili3.jpg" alt="動画プレイヤーコントロール">
+                        <p><strong>青線部分</strong>（左から順に）：画質、再生速度、字幕（ある場合）、音量、再生設定、ピクチャーインピクチャー、ワイドスクリーン、ウェブ全画面、全画面モード</p>
+                        <p><strong>赤線部分</strong>：現在の同時視聴者数、弾幕（コメント）のオン/オフ、弾幕設定、弾幕入力欄（※新規登録アカウントは別途手続きが必要）</p>
+                        <p><strong>黄線部分</strong>：いいね、コイン投げ（Bilibili独自機能、いいねよりも価値が高い）、お気に入り、シェア</p>
 
-                        <h4>便利なヒント</h4>
-                        <ul>
-                            <li>弾幕を非表示にするには、プレイヤー下の吹き出しアイコンをクリック</li>
-                            <li>動画右下の「投幣」はコイン投げ（応援）機能</li>
-                            <li>「一键三连」は「いいね＋コイン＋お気に入り」を一括で行う機能</li>
-                        </ul>`,
+                        <h4>アカウントのアップグレード</h4>
+                        <p>新規登録したアカウントでは弾幕を送信できません。この機能を使うには、アカウントをアップグレードする必要があります。</p>
+                        <p>メイン画面で、ログインアイコンがあなたのアカウントのアバターに変わっています。アバターの上にマウスを置くと新しいエリアが表示されるので、「答题转正直升lv.1」（クイズで正式会員昇格）をクリックします。</p>
+                        <!-- IMG_REPLACE_BILI4: replace src with actual screenshot path -->
+                        <img src="bili4.jpg" alt="アカウントアップグレード画面1">
+                        <!-- IMG_REPLACE_BILI5: replace src with actual screenshot path -->
+                        <img src="bili5.jpg" alt="アカウントアップグレード画面2">
+                        <p>クイズ画面が表示されます。ただし、この部分は中国人にとっても難しいため、赤線部分から招待コード（邀请码）を入力することもできます。</p>
+                        <p>ただし招待コードは、アカウントレベルがlv.5以上のユーザーが申請する必要があります。必要な場合は私のメールにお問い合わせください、メールアドレスはサイト紹介の中にあります。</p>
+                        <p>これらの手順を完了すると、アカウントは正式アカウントになります。その後のログインや動画視聴によってアカウントレベルが上がっていきます。</p>
+
+                        <p style="margin-top:20px;padding:14px 16px;background:rgba(135,206,235,0.1);border-radius:8px;border-left:3px solid #87ceeb;font-size:14px;">💡 新たな質問がある場合は、お気軽にお問い合わせください。今後もこのコラムを継続的に更新していきます。</p>`,
                     body_en: `
-                        <h4>What is Bilibili?</h4>
-                        <p>Bilibili (B站) is China's largest video-sharing platform, covering anime, gaming, knowledge, music, vlogs, and more. It's famous for its "danmaku" (floating comment) system — similar to Japan's Niconico.</p>
+                        <h4>Initial Page</h4>
+                        <p>When you visit Bilibili's website, this is your initial interface. The first thing you should do is register and log in to your account. Once logged in, you can enjoy higher video quality and keep track of your watch history.</p>
+                        <!-- IMG_REPLACE_BILI1: replace src with actual screenshot path -->
+                        <img src="bili1.jpg" alt="Bilibili initial page">
 
-                        <h4>Creating an Account</h4>
-                        <ol>
-                            <li>Go to <a href="https://www.bilibili.com/" target="_blank" style="color:#00a1d6;">bilibili.com</a> and click "登录" (Login) at the top right</li>
-                            <li>Select "注册" (Register)</li>
-                            <li>Enter your phone number or email address</li>
-                            <li>Enter the verification code and complete registration</li>
-                        </ol>
-                        <p>※ A Chinese phone number is not required — email registration works fine.</p>
+                        <h4>Registration & Login</h4>
+                        <p>At the top center of the page, to the right of the search bar, you'll find the blue "登录" (Login) button.</p>
+                        <!-- IMG_REPLACE_BILI2: replace src with actual screenshot path -->
+                        <img src="bili2.jpg" alt="Login interface">
+                        <p>This is the registration/login interface. You can select your country/region phone number to receive a verification code and complete registration. Once registration is successful, you'll be automatically logged in.</p>
 
-                        <h4>Searching & Watching Videos</h4>
-                        <ol>
-                            <li>Use the top search bar — Japanese, English, and Chinese keywords all work</li>
-                            <li>Browse categories: "番剧" (Anime), "游戏" (Gaming), and more in the top nav</li>
-                            <li>Click any video to start watching. Floating text on screen = live viewer comments (danmaku)</li>
-                        </ol>
+                        <h4>Video Player Settings</h4>
+                        <p>After opening a video, you'll see the following control bar below the player.</p>
+                        <!-- IMG_REPLACE_BILI3: replace src with actual screenshot path -->
+                        <img src="bili3.jpg" alt="Video player controls">
+                        <p><strong>Blue line</strong> (left to right): Video quality, playback speed, subtitles (if available), volume, playback settings, picture-in-picture, widescreen mode, web fullscreen, fullscreen mode</p>
+                        <p><strong>Red line</strong>: Current concurrent viewers, danmaku (comments) toggle, danmaku settings, danmaku input bar (※ newly registered accounts require additional steps)</p>
+                        <p><strong>Yellow line</strong>: Like, coin toss (Bilibili's unique feature — more valuable than a like), favorite, share</p>
 
-                        <h4>Useful Tips</h4>
-                        <ul>
-                            <li>Hide danmaku: click the speech-bubble icon in the player controls</li>
-                            <li>"投幣" (Coin throw) = send virtual coins to support a creator</li>
-                            <li>"一键三连" = Like + Coin + Favorite all at once with one button</li>
-                        </ul>`
+                        <h4>Account Upgrade</h4>
+                        <p>Newly registered accounts cannot send danmaku. To use this feature, you need to upgrade your account first.</p>
+                        <p>On the main interface, the login icon has now been replaced with your account avatar. Hover your mouse over the avatar to reveal a new area, then click "答题转正直升lv.1" (Quiz to become a full member at lv.1).</p>
+                        <!-- IMG_REPLACE_BILI4: replace src with actual screenshot path -->
+                        <img src="bili4.jpg" alt="Account upgrade screen 1">
+                        <!-- IMG_REPLACE_BILI5: replace src with actual screenshot path -->
+                        <img src="bili5.jpg" alt="Account upgrade screen 2">
+                        <p>A quiz interface will appear. However, this section is challenging even for Chinese users, so you can also enter an invitation code via the red line area.</p>
+                        <p>Note: Invitation codes require an account at lv.5 or above to apply. Feel free to contact me if you need one.</p>
+                        <p>After completing these steps, your account becomes a full member account. Subsequent logins and video watching will further increase your account level.</p>
+
+                        <p style="margin-top:20px;padding:14px 16px;background:rgba(135,206,235,0.1);border-radius:8px;border-left:3px solid #87ceeb;font-size:14px;">💡 If you have any new questions, feel free to contact me. I will continue to update this column in the future.</p>`
                 }
             };
 
