@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国ウェブサイト案内</title>
+    <title>CtW.web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -22,6 +22,7 @@
             --radius: 14px;
             --radius-sm: 8px;
             --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-mincho: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", "Songti SC", "STSong", "SimSun", serif;
         }
 
         * {
@@ -153,6 +154,7 @@
         .logo {
             font-size: 20px;
             font-weight: 800;
+            font-family: var(--font-mincho);
             color: var(--primary);
             text-decoration: none;
             display: flex;
@@ -754,6 +756,7 @@
             font-size: 18px;
             font-weight: 700;
             color: white;
+            font-family: var(--font-mincho);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -847,32 +850,60 @@
             padding: 32px 0 0;
         }
 
-        /* ========== STATS BAR ========== */
-        .stats-bar {
+        /* ========== SLOGAN BAR (东方墨韵风) ========== */
+        .slogan-bar {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 40px;
-            padding: 28px 0;
+            gap: 34px;
+            padding: 56px 0;
             border-bottom: 1px solid var(--border);
-            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-item {
-            text-align: center;
+        .slogan-bar::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 760px;
+            height: 380px;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.05) 0%, transparent 62%);
+            pointer-events: none;
         }
 
-        .stat-num {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--primary);
+        .slogan-line {
+            flex: 0 1 130px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.4), transparent);
+            position: relative;
+            z-index: 1;
+        }
+
+        .slogan-content {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .slogan-text {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 700;
+            color: var(--text);
+            font-family: var(--font-mincho);
+            letter-spacing: 5px;
             line-height: 1;
+            margin: 0;
+            animation: ink-reveal 0.9s ease-out both;
         }
 
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 4px;
-            font-weight: 500;
+        @keyframes ink-reveal {
+            from { opacity: 0; letter-spacing: 14px; }
+            to { opacity: 1; letter-spacing: 5px; }
         }
 
         /* ========== NEWS COLUMN ========== */
@@ -1255,6 +1286,133 @@
             .tutorial-modal-title { font-size: 17px; }
         }
 
+        /* ========== GAME MODAL ========== */
+        .game-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.55);
+            z-index: 9999;
+            overflow-y: auto;
+            padding: 50px 16px 40px;
+        }
+        .game-modal.show { display: flex; justify-content: center; align-items: flex-start; }
+        .game-modal-content {
+            background: var(--card-bg);
+            border-radius: 18px;
+            max-width: 620px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            animation: gameModalIn 0.35s cubic-bezier(0.2,0.8,0.3,1);
+        }
+        @keyframes gameModalIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .game-modal-header {
+            padding: 28px 28px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            position: relative;
+        }
+        .game-modal-close {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 15px;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .game-modal-close:hover { background: rgba(255,255,255,0.3); }
+        .game-modal-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .game-modal-subtitle {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+        .game-modal-body {
+            padding: 20px 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .game-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+        .game-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(229,57,53,0.1);
+        }
+        .game-item-icon {
+            width: 56px; height: 56px;
+            border-radius: 14px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: var(--border);
+        }
+        .game-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .game-item-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0 0 4px;
+        }
+        .game-item-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .game-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 13px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .game-link-bili {
+            background: #00a1d6;
+            color: #fff;
+        }
+        .game-link-bili:hover { background: #008ac7; transform: translateY(-1px); }
+        .game-link-merch {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .game-link-merch:hover { background: #ffd5d6; transform: translateY(-1px); }
+        @media (max-width: 768px) {
+            .game-modal { padding: 30px 8px 16px; }
+            .game-modal-header { padding: 22px 18px 16px; }
+            .game-modal-body { padding: 14px 12px 20px; gap: 12px; }
+            .game-item { padding: 12px; gap: 12px; }
+            .game-item-icon { width: 46px; height: 46px; }
+            .game-modal-title { font-size: 18px; }
+        }
+
         /* ========== LANG SWITCH ========== */
         .lang-switch {
             display: flex;
@@ -1353,8 +1511,13 @@
                 font-size: 26px;
             }
 
-            .stats-bar {
-                gap: 24px;
+            .slogan-bar {
+                gap: 16px;
+                padding: 36px 0;
+            }
+
+            .slogan-line {
+                flex: 0 1 60px;
             }
 
             .about-card {
@@ -1385,7 +1548,7 @@
             <div class="header-content">
                 <a href="#" class="logo">
                     <div class="logo-icon"><i class="fas fa-globe-asia"></i></div>
-                    中国ウェブサイト案内
+                    CtW.web
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#" data-cate="all" class="active"><i class="fas fa-th"></i> <span data-i18n="nav_all">すべて</span></a></li>
@@ -1395,6 +1558,7 @@
                     <li class="nav-item"><a href="#" data-cate="social"><i class="fas fa-users"></i> <span data-i18n="nav_social">ソーシャル</span></a></li>
                     <li class="nav-item"><a href="#" data-cate="map"><i class="fas fa-map-marked-alt"></i> <span data-i18n="nav_map">地図</span></a></li>
                     <li class="nav-item"><a href="#" data-cate="news"><i class="fas fa-newspaper"></i> <span data-i18n="nav_news">最新情報</span></a></li>
+                    <li class="nav-item"><a href="#" data-cate="games"><i class="fas fa-gamepad"></i> <span data-i18n="nav_games">ゲーム</span></a></li>
                     <li class="nav-item special"><a href="#" id="openAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
                 </ul>
                 <!-- Language Switch -->
@@ -1420,21 +1584,14 @@
         </div>
     </div>
 
-    <!-- STATS -->
+    <!-- SLOGAN -->
     <div class="container">
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-num">12+</div>
-                <div class="stat-label" data-i18n="stat_services">掲載サービス</div>
+        <div class="slogan-bar">
+            <div class="slogan-line"></div>
+            <div class="slogan-content">
+                <h2 class="slogan-text" data-i18n="slogan_main">世界へ</h2>
             </div>
-            <div class="stat-item">
-                <div class="stat-num">5</div>
-                <div class="stat-label" data-i18n="stat_categories">カテゴリー</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">100%</div>
-                <div class="stat-label" data-i18n="stat_lang">日本語対応</div>
-            </div>
+            <div class="slogan-line"></div>
         </div>
     </div>
 
@@ -1446,27 +1603,6 @@
             <h2 class="section-title" data-i18n="sec_news">最新情報コラム</h2>
             <p class="section-subtitle" data-i18n="sec_news_sub">各プラットフォームの注目ニュース・限定情報を随時更新</p>
             <div class="news-grid">
-
-                <!-- Article: miHoYo Official Merch Store (Permanent) -->
-                <div class="news-card" data-news="news_mihoyogift">
-                    <div class="news-card-header" style="position:relative;">
-                        <!-- IMG_REPLACE_MIHOYOGIFT: replace src with actual image path if needed -->
-                        <img src="mihoyogift.jpg" alt="miHoYo Gift" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
-                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
-                            <span class="news-platform-tag taobao"><i class="fas fa-shopping-cart"></i> miHoYo Gift</span>
-                            <span class="news-badge-new" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">常驻</span>
-                            <span class="news-date">常設</span>
-                        </div>
-                    </div>
-                    <div class="news-card-body">
-                        <h3 class="news-title" data-i18n="news_mihoyogift_title">米哈游周边通贩（常驻）</h3>
-                        <p class="news-excerpt" data-i18n="news_mihoyogift_excerpt">米哈游系列所有官方周边的购买渠道，也可通过淘宝搜索"miHoYo旗舰店"购买。</p>
-                        <div class="news-card-footer">
-                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_shopping">ショッピング</span></span>
-                            <span class="news-read-more" data-news="news_mihoyogift"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Article: Wuthering Waves Live Concert -->
                 <div class="news-card" data-news="news_wwlive">
@@ -1489,6 +1625,108 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="games" class="site-section">
+            <h2 class="section-title" data-i18n="sec_games">ゲーム</h2>
+            <p class="section-subtitle" data-i18n="sec_games_sub">中国を代表するゲームメーカーと人気タイトル</p>
+            <div class="site-grid">
+                <!-- miHoYo -->
+                <div class="site-card game-trigger" data-game="mihoyo">
+                    <div class="site-card-img-wrap">
+                        <!-- IMG_REPLACE_MIHOYO: company logo -->
+                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/MiHoYo%20Games.png" alt="miHoYo" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            miHoYo (米哈游)
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="game_mihoyo_tag">原神・星鉄・ZZZ</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- KURO GAMES -->
+                <div class="site-card game-trigger" data-game="kuro">
+                    <div class="site-card-img-wrap">
+                        <!-- IMG_REPLACE_KURO: company logo -->
+                        <img src="kuro.png" alt="KURO GAMES" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            KURO GAMES (庫洛)
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="game_kuro_tag">鳴潮・戦双</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hypergryph -->
+                <div class="site-card game-trigger" data-game="hypergryph">
+                    <div class="site-card-img-wrap">
+                        <!-- IMG_REPLACE_HYPERGRYPH: company logo -->
+                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/Hypergryph.png" alt="Hypergryph" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            Hypergryph (鷹角)
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="game_hyper_tag">明日方舟・終末地</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ananta (异环) -->
+                <div class="site-card game-trigger" data-game="ananta">
+                    <div class="site-card-img-wrap">
+                        <!-- IMG_REPLACE_ANANTA: game key art (not company) -->
+                        <img src="header.jpg" alt="Ananta" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            异环 (Ananta)
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="game_ananta_tag">超自然都市RPG</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- MICA Team / Sunborn -->
+                <div class="site-card game-trigger" data-game="mica">
+                    <div class="site-card-img-wrap">
+                        <!-- IMG_REPLACE_MICA: company logo -->
+                        <img src="https://iopwiki.com/images/9/9c/Sunborn_logo.png" alt="Sunborn Network" class="site-card-img">
+                        <div class="card-overlay"></div>
+                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                    </div>
+                    <div class="site-card-content">
+                        <h3 class="site-card-title">
+                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                            散爆 (MICA Team)
+                        </h3>
+                        <div class="card-footer">
+                            <span class="site-card-tag" data-i18n="game_mica_tag">少女前線2</span>
+                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1847,19 +2085,31 @@
         </div>
     </div>
 
+    <!-- GAME MODAL -->
+    <div class="game-modal" id="gameModal">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <button class="game-modal-close" id="closeGameModal"><i class="fas fa-times"></i></button>
+                <h2 class="game-modal-title" id="gameModalTitle"></h2>
+                <div class="game-modal-subtitle" id="gameModalSubtitle"></div>
+            </div>
+            <div class="game-modal-body" id="gameModalBody"></div>
+        </div>
+    </div>
+
     <footer id="mainFooter">
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-logo">
                     <div class="footer-logo-icon"><i class="fas fa-globe-asia" style="color:white"></i></div>
-                    <span data-i18n="site_title">中国ウェブサイト案内</span>
+                    <span data-i18n="site_title">CtW.web</span>
                 </div>
                 <ul class="footer-links">
                     <li><a href="#" id="footerAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
                     <li><a href="mailto:tuiochi@petalmail.com"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">お問い合わせ</span></a></li>
                 </ul>
                 <div class="footer-divider"></div>
-                <p class="copyright" data-i18n="footer_copy">© 2025 中国ウェブサイト案内 — 中国文化の対外発信を目的として運営</p>
+                <p class="copyright" data-i18n="footer_copy">© 2025 CtW.web — 中国文化の対外発信を目的として運営</p>
             </div>
         </div>
     </footer>
@@ -1872,7 +2122,7 @@
         // ==========================================
         const i18n = {
             ja: {
-                site_title: '中国ウェブサイト案内',
+                site_title: 'CtW.web',
                 nav_all: 'すべて',
                 nav_news: '最新情報',
                 nav_video: '動画',
@@ -1880,13 +2130,12 @@
                 nav_shopping: 'ショッピング',
                 nav_social: 'ソーシャル',
                 nav_map: '地図',
+                nav_games: 'ゲーム',
                 nav_about: 'サイト紹介',
                 hero_badge: '中国トップサービスを厳選紹介',
                 hero_title: '中国の人気<span>ウェブサービス</span>を<br>日本語でわかりやすく',
                 hero_sub: '動画・音楽・ショッピング・SNS・地図など<br>あらゆるカテゴリを網羅した総合ガイド',
-                stat_services: '掲載サービス',
-                stat_categories: 'カテゴリー',
-                stat_lang: '日本語対応',
+                slogan_main: '世界へ',
                 card_detail: '詳細を見る',
                 detail_visit: '公式サイトを訪問',
                 // news section
@@ -1898,8 +2147,6 @@
                 news_cate_live: 'ライブ配信',
                 news_cate_event: 'イベント',
                 news_cate_collab: 'コラボ',
-                news_mihoyogift_title: 'miHoYo 公式グッズ通販（常設）',
-                news_mihoyogift_excerpt: '原神・崩壊シリーズなど miHoYo 全タイトルの公式グッズを購入できます。淘宝（タオバオ）では「miHoYo旗艦店」で検索しても購入可能です。なお、中国国外への配送には対応していない場合があります。',
                 news_wwlive_title: '鳴潮「新世界へ」ライブコンサート Bilibili独占配信中',
                 news_wwlive_excerpt: '鳴潮「致予新世界」ライブコンサートがBilibiliに独占配信されました。いつでもフル回放をご覧いただけます。',
                 news_readmore: '続きを読む',
@@ -1914,6 +2161,8 @@
                 sec_social_sub: '中国の主要SNSプラットフォーム',
                 sec_map: '地図・ナビゲーション',
                 sec_map_sub: '中国の主要マップサービス',
+                sec_games: 'ゲーム',
+                sec_games_sub: '中国を代表するゲームメーカーと人気タイトル',
                 // cards
                 bili_desc: '中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。',
                 bili_tag: '動画共有',
@@ -1939,6 +2188,12 @@
                 amap_tag: '地図サービス',
                 baidu_desc: '百度が提供する地図サービス。検索エンジンと連携。',
                 baidu_tag: 'ナビゲーション',
+                // game cards
+                game_mihoyo_tag: '原神・星鉄・ZZZ',
+                game_kuro_tag: '鳴潮・戦双',
+                game_hyper_tag: '明日方舟・終末地',
+                game_ananta_tag: '超自然都市RPG',
+                game_mica_tag: '少女前線2',
                 // tutorial card
                 tut_bili_card_title: 'Bilibiliの簡易使用教程',
                 tut_bili_card_desc: 'Bilibiliの基本的な使い方をわかりやすくまとめたガイドです。アカウント登録から動画視聴まで解説しています。',
@@ -1959,7 +2214,7 @@
                 about_contact_suffix: 'までご連絡ください。',
                 // footer
                 footer_contact: 'お問い合わせ',
-                footer_copy: '© 2025 中国ウェブサイト案内 — 中国文化の対外発信を目的として運営',
+                footer_copy: '© 2025 CtW.web — 中国文化の対外発信を目的として運営',
                 // detail modal
                 detail_titles: {
                     bilibili: 'Bilibili (ビリビリ)', douyin: '抖音 (Douyin/TikTok)',
@@ -1993,7 +2248,7 @@
                 }
             },
             en: {
-                site_title: 'China Website Guide',
+                site_title: 'CtW.web',
                 nav_all: 'All',
                 nav_news: 'Latest',
                 nav_video: 'Video',
@@ -2001,13 +2256,12 @@
                 nav_shopping: 'Shopping',
                 nav_social: 'Social',
                 nav_map: 'Maps',
+                nav_games: 'Games',
                 nav_about: 'About',
                 hero_badge: 'Curated Top Chinese Services',
                 hero_title: 'Explore China\'s Most Popular<br><span>Web Services</span> in English',
                 hero_sub: 'Your comprehensive guide to video, music,<br>shopping, social media & maps',
-                stat_services: 'Services Listed',
-                stat_categories: 'Categories',
-                stat_lang: 'English Support',
+                slogan_main: 'To the World',
                 card_detail: 'View Details',
                 detail_visit: 'Visit Official Site',
                 // news section
@@ -2019,8 +2273,6 @@
                 news_cate_live: 'Live Stream',
                 news_cate_event: 'Event',
                 news_cate_collab: 'Collaboration',
-                news_mihoyogift_title: 'miHoYo Official Merch Store (Permanent)',
-                news_mihoyogift_excerpt: 'The official destination for all miHoYo merchandise — including Genshin Impact, Honkai series, and more. You can also search "miHoYo旗舰店" on Taobao. Note: international shipping may not be available.',
                 news_birthday_title: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
                 news_birthday_excerpt: 'The 2026 Wuthering Waves Birthday Event will be streamed on Bilibili in video format, released in three segments at 18:00, 18:30, and 19:00 (Beijing Time).',
                 news_niko_title: 'Niko to Host Exclusive Live Stream on Bilibili',
@@ -2039,6 +2291,8 @@
                 sec_social_sub: 'Major social media platforms in China',
                 sec_map: 'Maps & Navigation',
                 sec_map_sub: 'Leading map services in China',
+                sec_games: 'Games',
+                sec_games_sub: "China's leading game studios and popular titles",
                 // cards
                 bili_desc: 'China\'s most diverse video platform covering anime, education, gaming, music and more.',
                 bili_tag: 'Video Sharing',
@@ -2064,6 +2318,12 @@
                 amap_tag: 'Map Service',
                 baidu_desc: 'Baidu\'s map service, integrated with its powerful search engine.',
                 baidu_tag: 'Navigation',
+                // game cards
+                game_mihoyo_tag: 'Genshin · HSR · ZZZ',
+                game_kuro_tag: 'WuWa · PGR',
+                game_hyper_tag: 'Arknights · Endfield',
+                game_ananta_tag: 'Urban Open-World RPG',
+                game_mica_tag: 'GF2',
                 // tutorial card
                 tut_bili_card_title: 'Bilibili Quick Start Guide',
                 tut_bili_card_desc: 'A beginner-friendly guide to using Bilibili. Covers account registration, video browsing, and more.',
@@ -2084,7 +2344,7 @@
                 about_contact_suffix: '',
                 // footer
                 footer_contact: 'Contact',
-                footer_copy: '© 2025 China Website Guide — Promoting Chinese culture internationally',
+                footer_copy: '© 2025 CtW.web — Promoting Chinese culture internationally',
                 // detail modal
                 detail_titles: {
                     bilibili: 'Bilibili', douyin: 'Douyin (TikTok China)',
@@ -2125,7 +2385,7 @@
             currentLang = lang;
             const t = i18n[lang];
             document.getElementById('htmlRoot').setAttribute('lang', lang === 'ja' ? 'ja' : 'en');
-            document.title = t.site_title + (lang === 'ja' ? '' : ' | China Website Guide');
+            document.title = t.site_title;
 
             // Update all data-i18n elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -2370,30 +2630,134 @@
                 }
             });
 
+            // ==========================================
+            // GAME MODAL
+            // ==========================================
+            const gameData = {
+                mihoyo: {
+                    title_ja: 'miHoYo（米哈游）',
+                    title_en: 'miHoYo',
+                    subtitle_ja: '原神・崩壊：スターレイル・ゼンレスゾーンゼロ',
+                    subtitle_en: 'Genshin Impact · Honkai: Star Rail · Zenless Zone Zero',
+                    games: [
+                        { name_ja:'原神', name_en:'Genshin Impact', icon:'genshin.png',
+                          bili:'https://space.bilibili.com/401742377',
+                          merch:'https://www.mihoyogift.com', merch_ja:'miHoYo公式グッズ', merch_en:'miHoYo Official Merch' },
+                        { name_ja:'崩壊：スターレイル', name_en:'Honkai: Star Rail', icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/HonkaiStarRailIcon.png',
+                          bili:'https://space.bilibili.com/1340190821',
+                          merch:'https://www.mihoyogift.com', merch_ja:'miHoYo公式グッズ', merch_en:'miHoYo Official Merch' },
+                        { name_ja:'ゼンレスゾーンゼロ', name_en:'Zenless Zone Zero', icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/ZZZ%20miYoYo%20logo.jpg',
+                          bili:'https://space.bilibili.com/1636034895',
+                          merch:'https://www.mihoyogift.com', merch_ja:'miHoYo公式グッズ', merch_en:'miHoYo Official Merch' }
+                    ]
+                },
+                kuro: {
+                    title_ja: 'KURO GAMES（庫洛ゲーム）',
+                    title_en: 'KURO GAMES',
+                    subtitle_ja: '鳴潮・戦双帕弥什',
+                    subtitle_en: 'Wuthering Waves · Punishing: Gray Raven',
+                    games: [
+                        { name_ja:'鳴潮', name_en:'Wuthering Waves', icon:'https://img.tapimg.com/market/images/98aafaa86349a5fee8beea6928b7f140.png/appicon',
+                          bili:'https://space.bilibili.com/1955897084',
+                          merch:'https://kurogames.tmall.com/category.htm?spm=pc_detail.30350276.shop_block.dshopinfo.73b37dd6sCiltZ', merch_ja:'公式グッズ', merch_en:'Official Merch' },
+                        { name_ja:'戦双帕弥什', name_en:'Punishing: Gray Raven', icon:'OADD2.jpg',
+                          bili:'https://live.bilibili.com/21242511',
+                          merch:'https://kurogames.tmall.com/category.htm?spm=pc_detail.30350276.shop_block.dshopinfo.73b37dd6sCiltZ', merch_ja:'公式グッズ', merch_en:'Official Merch' }
+                    ]
+                },
+                hypergryph: {
+                    title_ja: 'Hypergryph（鷹角ネットワーク）',
+                    title_en: 'Hypergryph',
+                    subtitle_ja: '明日方舟・明日方舟：終末地',
+                    subtitle_en: 'Arknights · Arknights: Endfield',
+                    games: [
+                        { name_ja:'明日方舟', name_en:'Arknights', icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/ArknightsAppIcon.png',
+                          bili:'https://space.bilibili.com/161775300',
+                          merch:'https://mingrifangzhou.tmall.com/category.htm?spm=pc_detail.30350276.shop_block.dshopinfo.23ff50a63gOT9K', merch_ja:'公式グッズ', merch_en:'Official Merch' },
+                        { name_ja:'明日方舟：終末地', name_en:'Arknights: Endfield', icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/ArknightsEndfieldAppIcon.png',
+                          bili:'https://space.bilibili.com/1265652806',
+                          merch:'https://arknightsendfieldyx.tmall.com/category.htm?spm=pc_detail.30350276.shop_block.dshopinfo.4f8c6d8btey35O', merch_ja:'公式グッズ', merch_en:'Official Merch' }
+                    ]
+                },
+                ananta: {
+                    title_ja: '异環（Ananta / NTE）',
+                    title_en: 'Ananta (NTE)',
+                    subtitle_ja: '超自然都市オープンワールドRPG',
+                    subtitle_en: 'Supernatural Urban Open-World RPG',
+                    games: [
+                        { name_ja:'异環', name_en:'Ananta (NTE)', icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/YH%20APP.png',
+                          bili:'https://space.bilibili.com/3546636978489848',
+                          merch:'https://yh.wanmei.com/', merch_ja:'公式サイト', merch_en:'Official Website' }
+                    ]
+                },
+                mica: {
+                    title_ja: '散爆ネットワーク（MICA Team）',
+                    title_en: 'Sunborn Network (MICA Team)',
+                    subtitle_ja: '少女前線2：追放',
+                    subtitle_en: "Girls' Frontline 2: Exilium",
+                    games: [
+                        { name_ja:'少女前線2：追放', name_en:"Girls' Frontline 2: Exilium", icon:'https://commons.moegirl.org.cn/zh/Special:FilePath/Gfzf%20Logo%20CHS.png',
+                          bili:'https://space.bilibili.com/401315197',
+                          merch:'https://girlsfrontline.tmall.com/category.htm?spm=pc_detail.30350276.shop_block.dshopinfo.40c13fe3fieK8M', merch_ja:'公式グッズ', merch_en:'Official Merch' }
+                    ]
+                }
+            };
+
+            const gameModal = document.getElementById('gameModal');
+            const gameModalTitle = document.getElementById('gameModalTitle');
+            const gameModalSubtitle = document.getElementById('gameModalSubtitle');
+            const gameModalBody = document.getElementById('gameModalBody');
+            const closeGameModal = document.getElementById('closeGameModal');
+            const gameBiliLabel = { ja: 'Bilibili公式', en: 'Bilibili Official' };
+
+            function openGameModal(key) {
+                const d = gameData[key];
+                if (!d) return;
+                const isJa = currentLang === 'ja';
+                gameModalTitle.textContent = isJa ? d.title_ja : d.title_en;
+                gameModalSubtitle.textContent = isJa ? d.subtitle_ja : d.subtitle_en;
+                const biliLabel = isJa ? gameBiliLabel.ja : gameBiliLabel.en;
+                gameModalBody.innerHTML = d.games.map(g => `
+                    <div class="game-item">
+                        <!-- IMG_REPLACE_GAME_${g.icon}: replace with actual game icon -->
+                        <img src="${g.icon}" alt="${g.name_en}" class="game-item-icon">
+                        <div class="game-item-info">
+                            <h4 class="game-item-name">${isJa ? g.name_ja : g.name_en}</h4>
+                            <div class="game-item-links">
+                                <a href="${g.bili}" target="_blank" class="game-link-btn game-link-bili">
+                                    <i class="fab fa-bilibili"></i> ${biliLabel}
+                                </a>
+                                <a href="${g.merch}" target="_blank" class="game-link-btn game-link-merch">
+                                    <i class="fas fa-shopping-bag"></i> ${isJa ? g.merch_ja : g.merch_en}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                gameModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            document.querySelectorAll('.game-trigger').forEach(card => {
+                card.addEventListener('click', function() {
+                    const key = this.getAttribute('data-game');
+                    openGameModal(key);
+                });
+            });
+
+            closeGameModal.addEventListener('click', () => {
+                gameModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            gameModal.addEventListener('click', e => {
+                if (e.target === gameModal) {
+                    gameModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
             // News modal data
             const newsData = {
-                news_mihoyogift: {
-                    platform: 'taobao',
-                    platformIcon: 'fas fa-shopping-cart',
-                    platformLabel_ja: 'miHoYo Gift',
-                    platformLabel_en: 'miHoYo Gift',
-                    date: '常設',
-                    isNew: false,
-                    // IMG_REPLACE_MIHOYOGIFT: replace img_src value with actual image path if needed
-                    img_src: 'mihoyogift.jpg',
-                    title_ja: 'miHoYo 公式グッズ通販（常設）',
-                    title_en: 'miHoYo Official Merch Store (Permanent)',
-                    body_ja: `<p><strong>miHoYo（米哈游）</strong> の全シリーズ——『原神』『崩壊：スターレイル』『崩壊3rd』『ゼンレスゾーンゼロ』などの<strong>公式グッズ</strong>を購入できる公式通販サイトです。</p>
-<div class="news-highlight-box">🛍️ 対応シリーズ：原神 / 崩壊：スターレイル / 崩壊3rd / ゼンレスゾーンゼロ など<br>🏪 淘宝での購入：「miHoYo旗艦店」で検索<br>⚠️ 注意：中国国外への配送に対応していない場合があります</div>
-<p>miHoYo 公式グッズストアでは、キャラクターフィギュア、アクリルスタンド、アパレル、限定コラボアイテムなど、幅広い商品を取り扱っています。</p>
-<p>中国国外から購入を希望される場合は、配送ポリシーを事前にご確認いただくか、日本への転送サービスをご利用いただくことをおすすめします。</p>
-<p style="margin-top:18px;"><a href="https://www.mihoyogift.com" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(109,40,217,0.4)\\';\" onmouseout=\"this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-shopping-bag"></i> miHoYo Gift 公式サイトを見る</a></p>`,
-                    body_en: `<p><strong>miHoYo's official merchandise store</strong> — your one-stop shop for all official goods from <strong>Genshin Impact, Honkai: Star Rail, Honkai Impact 3rd, Zenless Zone Zero</strong>, and more.</p>
-<div class="news-highlight-box">🛍️ Supported titles: Genshin Impact / Honkai: Star Rail / Honkai Impact 3rd / Zenless Zone Zero & more<br>🏪 Also on Taobao: search "miHoYo旗舰店"<br>⚠️ Note: International shipping may not be available</div>
-<p>The official miHoYo gift store carries a wide range of products — character figures, acrylic stands, apparel, limited edition collaborations, and more.</p>
-<p>If you're outside China, we recommend checking the shipping policy first, or consider using a forwarding service to receive items internationally.</p>
-<p style="margin-top:18px;"><a href="https://www.mihoyogift.com" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform=\\'translateY(-2px)\\';this.style.boxShadow=\\'0 6px 20px rgba(109,40,217,0.4)\\';\" onmouseout=\"this.style.transform=\\'\\';this.style.boxShadow=\\'none\\';"><i class="fas fa-shopping-bag"></i> Visit miHoYo Gift Official Site</a></p>`
-                },
                 news_wwlive: {
                     platform: 'bilibili',
                     platformIcon: 'fas fa-video',
