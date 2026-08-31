@@ -1604,6 +1604,27 @@
             <p class="section-subtitle" data-i18n="sec_news_sub">各プラットフォームの注目ニュース・限定情報を随時更新</p>
             <div class="news-grid">
 
+                <!-- Article: Endfield x UNIQLO Collaboration -->
+                <div class="news-card" data-news="news_efut">
+                    <div class="news-card-header" style="position:relative;">
+                        <!-- IMG_REPLACE_EFUT: replace src with actual image path if needed -->
+                        <img src="efut.jpg" alt="终末地 x 优衣库联动" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag weibo"><i class="fab fa-weibo"></i> Weibo</span>
+                            <span class="news-badge-new">NEW</span>
+                            <span class="news-date">2026.09.01</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_efut_title">终末地×优衣库联动已开启</h3>
+                        <p class="news-excerpt" data-i18n="news_efut_excerpt">终末地与优衣库的联动企划正式开启，为期一年。详细内容可在微博官方查看。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_collab">コラボ</span></span>
+                            <span class="news-read-more" data-news="news_efut"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Article: Wuthering Waves Live Concert -->
                 <div class="news-card" data-news="news_wwlive">
                     <div class="news-card-header" style="position:relative;">
@@ -2147,6 +2168,8 @@
                 news_cate_live: 'ライブ配信',
                 news_cate_event: 'イベント',
                 news_cate_collab: 'コラボ',
+                news_efut_title: '明日方舟：終末地 × UNIQLO コラボ開催中',
+                news_efut_excerpt: '『明日方舟：終末地』と UNIQLO のコラボが開催中。期間は1年間。詳細はWeibo公式にて確認できます。',
                 news_wwlive_title: '鳴潮「新世界へ」ライブコンサート Bilibili独占配信中',
                 news_wwlive_excerpt: '鳴潮「致予新世界」ライブコンサートがBilibiliに独占配信されました。いつでもフル回放をご覧いただけます。',
                 news_readmore: '続きを読む',
@@ -2273,6 +2296,8 @@
                 news_cate_live: 'Live Stream',
                 news_cate_event: 'Event',
                 news_cate_collab: 'Collaboration',
+                news_efut_title: 'Arknights: Endfield x UNIQLO Collaboration Now Live',
+                news_efut_excerpt: 'The Arknights: Endfield x UNIQLO collab is now live for one full year. Full details are available on the official Weibo account.',
                 news_birthday_title: 'Wuthering Waves Birthday Event Starts at 18:00 (Beijing Time), May 30',
                 news_birthday_excerpt: 'The 2026 Wuthering Waves Birthday Event will be streamed on Bilibili in video format, released in three segments at 18:00, 18:30, and 19:00 (Beijing Time).',
                 news_niko_title: 'Niko to Host Exclusive Live Stream on Bilibili',
@@ -2758,6 +2783,32 @@
 
             // News modal data
             const newsData = {
+                news_efut: {
+                    platform: 'weibo',
+                    platformIcon: 'fab fa-weibo',
+                    platformLabel_ja: 'Weibo',
+                    platformLabel_en: 'Weibo',
+                    date: '2026.09.01',
+                    isNew: true,
+                    // IMG_REPLACE_EFUT: replace img_src value with actual image path if needed
+                    img_src: 'efut.jpg',
+                    title_ja: '明日方舟：終末地 × UNIQLO コラボ開催中',
+                    title_en: 'Arknights: Endfield x UNIQLO Collaboration Now Live',
+                    body_ja: `<p>『<strong>明日方舟：終末地（Arknights: Endfield）</strong>』と <strong>UNIQLO（優衣庫）</strong> のコラボレーションが<strong>開催中</strong>です。期間は<strong>1年間</strong>。</p>
+<div class="news-highlight-box">👕 コラボ：明日方舟：終末地 × UNIQLO<br>📅 期間：1年間<br>📢 詳細：Weibo公式アカウントにて確認可能</div>
+<p>コラボの詳細については、以下のリンクから Weibo の公式投稿をご確認ください。</p>
+<p style="margin-top:18px;"><a href="https://weibo.com/7745672941/ReHI9aIo3" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#ff6600,#e65100);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(255,102,0,0.4)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fab fa-weibo"></i> Weibo 公式投稿を見る</a></p>
+<p style="margin-top:22px;">デザインに興味のある方は、こちらの特設サイトもご覧ください。</p>
+<p style="margin-top:10px;"><a href="https://www.bilibili.com/toy/skland-uniqlo-2026/index.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:13px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-palette"></i> デザイン特設サイト（Bilibili）</a></p>
+<p style="margin-top:22px;font-size:13px;color:rgba(255,255,255,0.6);">原作者（Bilibili）：<a href="https://www.bilibili.com/video/BV16uhN68EK9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=97848b0701a369e36ff762457473edae" target="_blank" style="color:#4fc3f7;text-decoration:none;">動画を見る</a></p>`,
+                    body_en: `<p>The collaboration between <strong>Arknights: Endfield</strong> and <strong>UNIQLO</strong> is now <strong>live</strong>, running for <strong>one full year</strong>.</p>
+<div class="news-highlight-box">👕 Collab: Arknights: Endfield x UNIQLO<br>📅 Duration: 1 year<br>📢 Details: Available on the official Weibo account</div>
+<p>For full details about the collaboration, check out the official Weibo post via the link below.</p>
+<p style="margin-top:18px;"><a href="https://weibo.com/7745672941/ReHI9aIo3" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#ff6600,#e65100);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(255,102,0,0.4)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fab fa-weibo"></i> View Official Weibo Post</a></p>
+<p style="margin-top:22px;">Interested in the designs? Check out this dedicated site as well.</p>
+<p style="margin-top:10px;"><a href="https://www.bilibili.com/toy/skland-uniqlo-2026/index.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:13px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-palette"></i> Design Special Site (Bilibili)</a></p>
+<p style="margin-top:22px;font-size:13px;color:rgba(255,255,255,0.6);">Original author (Bilibili): <a href="https://www.bilibili.com/video/BV16uhN68EK9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=97848b0701a369e36ff762457473edae" target="_blank" style="color:#4fc3f7;text-decoration:none;">Watch the video</a></p>`
+                },
                 news_wwlive: {
                     platform: 'bilibili',
                     platformIcon: 'fas fa-video',
