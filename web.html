@@ -10,21 +10,20 @@
     <meta name="theme-color" content="#e53935">
 
     <!-- ═══ OGP / SNSシェア用（Xでリンクカードを出すために必須） ═══ -->
-    <!-- ※ 本番ドメイン確定後、og:url と og:image を絶対URLに置き換えてください -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CtW.web">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="中国のWebサービス総合ガイド | CtW.web">
     <meta property="og:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。">
-    <meta property="og:image" content="header.jpg">
+    <meta property="og:image" content="https://webctwguid.com/header.jpg">
     <meta property="og:image:alt" content="CtW.web - 中国のWebサービス総合ガイド">
-    <meta property="og:url" content="">
+    <meta property="og:url" content="https://webctwguid.com/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="中国のWebサービス総合ガイド | CtW.web">
     <meta name="twitter:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。">
-    <meta name="twitter:image" content="header.jpg">
+    <meta name="twitter:image" content="https://webctwguid.com/header.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -853,6 +852,52 @@
             box-shadow: 0 8px 24px var(--primary-glow);
         }
 
+        /* ========== PHONE COMPARE FLOATING BUTTON ========== */
+        .phone-fab {
+            position: fixed;
+            bottom: 92px;
+            right: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 20px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 6px 20px var(--primary-glow);
+            z-index: 998;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .phone-fab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px var(--primary-glow);
+        }
+        .phone-fab i { font-size: 15px; }
+        .phone-fab-close {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            color: #fff;
+            font-size: 11px;
+            cursor: pointer;
+            margin-left: 2px;
+            line-height: 1;
+            transition: background 0.2s;
+        }
+        .phone-fab-close:hover { background: rgba(255,255,255,0.45); }
+        .phone-fab.hidden { display: none; }
+        @media (max-width: 480px) {
+            .phone-fab { right: 14px; bottom: 84px; padding: 11px 16px; font-size: 13px; }
+        }
+
         /* ========== CATEGORY PILLS ========== */
         .category-bar {
             display: flex;
@@ -1571,6 +1616,7 @@
                     <li class="nav-item"><a href="#" data-cate="map"><i class="fas fa-map-marked-alt"></i> <span data-i18n="nav_map">地図</span></a></li>
                     <li class="nav-item"><a href="#" data-cate="news"><i class="fas fa-newspaper"></i> <span data-i18n="nav_news">最新情報</span></a></li>
                     <li class="nav-item"><a href="#" data-cate="games"><i class="fas fa-gamepad"></i> <span data-i18n="nav_games">ゲーム</span></a></li>
+                    <li class="nav-item"><a href="phones.html" target="_blank" rel="noopener" id="navPhones" style="white-space:nowrap;"><i class="fas fa-mobile-alt"></i> <span data-i18n="nav_phones">スマホ比較</span></a></li>
                     <li class="nav-item special"><a href="#" id="openAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
                 </ul>
                 <!-- Language Switch -->
@@ -2149,6 +2195,13 @@
 
     <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
 
+    <!-- Phone Compare floating button -->
+    <a href="phones.html" target="_blank" rel="noopener" class="phone-fab" id="phoneFab">
+        <i class="fas fa-mobile-alt"></i>
+        <span data-i18n="nav_phones">スマホ比較</span>
+        <span class="phone-fab-close" id="phoneFabClose" title="閉じる"><i class="fas fa-times"></i></span>
+    </a>
+
     <script>
         // ==========================================
         // i18n 翻译字典
@@ -2165,6 +2218,7 @@
                 nav_social: 'ソーシャル',
                 nav_map: '地図',
                 nav_games: 'ゲーム',
+                nav_phones: 'スマホ比較',
                 nav_about: 'サイト紹介',
                 hero_badge: '中国トップサービスを厳選紹介',
                 hero_title: '中国の人気<span>ウェブサービス</span>を<br>日本語でわかりやすく',
@@ -2290,6 +2344,7 @@
                 nav_social: 'Social',
                 nav_map: 'Maps',
                 nav_games: 'Games',
+                nav_phones: 'Phone Compare',
                 nav_about: 'About',
                 hero_badge: 'Curated Top Chinese Services',
                 hero_title: 'Explore China\'s Most Popular<br><span>Web Services</span> in English',
@@ -2505,6 +2560,26 @@
                 backToTop.classList.toggle('show', window.scrollY > 300);
             });
             backToTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+            // ═══ スマホ比較フローティングボタン：閉じる処理 ═══
+            const PHONE_FAB_KEY = 'ctw_phonefab_closed';
+            const phoneFab = document.getElementById('phoneFab');
+            if (phoneFab) {
+                try {
+                    if (localStorage.getItem(PHONE_FAB_KEY) === '1') {
+                        phoneFab.classList.add('hidden');
+                    }
+                } catch (e) {}
+                const fabClose = document.getElementById('phoneFabClose');
+                if (fabClose) {
+                    fabClose.addEventListener('click', function(ev) {
+                        ev.preventDefault();
+                        ev.stopPropagation();
+                        phoneFab.classList.add('hidden');
+                        try { localStorage.setItem(PHONE_FAB_KEY, '1'); } catch (e) {}
+                    });
+                }
+            }
 
             // 导航分类
             const navItems = document.querySelectorAll('.nav-item a[data-cate]');

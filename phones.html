@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja" data-page-node-id="ByoDsAEl9N1lljoUcsA2sY">
+<head data-page-node-id="iu9OP920D9wvECMjOWfgcQ">
+<meta charset="UTF-8" data-page-node-id="KHAD7DkCdifOyyHO41aSNz">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="2DlRhRoLSd6PyF7bAbgaGZ">
+<title>中日スマホ スペック比較ツール | CtW.web</title>
+<style>
+:root{
+  --primary:#e53935; --primary-light:#ffebee; --text:#1a1a2e; --text-muted:#6b7280;
+  --border:#e8ecf4; --bg:#f4f6fb; --card:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hiragino Sans','Yu Gothic','Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:40px 16px}
+.wrap{max-width:860px;margin:0 auto}
+.tag{display:inline-block;background:var(--primary-light);color:var(--primary);font-weight:600;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+h1{font-size:25px;margin-bottom:6px}
+.sub{color:var(--text-muted);font-size:14px;margin-bottom:24px}
+.sub em{color:var(--primary);font-style:normal;font-weight:600}
+
+.pick{background:var(--card);border-radius:16px;padding:22px;border:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:22px}
+.pick-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pick-box{flex:1;min-width:230px}
+.pick-box label{display:block;font-size:12px;color:var(--text-muted);margin-bottom:6px;font-weight:600}
+.pick-box select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);font-size:15px;background:#fff;color:var(--text);cursor:pointer}
+.vs{font-weight:800;color:var(--primary);font-size:16px}
+.pick-hint{font-size:12px;color:var(--text-muted);margin-top:12px}
+
+table.cmp{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+table.cmp th,table.cmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);font-size:14px;vertical-align:top}
+table.cmp thead th{background:#1a1a2e;color:#fff}
+table.cmp thead th small{display:block;font-weight:400;font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+table.cmp thead th .flag{margin-right:6px}
+table.cmp tbody th{background:#f7f8fb;width:22%;font-weight:600;font-size:13px;color:var(--text-muted);white-space:nowrap}
+table.cmp tbody tr:last-child td,table.cmp tbody tr:last-child th{border-bottom:none}
+table.cmp td.hl{background:#fff8f7}
+.hl-y{background:#fffde7}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px;font-weight:600}
+.b-cn{background:#fce4ec;color:#c2185b}
+.b-jp{background:#e3f2fd;color:#1565c0}
+.b-intl{background:#e8f5e9;color:#2e7d32}
+.empty{padding:60px 20px;text-align:center;color:var(--text-muted);font-size:15px}
+.empty i{display:block;font-size:40px;margin-bottom:14px;opacity:.4}
+.src{font-size:11px;color:var(--text-muted);margin-top:16px;border-top:1px solid var(--border);padding-top:10px}
+@media(max-width:640px){table.cmp{font-size:12px}table.cmp th,table.cmp td{padding:10px}}
+</style>
+</head>
+<body data-page-node-id="oIG6WAVmoe950t4umeJLtB">
+<div class="wrap" data-page-node-id="gDPz8zyBFwNjRfBRDumQyI">
+  <span class="tag" data-page-node-id="TVKrtkOZDOQObpG9WBVcSg">CtW.web 特集ツール ─ 中国vs日本スマホ比較</span>
+  <p style="margin-bottom:16px;" data-page-node-id="0iCCGoWqROT7QOOAkSBeZG"><a href="index.html" style="color:var(--text-muted);text-decoration:none;font-size:13px;" data-page-node-id="NBkaldtQA8hGBVNrXck0VA">&larr; メインページに戻る</a></p>
+  <h1 data-page-node-id="CZyBsAC0oV0xOjlfnsQXNo">中日スマホ スペック比較</h1>
+  <p class="sub" data-page-node-id="Bh7swdwxLkvTUEQCuTNOur">左と右で機種を選ぶと、発売時期・チップ・カメラなどを並べて比較。<em data-page-node-id="Hy3d3lBGjrUkNU8I4Cmlv2">「中国で何が主流か」「日本とどれだけ違うか」を何度も調べ直す人向け。</em></p>
+
+  <div class="pick" data-page-node-id="7v3t0wWJRaW32SCoCiGDBa">
+    <div class="pick-row" data-page-node-id="2vUF75cNocDTcllD7NJCZ0">
+      <div class="pick-box" data-page-node-id="odepoOCz0wKqmSG5iHm9WK">
+        <label data-page-node-id="AgAUA3lT09MrgfWxEgPtwM">1台目（A）</label>
+        <select id="selA" data-page-node-id="mabreNkHII5ZMpkGwiuiIv"></select>
+      </div>
+      <div class="vs" data-page-node-id="5EZSqVy7MRKIhx5NJyL6Dh">VS</div>
+      <div class="pick-box" data-page-node-id="jf1hXRrcl8ERTzpTfawg6F">
+        <label data-page-node-id="J3YGFsqoseurSmWyNcBz9s">2台目（B）</label>
+        <select id="selB" data-page-node-id="aZhZ4yGrkBe2QF6AXXeexF"></select>
+      </div>
+    </div>
+    <div class="pick-hint" data-page-node-id="jQuxD8EBXiRwH8B85MZqMa">3層（中国本土機 / 日本で買える中国機 / 日本本土機）を収録。同じ機種でも「中国版と日本版」で仕様が違う例（例：OPPO Reno16）を比べると、発売時期のズレ・構成差が一目瞭然です。</div>
+  </div>
+
+  <div id="result" data-page-node-id="OKWr4t9MfnT24AvnDzJ6Sa"></div>
+  <p class="src" id="srcnote" data-page-node-id="xfPbWq7Pdw1EtnUXUFu0Dp"></p>
+</div>
+
+<script>
+/* =========================================================
+   機種データベース（JSON風に一元管理）
+   ★ 追加/更新はここに1機種分を足すだけ。ページ側は自動で対応 ★
+   group: cn=中国本土機 / jp=日本で買える中国機 / jpnav=日本本土機 / ref=参照(Apple等)
+   検証状態: verified=データ確認済 / sample=構造サンプル(要データ確認)
+   ========================================================= */
+const PHONES = [
+    // ══ A層 中国本土機（2026-09現在・中国最新在售の国産旗艦） ══
+    {id:"xiaomi17_cn", name:"Xiaomi 17（国行・最新）", group:"cn", verified:true, release:"中国発売 2025年9月27日",
+     soc:"Snapdragon 8 Elite Gen5 (3nm)",
+     cam:"50MP(Leica,f/1.67,OIS) + 50MP望遠(60mm) + 50MP超広角",
+     screen:"6.3型 OLED直屏 / 2656×1220 / 120Hz",
+     battery:"7000mAh / 100W有線・50W無線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥4,499元（約9.0万円）〜",
+     note:"日本では17標準版は発売されず。小屏+大電池が特徴"},
+    {id:"huawei_mate80", name:"HUAWEI Mate 80（国行・最新標準版）", group:"cn", verified:true, release:"中国発売 2025年11月28日",
+     soc:"麒麟 9020",
+     cam:"50MP超光变主摄(f/1.4-4.0,OIS) + 40MP超広角 + 12MP潜望(5.5×) + 紅楓原色",
+     screen:"6.75型 OLED直屏 / 2832×1280 / 120Hz",
+     battery:"5750mAh / 66W有線・50W無線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥4,699元〜（2026/9時点公式¥5,499〜）",
+     note:"日本では正規購入不可。麒麟自社チップ・可変絞り"},
+    {id:"vivo_x300", name:"vivo X300（国行・最新標準版）", group:"cn", verified:true, release:"中国発売 2025年10月17日",
+     soc:"Dimensity 9500",
+     cam:"2億画素蔡司主摄(f/1.68,OIS) + 50MP潜望 + 50MP超広角",
+     screen:"6.31型 AMOLED直屏 / 120Hz",
+     battery:"6040mAh / 90W有線・40W無線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥4,599元（約9.2万円）〜",
+     note:"日本未進出（vivoは日本撤退）"},
+    {id:"oppo_findx9", name:"OPPO Find X9（国行・標準版）", group:"cn", verified:true, release:"中国発売 2025年10月22日",
+     soc:"Dimensity 9500",
+     cam:"50MP主摄(哈蘇,f/1.6,OIS) + 50MP超広角 + 50MP潜望(3×) + 200万副摄",
+     screen:"6.59型 AMOLED直屏 / 2760×1256 / 120Hz",
+     battery:"7025mAh / 80W有線・50W無線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥4,399元（約8.8万円）〜",
+     note:"日本ではFind系列は未進出（Reno中端のみ）"},
+    {id:"honor_magic8", name:"HONOR Magic8（国行）", group:"cn", verified:true, release:"中国発売 2025年10月23日（Magic9は9/28発表・未上市）",
+     soc:"Snapdragon 8 Elite Gen5",
+     cam:"50MP主摄 + 50MP超広角 + 64MP潜望(3×)",
+     screen:"6.58型 OLED直屏 / 2760×1256 / 120Hz",
+     battery:"7000mAh / 90W有線・80W無線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥4,499元（約9.0万円）〜",
+     note:"日本未進出"},
+    {id:"oppo_reno16_cn", name:"OPPO Reno16（国行）", group:"cn", verified:true, release:"中国発売 2026年5月29日",
+     soc:"Dimensity 8550 SUPER",
+     cam:"2億画素広角(f/1.8,OIS) + 50MP超広角 + 50MP潜望(3.5×,OIS)",
+     screen:"6.32型 AMOLED / 2640×1216 / 120Hz",
+     battery:"6700mAh / 80W有線",
+     ram:"12/16GB + 256GB~1TB",
+     price:"¥3,499元（約7万円）〜",
+     note:"国行は天玑8550SUPER（日本版Reno16はSnapdragon7Gen4で別物）。日本未進出の標準版"},
+    {id:"oppo_a6i", name:"OPPO A6i（国行）", group:"cn", verified:true, release:"中国発売 2025年9月12日",
+     soc:"Dimensity 6300",
+     cam:"50MP主摄(f/1.8) + 2MP深度",
+     screen:"6.67型 LCD / HD+(1604×720) / 120Hz",
+     battery:"6000mAh / 45W有線",
+     ram:"6/8GB + 128/256GB",
+     price:"¥899元（約1.8万円）〜",
+     note:"OPPO A5 5Gの国行換名款（同款・構成微調整）"},
+    {id:"redmi_note17pro_cn", name:"Redmi Note 17 Pro（国行）", group:"cn", verified:true, release:"中国発売 2026年7月14日",
+     soc:"Snapdragon 6s Gen 4",
+     cam:"50MP主摄(OIS) + 2MP深度",
+     screen:"6.83型 1.5K OLED / 2772×1280 / 120Hz",
+     battery:"9000mAh / 67W有線",
+     ram:"8/12GB + 128~512GB",
+     price:"¥1,599元（約3.2万円）〜",
+     note:"国行にPro Maxは無い。超特大バッテリーの中堅"},
+    {id:"huawei_changxiang90pm", name:"HUAWEI 畅享90 Pro Max（国行）", group:"cn", verified:true, release:"中国発売 2026年4月2日",
+     soc:"麒麟 8000",
+     cam:"50MP単眼(RYYB,f/1.9) + 前8MP",
+     screen:"6.84型 OLED / 2756×1272 / 120Hz",
+     battery:"8500mAh / 40W有線",
+     ram:"8GB + 128~512GB",
+     price:"¥1,699元（約3.4万円）〜",
+     note:"畅享系列初のPro Max。後置単眼の大容量型"},
+
+    // ══ B層 日本で買える中国機（2026-09現在） ══
+    {id:"xiaomi17ultra_jp", name:"Xiaomi 17 Ultra（日本版）", group:"jp", verified:true, release:"日本発売 2026年3月5日",
+     soc:"Snapdragon 8 Elite Gen5",
+     cam:"50MP 1型主摄(LOFIC) + 200MP可変式光学変焦 + 50MP超広角(徠卡)",
+     screen:"6.9型 HyperRGB OLED / 1-120Hz",
+     battery:"6000mAh / 90W有線",
+     ram:"16GB + 512GB/1TB",
+     price:"¥199,800〜（16+512GB）",
+     note:"日本では17標準版は未発売、Ultraのみ。FeliCa対応"},
+    {id:"oppo_reno16", name:"OPPO Reno16 5G（日本版）", group:"jp", verified:true, release:"日本発売 2026年8月17日",
+     soc:"Snapdragon 7 Gen 4（国行は天玑と構成違い）",
+     cam:"50MP×3(広角+望遠3.5×+超広角) + 前50MP",
+     screen:"6.3型 AMOLED / 2640×1216 / 120Hz",
+     battery:"6700mAh / 80W有線",
+     ram:"12GB + 256GB",
+     price:"¥89,800〜",
+     note:"日本OPPO最新だがミドル。Find X9は日本に入らない"},
+    {id:"oppo_a5jp", name:"OPPO A5 5G（日本版）", group:"jp", verified:true, release:"日本発売 2025年12月4日",
+     soc:"Dimensity 6300",
+     cam:"50MP広角 + 2MP深度",
+     screen:"6.7型 LCD / HD+(1604×720) / 120Hz",
+     battery:"6000mAh / 45W有線",
+     ram:"4GB(+8GB拡張) + 128GB",
+     price:"約¥20,000〜24,000（SIMフリー実勢）",
+     note:"日本向け入門・降配モデル。FeliCa対応（中国版A5 5Gとは別物）"},
+    {id:"nubia_neo5gt", name:"nubia Neo 5 GT（全球版・日本で購入可）", group:"jp", verified:true, release:"日本発売 2026年4月23日",
+     soc:"Dimensity 7400",
+     cam:"50MP広角 + 2MP深度",
+     screen:"6.8型 AMOLED / 2720×1224 / 144Hz",
+     battery:"6210mAh / 55W有線",
+     ram:"8GB(+拡張) + 256GB",
+     price:"¥52,800（税込・公式）",
+     note:"全球機種（日本独占ではないがZTE Japanが正規SIMフリー販売）。ゲーミング仕様（冷却ファン内蔵）。FeliCa要確認"},
+    {id:"redmi_note17promax_jp", name:"Redmi Note 17 Pro Max 5G（日本版）", group:"jp", verified:true, release:"日本発売 2026年8月28日",
+     soc:"Snapdragon 6 Gen 5",
+     cam:"50MP主摄(OIS) + 8MP超広角 + 前32MP",
+     screen:"6.83型 1.5K AMOLED / 2772×1280 / 120Hz",
+     battery:"10000mAh / 100W有線",
+     ram:"8GB(+拡張) + 256/512GB",
+     price:"¥79,980〜（早割¥69,980）",
+     note:"小米初の10000mAh機。日本版は国行Note17Proより上位スペック。FeliCa要確認"},
+
+    // ══ C層 日本本土/在日主流機（2026-09現在） ══
+    {id:"iphone17_jp", name:"iPhone 17（日本版）", group:"jpnav", verified:true, release:"日本発売 2025年9月19日（18は9/18以降）",
+     soc:"A19",
+     cam:"48MP Fusion主摄 + 48MP超広角",
+     screen:"6.3型 OLED / 120Hz",
+     battery:"約3692mAh / 40W級・MagSafe",
+     ram:"8GB + 256GB起",
+     price:"¥129,800〜（256GB発売価格）",
+     note:"日本シェア約51%。eSIM専用・FeliCa対応"},
+    {id:"pixel11", name:"Google Pixel 11（日本版）", group:"jpnav", verified:true, release:"日本発売 2026年8月20日",
+     soc:"Google Tensor G6",
+     cam:"48MP主摄 + 13MP超広角 + 10.8MP望遠",
+     screen:"6.3型 Actua OLED / 120Hz",
+     battery:"約4985mAh",
+     ram:"12GB + 256GB起",
+     price:"¥136,800〜（256GB）",
+     note:"日本で急伸・2位。FeliCa対応"},
+    {id:"galaxy_s26", name:"Galaxy S26（日本版）", group:"jpnav", verified:true, release:"日本発売 2026年3月12日（S27未発）",
+     soc:"Snapdragon 8 Elite Gen5 for Galaxy",
+     cam:"50MP主摄 + 12MP超広角 + 10MP 3×望遠",
+     screen:"6.3型 AMOLED / 1-120Hz",
+     battery:"4300mAh / 25W有線",
+     ram:"12GB + 256GB起",
+     price:"¥136,800〜（256GB）",
+     note:"日本Androidの一角。FeliCa対応"},
+    {id:"aquos_r11", name:"AQUOS R11（日本版）", group:"jpnav", verified:true, release:"日本発売 2026年7月9日",
+     soc:"Snapdragon 8s Gen 4",
+     cam:"50.3MP主摄 + 50.3MP超広角 + 38.5MP望遠(初)",
+     screen:"6.5型 Pro IGZO OLED / 1-240Hz",
+     battery:"5100mAh",
+     ram:"12GB + 256/512GB",
+     price:"¥156,960〜（SoftBank 256GB）",
+     note:"シャープ最新旗艦。FeliCa対応"},
+    {id:"arrows_alpha2", name:"arrows Alpha2（日本版）", group:"jpnav", verified:true, release:"日本発売 2026年8月下旬（docomo）",
+     soc:"Dimensity 8350 Extreme",
+     cam:"50MP LYTIA710主摄(OIS) + 50MP超広角",
+     screen:"6.4型 LTPO OLED / 144Hz",
+     battery:"5370mAh / 90W有線",
+     ram:"8/12GB + 256/512GB",
+     price:"（価格未発表）",
+     note:"FCNT最新・軍規格。FeliCa対応"}
+];
+
+const GROUP_LABEL = {cn:{t:"中国本土機（国行）",c:"b-cn"}, jp:{t:"日本で買える中国機",c:"b-jp"}, jpnav:{t:"日本本土機",c:"b-intl"}};
+const FIELD_LABEL = {release:"発売時期", soc:"チップ", cam:"カメラ", screen:"画面", battery:"バッテリー/充電", ram:"メモリ/容量", price:"価格", note:"備考"};
+
+function groupOptions(g){
+  const list = PHONES.filter(p=>p.group===g);
+  return list.map(p=>`<option value="${p.id}">${p.name}${p.verified?"":"（要確認）"}</option>`).join('');
+}
+function fillSelects(){
+  const selA=document.getElementById('selA'), selB=document.getElementById('selB');
+  const byGroup={};
+  PHONES.forEach(p=>{(byGroup[p.group]=byGroup[p.group]||[]).push(p)});
+  const mkOpts=(sel,preset)=>{
+    let h='<option value="">— 機種を選ぶ —</option>';
+    for(const g in GROUP_LABEL){
+      if(!byGroup[g])continue;
+      h+=`<optgroup label="${GROUP_LABEL[g].t}">`;
+      byGroup[g].forEach(p=>{h+=`<option value="${p.id}">${p.name}</option>`});
+      h+='</optgroup>';
+    }
+    sel.innerHTML=h;
+    if(preset){const idx=[...sel.options].findIndex(o=>o.value===preset);if(idx>=0)sel.selectedIndex=idx;}
+  };
+  mkOpts(selA,'xiaomi17_cn');
+  mkOpts(selB,'xiaomi17ultra_jp');
+}
+function render(){
+  const a=document.getElementById('selA').value, b=document.getElementById('selB').value;
+  const box=document.getElementById('result');
+  if(!a||!b){box.innerHTML=`<div class="empty"><i>⚖</i>両方の機種を選んでください</div>`;document.getElementById('srcnote').textContent='';return;}
+  const PA=PHONES.find(p=>p.id===a), PB=PHONES.find(p=>p.id===b);
+  const grpA=GROUP_LABEL[PA.group], grpB=GROUP_LABEL[PB.group];
+  let rows='';
+  for(const f in FIELD_LABEL){
+    rows+=`<tr><th>${FIELD_LABEL[f]}</th><td class="${f==='note'?'hl-y':''}">${PA[f]}</td><td class="${f==='note'?'hl-y':''}">${PB[f]}</td></tr>`;
+  }
+  box.innerHTML=`
+  <table class="cmp">
+    <thead><tr>
+      <th style="width:22%">項目</th>
+      <th>${PA.name} <span class="badge ${grpA.c}">${grpA.t}</span></th>
+      <th>${PB.name} <span class="badge ${grpB.c}">${grpB.t}</span></th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+  const verNot=PHONES.filter(p=>p.id===a||p.id===b).some(p=>!p.verified);
+  document.getElementById('srcnote').textContent = verNot
+    ? "※「要確認」の機種は未検証データです。公式仕様で確認してから掲載してください。" 
+    : "出典：中国＝中関村在线/IT之家/百度百科/各社中国公式(国行発売価格)。日本＝MM総研(シェア)/各社日本公式・報道/楽天・KDDI/エディオン。仕様・価格は調査時点(2026/09)のもので変動あり。FeliCa対応は各機種の日本仕様に依存。";
+}
+
+document.getElementById('selA').addEventListener('change',render);
+document.getElementById('selB').addEventListener('change',render);
+fillSelects();
+render();
+</script>
+</body>
+</html>
