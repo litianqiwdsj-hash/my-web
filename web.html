@@ -676,6 +676,17 @@
             padding: 60px 20px 80px;
         }
 
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-grid .about-card {
+            margin-bottom: 0;
+        }
+
         .about-card {
             background: white;
             border-radius: var(--radius);
@@ -722,7 +733,8 @@
             background: linear-gradient(135deg, var(--primary-light), #fff5f5);
             border-radius: var(--radius);
             padding: 28px 32px;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
+            max-width: 600px;
             border: 1px solid rgba(229,57,53,0.15);
             text-align: center;
         }
@@ -896,6 +908,113 @@
         .phone-fab.hidden { display: none; }
         @media (max-width: 480px) {
             .phone-fab { right: 14px; bottom: 84px; padding: 11px 16px; font-size: 13px; }
+        }
+
+        /* ========== PHONE COMPARE FEATURE (中国版 vs 日本版) ========== */
+        .pc-feature {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 24px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .pc-feature-head {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .pc-feature-ic {
+            width: 46px;
+            height: 46px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .pc-feature-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+        .pc-feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .pc-vs {
+            display: flex;
+            align-items: stretch;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .pc-col {
+            flex: 1;
+            border-radius: 12px;
+            padding: 14px 16px;
+            min-width: 0;
+        }
+        .pc-cn { background: #fce4ec; }
+        .pc-jp { background: #e3f2fd; }
+        .pc-badge {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 6px;
+        }
+        .pc-cn .pc-badge { color: #c2185b; }
+        .pc-jp .pc-badge { color: #1565c0; }
+        .pc-model {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .pc-spec {
+            font-size: 12.5px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        .pc-spec:first-of-type { font-weight: 600; color: var(--text); }
+        .pc-vsmark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .pc-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            color: #fff;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px var(--primary-glow);
+        }
+        .pc-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--primary-glow);
+        }
+        @media (max-width: 520px) {
+            .pc-feature { padding: 18px; }
+            .pc-vs { flex-direction: column; }
+            .pc-vsmark { padding: 2px 0; }
         }
 
         /* ========== CATEGORY PILLS ========== */
@@ -1581,6 +1700,10 @@
                 flex-direction: column;
                 gap: 14px;
             }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1704,6 +1827,37 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- PHONE COMPARE FEATURE : 中国版 vs 日本版 -->
+        <section id="phonecompare" class="site-section">
+            <h2 class="section-title" data-i18n="sec_pc">中日スマホ比較ツール</h2>
+            <p class="section-subtitle" data-i18n="sec_pc_sub">同じ機種でも「中国版」と「日本版」でここまで違う</p>
+            <div class="pc-feature">
+                <div class="pc-feature-head">
+                    <div class="pc-feature-ic"><i class="fas fa-mobile-alt"></i></div>
+                    <div>
+                        <div class="pc-feature-title" data-i18n="pc_title">中国版 vs 日本版、その差を見てみよう</div>
+                        <div class="pc-feature-desc" data-i18n="pc_desc">19機種から2台を選んで、チップ・カメラ・価格などを並べて比較できます。</div>
+                    </div>
+                </div>
+                <div class="pc-vs">
+                    <div class="pc-col pc-cn">
+                        <div class="pc-badge" data-i18n="pc_cn">中国版</div>
+                        <div class="pc-model">OPPO Reno16</div>
+                        <div class="pc-spec">Dimensity 8550 SUPER</div>
+                        <div class="pc-spec">3,499元 ・ 2026.5</div>
+                    </div>
+                    <div class="pc-vsmark">VS</div>
+                    <div class="pc-col pc-jp">
+                        <div class="pc-badge" data-i18n="pc_jp">日本版</div>
+                        <div class="pc-model">OPPO Reno16 5G</div>
+                        <div class="pc-spec">Snapdragon 7 Gen 4</div>
+                        <div class="pc-spec">89,800円 ・ 2026.8</div>
+                    </div>
+                </div>
+                <a href="phones.html" target="_blank" rel="noopener" class="pc-cta"><span data-i18n="pc_cta">もっと比較する</span> <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
 
@@ -2092,6 +2246,7 @@
             <p class="about-subtitle" data-i18n="about_subtitle">中国ウェブサービス総合ガイド</p>
         </div>
         <div class="about-container">
+            <div class="about-grid">
             <div class="about-card">
                 <div class="about-card-icon"><i class="fas fa-info-circle"></i></div>
                 <div class="about-card-text">
@@ -2119,6 +2274,7 @@
                     <div class="about-card-title" data-i18n="about_c4_title">更新方針</div>
                     <p class="about-text" data-i18n="about_c4_text">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
                 </div>
+            </div>
             </div>
             <div class="about-contact">
                 <div class="about-contact-title"><i class="fas fa-envelope"></i> <span data-i18n="about_contact_title">お問い合わせ</span></div>
@@ -2249,6 +2405,13 @@
                 sec_map_sub: '中国の主要マップサービス',
                 sec_games: 'ゲーム',
                 sec_games_sub: '中国を代表するゲームメーカーと人気タイトル',
+                sec_pc: '中日スマホ比較ツール',
+                sec_pc_sub: '同じ機種でも「中国版」と「日本版」でここまで違う',
+                pc_title: '中国版 vs 日本版、その差を見てみよう',
+                pc_desc: '19機種から2台を選んで、チップ・カメラ・価格などを並べて比較できます。',
+                pc_cn: '中国版',
+                pc_jp: '日本版',
+                pc_cta: 'もっと比較する',
                 // cards
                 bili_desc: '中国における動画ジャンルが最も充実したウェブサイトで、二次元、知識、ゲーム、音楽など多岐にわたるジャンルの動画を網羅しています。',
                 bili_tag: '動画共有',
@@ -2375,6 +2538,13 @@
                 sec_map_sub: 'Leading map services in China',
                 sec_games: 'Games',
                 sec_games_sub: "China's leading game studios and popular titles",
+                sec_pc: 'China vs Japan Phone Compare',
+                sec_pc_sub: 'The same model can differ this much between the China and Japan versions',
+                pc_title: 'Compare the China version vs the Japan version',
+                pc_desc: 'Pick any two of 19 models and compare chip, camera, price and more side by side.',
+                pc_cn: 'China ver.',
+                pc_jp: 'Japan ver.',
+                pc_cta: 'Compare more',
                 // cards
                 bili_desc: 'China\'s most diverse video platform covering anime, education, gaming, music and more.',
                 bili_tag: 'Video Sharing',
@@ -2767,9 +2937,22 @@
                 setHash('tutorial-' + key);
             }
 
+            // ═══ 独立ページ対応：ページがあるカードはモーダルではなくページへ遷移 ═══
+            const PAGE_MAP = {
+                tutorial: { bilibili_guide: 'bilibili-guide.html' },
+                game: { mihoyo: 'game-mihoyo.html', kuro: 'game-kuro.html', hypergryph: 'game-hypergryph.html', ananta: 'game-ananta.html', mica: 'game-mica.html' },
+                news: { news_efut: 'news-endfield-uniqlo.html', news_wwlive: 'news-wuthering-concert.html' }
+            };
+            function goToPage(group, key) {
+                const p = PAGE_MAP[group] && PAGE_MAP[group][key];
+                if (p) { window.location.href = p; return true; }
+                return false;
+            }
+
             document.querySelectorAll('.tutorial-trigger').forEach(card => {
                 card.addEventListener('click', function() {
                     const key = this.getAttribute('data-tutorial');
+                    if (goToPage('tutorial', key)) return;
                     openTutorialModal(key);
                 });
             });
@@ -2891,6 +3074,7 @@
             document.querySelectorAll('.game-trigger').forEach(card => {
                 card.addEventListener('click', function() {
                     const key = this.getAttribute('data-game');
+                    if (goToPage('game', key)) return;
                     openGameModal(key);
                 });
             });
@@ -2990,6 +3174,7 @@
                 el.addEventListener('click', function(e) {
                     e.stopPropagation();
                     const key = this.getAttribute('data-news');
+                    if (key && goToPage('news', key)) return;
                     if (key) openNewsModal(key);
                 });
             });
