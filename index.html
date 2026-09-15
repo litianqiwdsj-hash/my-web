@@ -2827,7 +2827,9 @@
             document.querySelectorAll('.site-card').forEach(card => {
                 card.addEventListener('click', function() {
                     const key = this.getAttribute('data-detail');
-                    if (key) openDetailPage(key);
+                    if (!key) return;
+                    if (goToPage('site', key)) return;
+                    openDetailPage(key);
                 });
             });
 
@@ -2941,7 +2943,21 @@
             const PAGE_MAP = {
                 tutorial: { bilibili_guide: 'bilibili-guide.html' },
                 game: { mihoyo: 'game-mihoyo.html', kuro: 'game-kuro.html', hypergryph: 'game-hypergryph.html', ananta: 'game-ananta.html', mica: 'game-mica.html' },
-                news: { news_efut: 'news-endfield-uniqlo.html', news_wwlive: 'news-wuthering-concert.html' }
+                news: { news_efut: 'news-endfield-uniqlo.html', news_wwlive: 'news-wuthering-concert.html' },
+                site: {
+                    bilibili: 'bilibili-guide.html',
+                    douyin: 'site-douyin.html',
+                    qqmusic: 'site-qqmusic.html',
+                    neteasemusic: 'site-neteasemusic.html',
+                    taobao: 'site-taobao.html',
+                    jd: 'site-jd.html',
+                    xianyu: 'site-xianyu.html',
+                    pdd: 'site-pdd.html',
+                    weibo: 'site-weibo.html',
+                    xiaohongshu: 'site-xiaohongshu.html',
+                    amap: 'site-amap.html',
+                    baidumap: 'site-baidumap.html'
+                }
             };
             function goToPage(group, key) {
                 const p = PAGE_MAP[group] && PAGE_MAP[group][key];
