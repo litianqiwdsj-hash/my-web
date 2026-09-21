@@ -284,5 +284,76 @@ document.querySelectorAll('.g-body img').forEach(img => {
 zm.addEventListener('click', () => zm.classList.remove('show'));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') zm.classList.remove('show'); });
 </script>
+<!-- ===== CtW.web feedback entry ===== -->
+<style>
+.fb-entry{position:fixed;right:28px;bottom:28px;display:inline-flex;align-items:center;padding:12px 19px;background:#fff;color:#e53935;border:1.5px solid #e53935;border-radius:999px;font-size:13.5px;font-weight:700;line-height:1;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.13);z-index:997;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap;font-family:inherit;text-decoration:none}
+.fb-entry:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(229,57,53,.28);background:#fff6f6}
+.fb-entry.up{bottom:152px}
+.fb-mask{position:fixed;inset:0;background:rgba(15,15,30,.62);display:none;align-items:center;justify-content:center;padding:20px;z-index:9800}
+.fb-mask.show{display:flex}
+.fb-card{background:#fff;border-radius:16px;width:100%;max-width:420px;max-height:88vh;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.3);text-align:left}
+.fb-head{padding:17px 20px 14px;border-bottom:1px solid #e8ecf4;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.fb-head h3{font-size:16px;font-weight:700;color:#1a1a2e;margin:0;font-family:inherit}
+.fb-x{border:none;background:#f1f3f8;color:#6b7280;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:13px;flex:0 0 auto;line-height:1;font-family:inherit}
+.fb-x:hover{background:#e4e8f0;color:#1a1a2e}
+.fb-body{padding:18px 20px 22px}
+.fb-lbl{font-size:13.5px;font-weight:700;color:#1a1a2e;margin:0 0 5px}
+.fb-txt{font-size:12.5px;color:#6b7280;line-height:1.75;margin:0 0 13px}
+.fb-btn{display:block;width:100%;padding:13px;border-radius:10px;background:linear-gradient(135deg,#e53935,#ff6b6b);color:#fff;font-size:14px;font-weight:700;text-align:center;text-decoration:none;box-sizing:border-box}
+.fb-btn:hover{filter:brightness(1.05)}
+.fb-div{border-top:1px solid #e8ecf4;margin:20px 0}
+.fb-mail{display:block;text-align:center;font-size:13.5px;font-weight:700;color:#e53935;text-decoration:none;word-break:break-all;background:#fff6f6;border:1px solid rgba(229,57,53,.25);border-radius:10px;padding:12px}
+.fb-mail:hover{background:#ffeded}
+@media(max-width:480px){.fb-entry{right:14px;bottom:14px;padding:10px 16px;font-size:12.5px}.fb-entry.up{bottom:134px}.fb-card{max-height:92vh}}
+</style>
+<a class="fb-entry" id="fbEntry" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener" title="ご意見・ご要望"><span id="fbEntryLabel">ご意見</span></a>
+<div class="fb-mask" id="fbMask" role="dialog" aria-modal="true" aria-labelledby="fbTitle">
+<div class="fb-card">
+<div class="fb-head"><h3 id="fbTitle">ご意見・ご要望</h3><button class="fb-x" id="fbClose" type="button" aria-label="閉じる">&#10005;</button></div>
+<div class="fb-body">
+<p class="fb-lbl" id="fbL1"></p>
+<p class="fb-txt" id="fbT1"></p>
+<a class="fb-btn" id="fbBtn" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener"></a>
+<div class="fb-div"></div>
+<p class="fb-lbl" id="fbL2"></p>
+<p class="fb-txt" id="fbT2"></p>
+<a class="fb-mail" href="mailto:tuiochi@petalmail.com">tuiochi@petalmail.com</a>
+</div>
+</div>
+</div>
+<script>
+(function(){
+var FB_SURVEY_URL='https://forms.gle/F2fCfzX7r4ZD7ujH9';
+var FB_EMAIL='tuiochi@petalmail.com';
+var T={
+ ja:{lab:'ご意見',tip:'ご意見・ご要望',title:'ご意見・ご要望',
+  l1:'短いご意見はアンケートで',t1:'1分ほどで送れるフォームです。下のボタンからどうぞ。',b:'アンケートに答える',
+  l2:'長文のご意見・詳しいご指摘',t2:'内容の誤りや詳しいご指摘など、長くなる場合はメールでお願いします。'},
+ en:{lab:'Feedback',tip:'Feedback / requests',title:'Feedback',
+  l1:'Short feedback — use the form',t1:'It takes about a minute. Use the button below.',b:'Open the form',
+  l2:'Longer feedback or detailed notes',t2:'For corrections or anything detailed, please email us.'}
+};
+function lang(){try{return localStorage.getItem('ctw_lang')==='en'?'en':'ja'}catch(e){return 'ja'}}
+var entry=document.getElementById('fbEntry'),mask=document.getElementById('fbMask');
+if(!entry||!mask)return;
+if(document.getElementById('phoneFab')){entry.className+=' up'}
+function set(id,txt){var e=document.getElementById(id);if(e)e.textContent=txt}
+var cur=null;
+function render(){
+ var lg=lang();if(lg===cur)return;cur=lg;var L=T[lg];
+ set('fbEntryLabel',L.lab);entry.title=L.tip;set('fbTitle',L.title);
+ set('fbL1',L.l1);set('fbT1',L.t1);set('fbL2',L.l2);set('fbT2',L.t2);
+ var b=document.getElementById('fbBtn');if(b){b.textContent=L.b;b.href=FB_SURVEY_URL}
+}
+function open(){render();mask.classList.add('show')}
+function close(){mask.classList.remove('show')}
+entry.addEventListener('click',function(e){e.preventDefault();open()});
+document.getElementById('fbClose').addEventListener('click',close);
+mask.addEventListener('click',function(e){if(e.target===mask)close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+render();
+})();
+</script>
+<!-- ===== /CtW.web feedback entry ===== -->
 </body>
 </html>
