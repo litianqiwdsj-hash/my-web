@@ -1880,6 +1880,26 @@
             <p class="section-subtitle" data-i18n="sec_news_sub" data-page-node-id="QS6JS8CwOZ8rnieoyqPFT8">各プラットフォームの注目ニュース・限定情報を随時更新</p>
             <div class="news-grid" data-page-node-id="AZv3GPIR1AIohM8h3CBwEX">
 
+                <!-- Article: LAWSON x Ananta Collaboration -->
+                <div class="news-card" data-news="news_lsnet">
+                    <div class="news-card-header" style="position:relative;">
+                        <img src="lsnet.png" alt="ローソン×異環 コラボ" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
+                            <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
+                            <span class="news-badge-new">NEW</span>
+                            <span class="news-date">2026.10.12</span>
+                        </div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-title" data-i18n="news_lsnet_title">ローソン×異環 コラボ開催中</h3>
+                        <p class="news-excerpt" data-i18n="news_lsnet_excerpt">ローソンと『異環』のコラボが開催中。期間は2026年10月12日〜2027年1月3日。詳細は公式のお知らせにて。</p>
+                        <div class="news-card-footer">
+                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_collab">コラボ</span></span>
+                            <span class="news-read-more" data-news="news_lsnet"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Article: Endfield x UNIQLO Collaboration -->
                 <div class="news-card" data-news="news_efut" data-page-node-id="oi9HaAz4YfxPU8rJ8RTrRV">
                     <div class="news-card-header" style="position:relative;" data-page-node-id="caOGnoYUIrJy2KEXaw98EC">
@@ -2486,6 +2506,8 @@
                 news_efut_excerpt: '『明日方舟：終末地』と UNIQLO のコラボが開催中。期間は1年間。詳細はWeibo公式にて確認できます。',
                 news_wwlive_title: '鳴潮「新世界へ」ライブコンサート Bilibili独占配信中',
                 news_wwlive_excerpt: '鳴潮「致予新世界」ライブコンサートがBilibiliに独占配信されました。いつでもフル回放をご覧いただけます。',
+                news_lsnet_title: 'ローソン × 異環 コラボ開催中',
+                news_lsnet_excerpt: 'ローソンと『異環』のコラボが開催中。期間は2026年10月12日〜2027年1月3日。詳細は公式のお知らせにて。',
                 news_readmore: '続きを読む',
                 // sections
                 sec_video: '動画エンタテインメント',
@@ -2619,6 +2641,8 @@
                 news_efut_excerpt: 'The Arknights: Endfield x UNIQLO collab is now live for one full year. Full details are available on the official Weibo account.',
                 news_wwlive_title: 'Wuthering Waves "To the New World" Concert Now Exclusively on Bilibili',
                 news_wwlive_excerpt: 'The Wuthering Waves "To the New World" live concert is now exclusively available on Bilibili. Watch the full replay anytime.',
+                news_lsnet_title: 'LAWSON x Ananta Collaboration Now Live',
+                news_lsnet_excerpt: 'The LAWSON x Ananta collaboration is now live, running Oct 12, 2026 - Jan 3, 2027. Details in the official announcement.',
                 news_readmore: 'Read more',
                 // sections
                 sec_video: 'Video Entertainment',
@@ -3038,7 +3062,7 @@
             const PAGE_MAP = {
                 tutorial: { bilibili_guide: 'bilibili-guide.html' },
                 game: { mihoyo: 'game-mihoyo.html', kuro: 'game-kuro.html', hypergryph: 'game-hypergryph.html', ananta: 'game-ananta.html', mica: 'game-mica.html' },
-                news: { news_efut: 'news-endfield-uniqlo.html', news_wwlive: 'news-wuthering-concert.html' },
+                news: { news_efut: 'news-endfield-uniqlo.html', news_wwlive: 'news-wuthering-concert.html', news_lsnet: 'news-lawson-ananta.html' },
                 site: {
                     bilibili: 'bilibili-guide.html',
                     douyin: 'site-douyin.html',
@@ -3244,7 +3268,26 @@
 <p>A spectacular live concert set in the world of Wuthering Waves. Enjoy game soundtracks performed by a live orchestra, along with special performances and surprises.</p>
 <p>You can watch the full concert anytime via the link below. Log in to your Bilibili account for higher video quality.</p>
 <p style="margin-top:18px;"><a href="https://www.bilibili.com/video/BV1XhKr69EDd/?spm_id_from=333.1387.list.card_archive.click" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-play-circle"></i> Watch on Bilibili</a></p>`
-                }
+                },
+                news_lsnet: {
+                    platform: 'bilibili',
+                    platformIcon: 'fas fa-video',
+                    platformLabel_ja: 'Bilibili',
+                    platformLabel_en: 'Bilibili',
+                    date: '2026.10.12',
+                    isNew: true,
+                    img_src: 'lsnet.png',
+                    title_ja: 'ローソン × 異環 コラボ開催中',
+                    title_en: 'LAWSON x Ananta Collaboration Now Live',
+                    body_ja: `<p>『<strong>異環（アナンタ / Ananta）</strong>』と <strong>ローソン（LAWSON／罗森）</strong> のコラボレーションが<strong>開催中</strong>です。</p>
+<div class="news-highlight-box">🏪 コラボ：ローソン × 異環<br>📅 期間：2026年10月12日 〜 2027年1月3日<br>📢 詳細：公式のお知らせにて確認可能</div>
+<p>コラボ商品のラインナップや実施に関する詳しい情報は、以下のリンクから公式のお知らせをご確認ください。</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/opus/1253714306788229128?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-external-link-alt"></i> 公式のお知らせを見る（Bilibili）</a></p>`,
+                    body_en: `<p>The collaboration between <strong>Ananta</strong> (異環) and <strong>LAWSON</strong> is now <strong>live</strong>.</p>
+<div class="news-highlight-box">🏪 Collab: LAWSON x Ananta<br>📅 Period: Oct 12, 2026 - Jan 3, 2027<br>📢 Details: Available in the official announcement</div>
+<p>For the collaboration product lineup and further details, please see the official announcement via the link below.</p>
+<p style="margin-top:18px;"><a href="https://www.bilibili.com/opus/1253714306788229128?spm_id_from=333.1387.0.0" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#00a1d6,#008ac7);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:14px;transition:all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,161,214,0.35)';" onmouseout="this.style.transform='';this.style.boxShadow='none';"><i class="fas fa-external-link-alt"></i> View the official announcement (Bilibili)</a></p>`
+                },
             };
 
             // News modal logic
