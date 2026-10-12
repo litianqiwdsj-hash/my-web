@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="ja" id="htmlRoot">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ja" id="htmlRoot" data-page-node-id="MIzi5aji78oJBaC0jEIU5r">
+<head data-page-node-id="6TsfW3GKEUz1OFGjugP4lx">
+    <meta charset="UTF-8" data-page-node-id="6xWft4unrC5Je044BLGoon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="XUgefrjyCyayVBSnp1MD3c">
     <title>中国のWebサービス総合ガイド | CtW.web</title>
-    <meta name="description" content="中国の人気Webサービス（動画・音楽・通販・SNS・地図・ゲーム）を日本語でわかりやすく紹介。Bilibili・淘宝・微博・高德地図などの使い方・登録方法も解説する総合ナビゲーションサイト。">
-    <meta name="keywords" content="中国,Webサービス,Bilibili,使い方,淘宝,微博,高徳地図,中国アプリ,日本語,ナビゲーション">
-    <meta name="author" content="CtW.web">
-    <meta name="theme-color" content="#e53935">
+    <meta name="description" content="中国の人気Webサービス（動画・音楽・通販・SNS・地図・ゲーム）を日本語でわかりやすく紹介。Bilibili・淘宝・微博・高德地図などの使い方・登録方法も解説する総合ナビゲーションサイト。" data-page-node-id="ZppXHjOvBl0KxCTgGaaVOR">
+    <meta name="keywords" content="中国,Webサービス,Bilibili,使い方,淘宝,微博,高徳地図,中国アプリ,日本語,ナビゲーション" data-page-node-id="lhejR83FgCEreHnEXOhmfG">
+    <meta name="author" content="CtW.web" data-page-node-id="nCGEAn32ZEVAjWHOZfBVL3">
+    <meta name="theme-color" content="#e53935" data-page-node-id="BcYs0Tblo7Z3AppCjGzdc5">
+    <link rel="canonical" href="https://webctwguid.com/" data-page-node-id="9S7UojjOzG7DkClq7txQjv">
 
     <!-- ═══ OGP / SNSシェア用（Xでリンクカードを出すために必須） ═══ -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="CtW.web">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:title" content="中国のWebサービス総合ガイド | CtW.web">
-    <meta property="og:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。">
-    <meta property="og:image" content="https://webctwguid.com/header.jpg">
-    <meta property="og:image:alt" content="CtW.web - 中国のWebサービス総合ガイド">
-    <meta property="og:url" content="https://webctwguid.com/">
+    <meta property="og:type" content="website" data-page-node-id="5UvsG4XnZy6r2Hj2od5nqC">
+    <meta property="og:site_name" content="CtW.web" data-page-node-id="yXx9j5fIuQLBZvWpCQ11h6">
+    <meta property="og:locale" content="ja_JP" data-page-node-id="wvUCW573pHrejSGk62aW1n">
+    <meta property="og:locale:alternate" content="en_US" data-page-node-id="3Yy8mi7eBmCyE10JkkGaKF">
+    <meta property="og:title" content="中国のWebサービス総合ガイド | CtW.web" data-page-node-id="ieKujZk9lQm9FRjXflSRfU">
+    <meta property="og:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。" data-page-node-id="zCqhMlnq1sCBvYKXVnih6H">
+    <meta property="og:image" content="https://webctwguid.com/header.jpg" data-page-node-id="KUVkxGDYosYJxdlTRdwr9D">
+    <meta property="og:image:alt" content="CtW.web - 中国のWebサービス総合ガイド" data-page-node-id="jpSsBeE7R7GlxhHiL8aGuw">
+    <meta property="og:url" content="https://webctwguid.com/" data-page-node-id="pRrEubkp4CXnmQrpdJvCpD">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="中国のWebサービス総合ガイド | CtW.web">
-    <meta name="twitter:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。">
-    <meta name="twitter:image" content="https://webctwguid.com/header.jpg">
+    <meta name="twitter:card" content="summary_large_image" data-page-node-id="GfkadECxTEZgn0oWpSfY40">
+    <meta name="twitter:title" content="中国のWebサービス総合ガイド | CtW.web" data-page-node-id="1IuE7HWOUqJTkfnINGFhr2">
+    <meta name="twitter:description" content="Bilibili・淘宝・微博・高德地図など、中国の人気Webサービスを日本語で紹介。登録方法や使い方の解説付き。" data-page-node-id="fTcAeNealhWjGsrDHFrMe9">
+    <meta name="twitter:image" content="https://webctwguid.com/header.jpg" data-page-node-id="AumkjKUnul5ZVZwbSJ5TZh">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" data-page-node-id="e1a9Q6aZGtaM5hDDxWTZSs">
+
+    <!-- ═══ 構造化データ（検索エンジン向け / 子ページと同じ方針） ═══ -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://webctwguid.com/#website", "name": "CtW.web", "alternateName": "中国のWebサービス総合ガイド", "url": "https://webctwguid.com/", "description": "中国の人気Webサービス（動画・音楽・通販・SNS・地図・ゲーム）を日本語でわかりやすく紹介。Bilibili・淘宝・微博・高德地図などの使い方・登録方法も解説する総合ナビゲーションサイト。", "inLanguage": ["ja", "en"], "publisher": {"@id": "https://webctwguid.com/#organization"}}, {"@type": "Organization", "@id": "https://webctwguid.com/#organization", "name": "CtW.web", "url": "https://webctwguid.com/", "email": "tuiochi@petalmail.com", "description": "中国文化の対外発信を目的として運営される、中国Webサービス総合ガイドサイト。"}]}</script>
+
     <style>
         :root {
             --primary: #e53935;
@@ -54,6 +59,13 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* ═══ 移动端兜底：图片永不撑破容器（类选择器与行内样式优先级更高，不受影响） ═══ */
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         body {
@@ -62,6 +74,8 @@
             color: var(--text);
             background: var(--bg);
             min-height: 100vh;
+            min-height: 100dvh;
+            overflow-x: hidden;
         }
 
         /* ========== HERO BANNER ========== */
@@ -284,7 +298,7 @@
         /* ========== SITE GRID ========== */
         .site-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
             gap: 24px;
             margin: 0;
         }
@@ -465,6 +479,10 @@
             box-shadow: 0 32px 80px rgba(0,0,0,0.3);
             animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            /* ═══ 关键：父级是 align-items:center + overflow-y:auto，
+               内容高于视口时上边缘会被裁掉且滚不到。margin:auto 让它在
+               装得下时保持居中、装不下时能正常从顶部滚动。 ═══ */
+            margin: auto;
         }
 
         @keyframes slideUp {
@@ -1089,7 +1107,7 @@
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
             gap: 22px;
         }
 
@@ -1261,6 +1279,8 @@
             box-shadow: 0 32px 80px rgba(0,0,0,0.3);
             animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            /* ═══ 同上：修复内容超出视口后顶部与关闭按钮滚动不到的问题 ═══ */
+            margin: auto;
         }
 
         .news-modal-img-wrap {
@@ -1637,11 +1657,17 @@
         }
 
         @media (max-width: 768px) {
+            /* ═══════════════════════════════════════════════════
+               移动端顶栏 = 方案A：Logo 与语言键同一行，导航单独一行横向滚动
+               改前：三组纵向堆叠，导航换 2~4 行 → 顶栏 174~231px，遮挡 hero
+               改后：两行固定 → 顶栏约 117px，高度稳定不再随换行浮动
+               ═══════════════════════════════════════════════════ */
             .header-content {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
                 height: auto;
-                padding: 14px 0;
-                gap: 12px;
+                padding: 10px 0;
+                gap: 10px;
             }
 
             #header {
@@ -1649,22 +1675,99 @@
                 top: 0;
             }
 
+            .logo {
+                font-size: 17px;
+            }
+
+            .logo-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+
+            .lang-switch {
+                order: 2;
+                margin-left: auto;
+            }
+
+            .lang-btn {
+                padding: 10px 14px;
+            }
+
             .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
+                order: 3;
+                width: 100%;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding-bottom: 2px;
+            }
+
+            .nav-menu::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* 注意：.nav-menu 的直接子元素是 <li class="nav-item">，
+               flex 项是 li 而不是里面的 a —— 这条必须写在 li 上，
+               否则导航项会随容器收缩而不是产生横向滚动 */
+            .nav-item {
+                flex: 0 0 auto;
             }
 
             .nav-item a {
+                min-height: 44px;
                 font-size: 12px;
-                padding: 6px 10px;
+                padding: 0 12px;
             }
 
+            /* ═══ 顶栏高度已固定为两行，hero 预留值随之收敛 ═══ */
+            .hero {
+                padding: 128px 0 40px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            /* ═══ 移除加错位置的顶栏占位：
+               #mainContent 在 hero + slogan 之后，不承担顶栏避让 ═══ */
             #mainContent {
-                padding-top: 120px;
+                padding-top: 0;
             }
 
-            .site-grid {
+            .section-title {
+                margin: 36px 0 24px;
+            }
+
+            .site-grid,
+            .news-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* ═══ 触控目标补足到 44px（Apple HIG / Material 建议值） ═══ */
+            .close-btn,
+            .news-modal-close,
+            .tutorial-modal-close,
+            .game-modal-close {
+                width: 44px;
+                height: 44px;
+            }
+
+            .phone-fab-close {
+                width: 26px;
+                height: 26px;
+            }
+
+            /* ═══ 小字号提升到可读下限（原本 10~11px） ═══ */
+            .news-platform-tag,
+            .news-badge-new,
+            .news-date,
+            .news-category-label,
+            .pc-badge {
+                font-size: 12px;
             }
 
             .detail-img-wrap {
@@ -1677,14 +1780,6 @@
 
             .detail-title {
                 font-size: 18px;
-            }
-
-            .hero {
-                padding: 140px 0 50px;
-            }
-
-            .hero h1 {
-                font-size: 26px;
             }
 
             .slogan-bar {
@@ -1721,108 +1816,108 @@
         }
     </style>
 </head>
-<body>
+<body data-page-node-id="HMlh7FDdE4SaMbSpdFFPbf">
 
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <div class="logo-icon"><i class="fas fa-globe-asia"></i></div>
+    <header id="header" data-page-node-id="dK2hBPveRgNEBGxNr4H4Pi">
+        <div class="container" data-page-node-id="ECMyPLRGN71nQL9U4HeTxS">
+            <div class="header-content" data-page-node-id="QUyT4x8S6EQPYwC5ssyddW">
+                <a href="#" class="logo" data-page-node-id="FH9Fg6mOUQvEoNJ6qzt0xo">
+                    <div class="logo-icon" data-page-node-id="TS5COceWXpR2Dcx7OoyevE"><i class="fas fa-globe-asia" data-page-node-id="TPMBnFMFNTknitB4HuyChl"></i></div>
                     CtW.web
                 </a>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" data-cate="all" class="active"><i class="fas fa-th"></i> <span data-i18n="nav_all">すべて</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="video"><i class="fas fa-play"></i> <span data-i18n="nav_video">動画</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="music"><i class="fas fa-music"></i> <span data-i18n="nav_music">音楽</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="shopping"><i class="fas fa-shopping-bag"></i> <span data-i18n="nav_shopping">ショッピング</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="social"><i class="fas fa-users"></i> <span data-i18n="nav_social">ソーシャル</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="map"><i class="fas fa-map-marked-alt"></i> <span data-i18n="nav_map">地図</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="news"><i class="fas fa-newspaper"></i> <span data-i18n="nav_news">最新情報</span></a></li>
-                    <li class="nav-item"><a href="#" data-cate="games"><i class="fas fa-gamepad"></i> <span data-i18n="nav_games">ゲーム</span></a></li>
-                    <li class="nav-item"><a href="phones.html" target="_blank" rel="noopener" id="navPhones" style="white-space:nowrap;"><i class="fas fa-mobile-alt"></i> <span data-i18n="nav_phones">スマホ比較</span></a></li>
-                    <li class="nav-item special"><a href="#" id="openAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
+                <ul class="nav-menu" data-page-node-id="36lsM5t79c95krfohRvz3C">
+                    <li class="nav-item" data-page-node-id="ugaz6nnY13l9PBZj2fAaax"><a href="#" data-cate="all" class="active" data-page-node-id="ui2Phr84LhT9To5SZkc0Cc"><i class="fas fa-th" data-page-node-id="PwEABOYDx3p9ZJ1faLMtoQ"></i> <span data-i18n="nav_all" data-page-node-id="aJnBiecLslELzr55e1iCfS">すべて</span></a></li>
+                    <li class="nav-item" data-page-node-id="anPHKhs7FSe0YsZdwoRQyq"><a href="#" data-cate="video" data-page-node-id="DYAv897YwxhUMFZqvhGlof"><i class="fas fa-play" data-page-node-id="RUHASu860ls0khjXjfFHZq"></i> <span data-i18n="nav_video" data-page-node-id="6cNpF7sriGfQkZrb9oGYLZ">動画</span></a></li>
+                    <li class="nav-item" data-page-node-id="6yGrJTpRgAQMDouUWSbUrp"><a href="#" data-cate="music" data-page-node-id="jXZuv8gPR9D67YGw24YqTt"><i class="fas fa-music" data-page-node-id="fj31PmNEfk90vtNalY6sM6"></i> <span data-i18n="nav_music" data-page-node-id="YC3GLeaE7BtRBa3rGQhmG4">音楽</span></a></li>
+                    <li class="nav-item" data-page-node-id="L5NHewoN9Piu0yS54v3EzY"><a href="#" data-cate="shopping" data-page-node-id="xEF6PqG6EbYrXckqGTw8qA"><i class="fas fa-shopping-bag" data-page-node-id="xSkDEnD0ieQ7DUrvreewLh"></i> <span data-i18n="nav_shopping" data-page-node-id="qOsKbkdztpXYIxmAflnFqd">ショッピング</span></a></li>
+                    <li class="nav-item" data-page-node-id="dsvALifEJDPR8mjK0LbsaC"><a href="#" data-cate="social" data-page-node-id="kblfwyePoos7QJEerA2IQo"><i class="fas fa-users" data-page-node-id="vt8OVKrlnBRBLh9zABQBMh"></i> <span data-i18n="nav_social" data-page-node-id="ojRe7O2xwnnlIz10d5W55P">ソーシャル</span></a></li>
+                    <li class="nav-item" data-page-node-id="LxEcH7J1jhGeUABHFDIOGw"><a href="#" data-cate="map" data-page-node-id="ALaSG5iKBt1oOgxVDNqd8L"><i class="fas fa-map-marked-alt" data-page-node-id="apjtE12qfAgHBzd4FOhI6j"></i> <span data-i18n="nav_map" data-page-node-id="JUtH6l8daqBTCnJUK3rKVH">地図</span></a></li>
+                    <li class="nav-item" data-page-node-id="p7azgndllNJGO3qOT4ZHGE"><a href="#" data-cate="news" data-page-node-id="I3geeNtzvkF4b0yjAoXTXP"><i class="fas fa-newspaper" data-page-node-id="YeOO7yKabbFkOGLU9jxYAQ"></i> <span data-i18n="nav_news" data-page-node-id="IiIjasJavv34eTJWSQnZyW">最新情報</span></a></li>
+                    <li class="nav-item" data-page-node-id="w2esYPGwuKZvDtPwCwl4jZ"><a href="#" data-cate="games" data-page-node-id="g4dqYNnXSD32yxKZHhG6jQ"><i class="fas fa-gamepad" data-page-node-id="vYDfwOUBi3e9hFlVQuknF9"></i> <span data-i18n="nav_games" data-page-node-id="Poq6ndpbKO1qzVo9YcvRey">ゲーム</span></a></li>
+                    <li class="nav-item" data-page-node-id="3bMMUB2K0auy0UOAVtXwu4"><a href="phones.html" target="_blank" rel="noopener" id="navPhones" style="white-space:nowrap;" data-page-node-id="C5ypwVyhm1slE6wcqrRd82"><i class="fas fa-mobile-alt" data-page-node-id="5O1BTV1UU5958UWQxPlUrR"></i> <span data-i18n="nav_phones" data-page-node-id="dYsetOxRSQI5KR1EMe4e1w">スマホ比較</span></a></li>
+                    <li class="nav-item special" data-page-node-id="CXRsOqy6XNapIzbIVpbAcX"><a href="#" id="openAbout" data-page-node-id="Isc3QwlnCutrZUbbCAtCFH"><i class="fas fa-info-circle" data-page-node-id="SUqGj8iEHWD9N0301sUCnh"></i> <span data-i18n="nav_about" data-page-node-id="WXbwsyHxCXN4SrIhjHfBue">サイト紹介</span></a></li>
                 </ul>
                 <!-- Language Switch -->
-                <div class="lang-switch" id="langSwitch">
-                    <button class="lang-btn active" data-lang="ja">JA</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
+                <div class="lang-switch" id="langSwitch" data-page-node-id="4ALedAiT6JIKKn6kI9pA3r">
+                    <button class="lang-btn active" data-lang="ja" data-page-node-id="ed8Wq1TmU3d3wpO0Nmoi8F">JA</button>
+                    <button class="lang-btn" data-lang="en" data-page-node-id="GVrK2B4erY9ggzcjqgUKbb">EN</button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- HERO -->
-    <div class="hero" id="heroSection">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i>
-                    <span data-i18n="hero_badge">中国トップサービスを厳選紹介</span>
+    <div class="hero" id="heroSection" data-page-node-id="mXnmA406G80XXxCOBR6ail">
+        <div class="container" data-page-node-id="wDpFHakxiijw1Z6ip0vLTk">
+            <div class="hero-content" data-page-node-id="bCtBLMxxStR0bxBuN1XUiL">
+                <div class="hero-badge" data-page-node-id="zpxBgBTVlosZOFqzQ3MB4Y">
+                    <i class="fas fa-star" data-page-node-id="MVzhCAvGJkGLFrEZockO6R"></i>
+                    <span data-i18n="hero_badge" data-page-node-id="xqBKqs4b61gay2YIBUkqxi">中国トップサービスを厳選紹介</span>
                 </div>
-                <h1><span data-i18n="hero_title">中国の人気<span>ウェブサービス</span>を<br>日本語でわかりやすく</span></h1>
-                <p data-i18n="hero_sub">動画・音楽・ショッピング・SNS・地図など<br>あらゆるカテゴリを網羅した総合ガイド</p>
+                <h1 data-page-node-id="Arn92ABTtrxUBFt5YZ229b"><span data-i18n="hero_title" data-page-node-id="N5s4FXuhjFDexynMh7Ra5Z">中国の人気<span data-page-node-id="wcGFaQE87l1ppvwITyDv2d">ウェブサービス</span>を<br data-page-node-id="jstocOVusIVG1jm9XGrAQm">日本語でわかりやすく</span></h1>
+                <p data-i18n="hero_sub" data-page-node-id="buN5BZBLV8jAGfgkcIiWgd">動画・音楽・ショッピング・SNS・地図など<br data-page-node-id="ij22RCLhJC6xf4HcQxqWqZ">あらゆるカテゴリを網羅した総合ガイド</p>
             </div>
         </div>
     </div>
 
     <!-- SLOGAN -->
-    <div class="container">
-        <div class="slogan-bar">
-            <div class="slogan-line"></div>
-            <div class="slogan-content">
-                <h2 class="slogan-text" data-i18n="slogan_main">中国から世界へ</h2>
+    <div class="container" data-page-node-id="SgyilPmwkLeKZ7wMHciLd3">
+        <div class="slogan-bar" data-page-node-id="ElGdPAuJgDmDrCRc4Tj9jh">
+            <div class="slogan-line" data-page-node-id="Vo63FkeHG3gjJNDzAEyxvO"></div>
+            <div class="slogan-content" data-page-node-id="DsPGtac7iFWy94AWS6UGH7">
+                <h2 class="slogan-text" data-i18n="slogan_main" data-page-node-id="YvR3mZ8CuVJnhT1l9Mh9Hy">中国から世界へ</h2>
             </div>
-            <div class="slogan-line"></div>
+            <div class="slogan-line" data-page-node-id="qXhtyzcrw66t1aHmPFOjXu"></div>
         </div>
     </div>
 
     <!-- MAIN -->
-    <main id="mainContent" class="container">
+    <main id="mainContent" class="container" data-page-node-id="EhLWFC17lXT8aGVBBjFwuS">
 
         <!-- NEWS COLUMN -->
-        <section id="news" class="site-section">
-            <h2 class="section-title" data-i18n="sec_news">最新情報コラム</h2>
-            <p class="section-subtitle" data-i18n="sec_news_sub">各プラットフォームの注目ニュース・限定情報を随時更新</p>
-            <div class="news-grid">
+        <section id="news" class="site-section" data-page-node-id="xOJlR9jZjb1qqUrRqjyGru">
+            <h2 class="section-title" data-i18n="sec_news" data-page-node-id="q2eV4bGjUw5ah4meCcp7Ke">最新情報コラム</h2>
+            <p class="section-subtitle" data-i18n="sec_news_sub" data-page-node-id="QS6JS8CwOZ8rnieoyqPFT8">各プラットフォームの注目ニュース・限定情報を随時更新</p>
+            <div class="news-grid" data-page-node-id="AZv3GPIR1AIohM8h3CBwEX">
 
                 <!-- Article: Endfield x UNIQLO Collaboration -->
-                <div class="news-card" data-news="news_efut">
-                    <div class="news-card-header" style="position:relative;">
+                <div class="news-card" data-news="news_efut" data-page-node-id="oi9HaAz4YfxPU8rJ8RTrRV">
+                    <div class="news-card-header" style="position:relative;" data-page-node-id="caOGnoYUIrJy2KEXaw98EC">
                         <!-- IMG_REPLACE_EFUT: replace src with actual image path if needed -->
-                        <img src="efut.jpg" alt="終末地×ユニクロ コラボ" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
-                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
-                            <span class="news-platform-tag weibo"><i class="fab fa-weibo"></i> Weibo</span>
-                            <span class="news-badge-new">NEW</span>
-                            <span class="news-date">2026.09.01</span>
+                        <img src="efut.jpg" alt="終末地×ユニクロ コラボ" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;" data-page-node-id="WAfGd6sAec9QtJMywTPEH0">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;" data-page-node-id="WEooZi6r5FMHI48YxCoYiq">
+                            <span class="news-platform-tag weibo" data-page-node-id="OucIOW3xH1PjyWUSeWi1LR"><i class="fab fa-weibo" data-page-node-id="7PiCJagdNL5e0jTk1IvJWv"></i> Weibo</span>
+                            <span class="news-badge-new" data-page-node-id="EA3ZAmGdSV8fWYAsAhnaMu">NEW</span>
+                            <span class="news-date" data-page-node-id="aL9eDbZODg9G8eDHbVoZ0d">2026.09.01</span>
                         </div>
                     </div>
-                    <div class="news-card-body">
-                        <h3 class="news-title" data-i18n="news_efut_title">終末地×ユニクロ コラボ開催中</h3>
-                        <p class="news-excerpt" data-i18n="news_efut_excerpt">終末地とユニクロのコラボレーションが正式にスタート。期間は1年間。詳細は微博公式アカウントで確認できます。</p>
-                        <div class="news-card-footer">
-                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_collab">コラボ</span></span>
-                            <span class="news-read-more" data-news="news_efut"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                    <div class="news-card-body" data-page-node-id="PciKzTVUDm2ST4dhH8WwEH">
+                        <h3 class="news-title" data-i18n="news_efut_title" data-page-node-id="Nu2akKyyvmKUFNgKbwcHUH">終末地×ユニクロ コラボ開催中</h3>
+                        <p class="news-excerpt" data-i18n="news_efut_excerpt" data-page-node-id="gIRMHx0CN6iPWvoxGqMHBD">終末地とユニクロのコラボレーションが正式にスタート。期間は1年間。詳細は微博公式アカウントで確認できます。</p>
+                        <div class="news-card-footer" data-page-node-id="HFe1qiydd3gcBMCVLzRWWp">
+                            <span class="news-category-label" data-page-node-id="xH3ugitD50AtlgKtgcSGeE"><i class="fas fa-tag" data-page-node-id="9TWBTH7JvaPHhTciC8NAwc"></i> <span data-i18n="news_cate_collab" data-page-node-id="TgpEbuxmO9DtupWkR8F2oD">コラボ</span></span>
+                            <span class="news-read-more" data-news="news_efut" data-page-node-id="9M4dERxZfYZLMxBf1Ogt3z"><span data-i18n="news_readmore" data-page-node-id="HuPG3OZViPoL6W9Ek5B2LM">続きを読む</span> <i class="fas fa-arrow-right" data-page-node-id="uSCgcrCWlPyJEdaVMu6Uuo"></i></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Article: Wuthering Waves Live Concert -->
-                <div class="news-card" data-news="news_wwlive">
-                    <div class="news-card-header" style="position:relative;">
+                <div class="news-card" data-news="news_wwlive" data-page-node-id="ehxH1MOx3PflJOXNuyvUW9">
+                    <div class="news-card-header" style="position:relative;" data-page-node-id="ToeA01BJBuml7Pg7gEhLkO">
                         <!-- IMG_REPLACE_WWLIVE: replace src with actual image path -->
-                        <img src="wwlive.jpg" alt="鳴潮 ライブ「新たなる世界へ」" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;">
-                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;">
-                            <span class="news-platform-tag bilibili"><i class="fas fa-video"></i> Bilibili</span>
-                            <span class="news-badge-new" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">常驻</span>
-                            <span class="news-date">常設</span>
+                        <img src="wwlive.jpg" alt="鳴潮 ライブ「新たなる世界へ」" style="width:100%;height:160px;object-fit:cover;border-radius:14px 14px 0 0;display:block;" data-page-node-id="tqVBtWiqFL0EyINkz2SZIC">
+                        <div class="news-meta" style="position:absolute;bottom:10px;left:14px;" data-page-node-id="S29tYweArloCQqHkZHJF7r">
+                            <span class="news-platform-tag bilibili" data-page-node-id="zzgZWE80Cg2URBEDOCMS0j"><i class="fas fa-video" data-page-node-id="K00D1xVQUWQrfARzKlLN4i"></i> Bilibili</span>
+                            <span class="news-badge-new" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);" data-page-node-id="nn6Zjfg2boqinIXfPRerGZ">常驻</span>
+                            <span class="news-date" data-page-node-id="uKQZsetlE4ND9GdJRRMGB9">常設</span>
                         </div>
                     </div>
-                    <div class="news-card-body">
-                        <h3 class="news-title" data-i18n="news_wwlive_title">"鳴潮" ライブ「新たなる世界へ」独占配信中</h3>
-                        <p class="news-excerpt" data-i18n="news_wwlive_excerpt">"鳴潮" のライブ「新たなる世界へ」がBilibiliで独占配信中。フルバージョンをいつでも視聴できます。</p>
-                        <div class="news-card-footer">
-                            <span class="news-category-label"><i class="fas fa-tag"></i> <span data-i18n="news_cate_event">イベント</span></span>
-                            <span class="news-read-more" data-news="news_wwlive"><span data-i18n="news_readmore">続きを読む</span> <i class="fas fa-arrow-right"></i></span>
+                    <div class="news-card-body" data-page-node-id="m04mhzSGkAGR0wstuaObh2">
+                        <h3 class="news-title" data-i18n="news_wwlive_title" data-page-node-id="IYLq5tdngrVopitHxOcJwv">"鳴潮" ライブ「新たなる世界へ」独占配信中</h3>
+                        <p class="news-excerpt" data-i18n="news_wwlive_excerpt" data-page-node-id="rWl77rVgttHJi5ElPNl2j1">"鳴潮" のライブ「新たなる世界へ」がBilibiliで独占配信中。フルバージョンをいつでも視聴できます。</p>
+                        <div class="news-card-footer" data-page-node-id="oy0waGjV42YpW7ictpa2rC">
+                            <span class="news-category-label" data-page-node-id="xTN1HWqYHuvjGm8MziNYjz"><i class="fas fa-tag" data-page-node-id="J5DfwFppRwSmb9J0HbRAgk"></i> <span data-i18n="news_cate_event" data-page-node-id="0N0BpfzxD9JpD6e12uIbfK">イベント</span></span>
+                            <span class="news-read-more" data-news="news_wwlive" data-page-node-id="ZNLA0i7n2AHs84OBevnCcp"><span data-i18n="news_readmore" data-page-node-id="BUc4OYIaZgqSCVSdZOIvMw">続きを読む</span> <i class="fas fa-arrow-right" data-page-node-id="IxDhhkuypaow2QwNPdZW9d"></i></span>
                         </div>
                     </div>
                 </div>
@@ -1831,390 +1926,390 @@
         </section>
 
         <!-- PHONE COMPARE FEATURE : 中国版 vs 日本版 -->
-        <section id="phonecompare" class="site-section">
-            <h2 class="section-title" data-i18n="sec_pc">中日スマホ比較ツール</h2>
-            <p class="section-subtitle" data-i18n="sec_pc_sub">同じ機種でも「中国版」と「日本版」でここまで違う</p>
-            <div class="pc-feature">
-                <div class="pc-feature-head">
-                    <div class="pc-feature-ic"><i class="fas fa-mobile-alt"></i></div>
-                    <div>
-                        <div class="pc-feature-title" data-i18n="pc_title">中国版 vs 日本版、その差を見てみよう</div>
-                        <div class="pc-feature-desc" data-i18n="pc_desc">19機種から2台を選んで、チップ・カメラ・価格などを並べて比較できます。</div>
+        <section id="phonecompare" class="site-section" data-page-node-id="fKfpMqgOthwMiFKQgOGaTB">
+            <h2 class="section-title" data-i18n="sec_pc" data-page-node-id="3vqxAdMCBYIBiL4cAFlq5a">中日スマホ比較ツール</h2>
+            <p class="section-subtitle" data-i18n="sec_pc_sub" data-page-node-id="iscpHccCZEx5nmkPwTVlcB">同じ機種でも「中国版」と「日本版」でここまで違う</p>
+            <div class="pc-feature" data-page-node-id="irCcImVnBdChZaBvJEG6eF">
+                <div class="pc-feature-head" data-page-node-id="2tLIrMA0xBq6lsmLM25sRc">
+                    <div class="pc-feature-ic" data-page-node-id="dPTqZYhIzRJRzABTk2Dn0n"><i class="fas fa-mobile-alt" data-page-node-id="RmuuSO8AQP5hjGg1PK71be"></i></div>
+                    <div data-page-node-id="9zLmuEANZUxFxOzeWxkhTb">
+                        <div class="pc-feature-title" data-i18n="pc_title" data-page-node-id="li4nNgXcXFN8ex5wDPIytH">中国版 vs 日本版、その差を見てみよう</div>
+                        <div class="pc-feature-desc" data-i18n="pc_desc" data-page-node-id="45v7vvPVQ5uItqUSVtEs5d">19機種から2台を選んで、チップ・カメラ・価格などを並べて比較できます。</div>
                     </div>
                 </div>
-                <div class="pc-vs">
-                    <div class="pc-col pc-cn">
-                        <div class="pc-badge" data-i18n="pc_cn">中国版</div>
-                        <div class="pc-model">OPPO Reno16</div>
-                        <div class="pc-spec">Dimensity 8550 SUPER</div>
-                        <div class="pc-spec">3,499元 ・ 2026.5</div>
+                <div class="pc-vs" data-page-node-id="ImPUH0VDB8I9Bc3tZGeBaD">
+                    <div class="pc-col pc-cn" data-page-node-id="BpNAAbGqjCG1FgWmF6yfjA">
+                        <div class="pc-badge" data-i18n="pc_cn" data-page-node-id="xtjZU0eiXRkqPk80nCF5fD">中国版</div>
+                        <div class="pc-model" data-page-node-id="ZWrFuSBiUFpznCHwzztO5p">OPPO Reno16</div>
+                        <div class="pc-spec" data-page-node-id="xMn6Va7OzkFj177MNb8nDD">Dimensity 8550 SUPER</div>
+                        <div class="pc-spec" data-page-node-id="bEElIbqvW28ALJqUBXKXEf">3,499元 ・ 2026.5</div>
                     </div>
-                    <div class="pc-vsmark">VS</div>
-                    <div class="pc-col pc-jp">
-                        <div class="pc-badge" data-i18n="pc_jp">日本版</div>
-                        <div class="pc-model">OPPO Reno16 5G</div>
-                        <div class="pc-spec">Snapdragon 7 Gen 4</div>
-                        <div class="pc-spec">89,800円 ・ 2026.8</div>
+                    <div class="pc-vsmark" data-page-node-id="g4xKDaYDpGaXkRlu3CU0AB">VS</div>
+                    <div class="pc-col pc-jp" data-page-node-id="N8er0H7Avf9xhsCP1LBAOi">
+                        <div class="pc-badge" data-i18n="pc_jp" data-page-node-id="kW2VhHgSEQ8pIxnBDqCs1Z">日本版</div>
+                        <div class="pc-model" data-page-node-id="dIEJODm2odiYzDsRVFpfMb">OPPO Reno16 5G</div>
+                        <div class="pc-spec" data-page-node-id="Gb11swDFclEOBMzwUb6Ssf">Snapdragon 7 Gen 4</div>
+                        <div class="pc-spec" data-page-node-id="C8UruNHHB3eqXc72D4vxid">89,800円 ・ 2026.8</div>
                     </div>
                 </div>
-                <a href="phones.html" target="_blank" rel="noopener" class="pc-cta"><span data-i18n="pc_cta">もっと比較する</span> <i class="fas fa-arrow-right"></i></a>
+                <a href="phones.html" target="_blank" rel="noopener" class="pc-cta" data-page-node-id="0iCpUDWnXJAiKhUyaPQpSZ"><span data-i18n="pc_cta" data-page-node-id="xzusm0nw5EOek1K5HcizUR">もっと比較する</span> <i class="fas fa-arrow-right" data-page-node-id="wNIdZeFCuvbiREcj6yuDmN"></i></a>
             </div>
         </section>
 
-        <section id="games" class="site-section">
-            <h2 class="section-title" data-i18n="sec_games">ゲーム</h2>
-            <p class="section-subtitle" data-i18n="sec_games_sub">中国を代表するゲームメーカーと人気タイトル</p>
-            <div class="site-grid">
+        <section id="games" class="site-section" data-page-node-id="us0Y2CwflaO7EPgjN3HXkH">
+            <h2 class="section-title" data-i18n="sec_games" data-page-node-id="gurruqiQdNgOMd0eCRx46V">ゲーム</h2>
+            <p class="section-subtitle" data-i18n="sec_games_sub" data-page-node-id="N7Zal19xT9clKKEbVLWaJT">中国を代表するゲームメーカーと人気タイトル</p>
+            <div class="site-grid" data-page-node-id="UFW2QPfGe2I6lVSUmPknMX">
                 <!-- miHoYo -->
-                <div class="site-card game-trigger" data-game="mihoyo">
-                    <div class="site-card-img-wrap">
+                <div class="site-card game-trigger" data-game="mihoyo" data-page-node-id="MJTgDH0n6tX1Q4A4IZzClX">
+                    <div class="site-card-img-wrap" data-page-node-id="bMJWjBuWCHrz2nJaM5YtM8">
                         <!-- IMG_REPLACE_MIHOYO: company logo -->
-                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/MiHoYo%20Games.png" alt="miHoYo" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/MiHoYo%20Games.png" alt="miHoYo" class="site-card-img" data-page-node-id="5fyshRg7kBVY33qQOmSwWP">
+                        <div class="card-overlay" data-page-node-id="4FuDv2LL0Z8F69uZqQLDVj"></div>
+                        <span class="card-visit-btn" data-page-node-id="tMDcMZYMykubIAx2A2RPzo"><i class="fas fa-gamepad" data-page-node-id="Ku5DHU5RLog01mwe6F8Uzb"></i> <span data-i18n="card_detail" data-page-node-id="feL69evEODg8f6668TnLwZ">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="site-card-content" data-page-node-id="WnssT3Fsa28KkAE8aHHGPe">
+                        <h3 class="site-card-title" data-page-node-id="qYGvOfluUNdfM25kMA3uuV">
+                            <div class="card-icon" data-page-node-id="HpPTuRY7VxkwEfKiVUH3yK"><i class="fas fa-gamepad" data-page-node-id="NIIo0IsmbDgPd4UiWvf0iK"></i></div>
                             miHoYo (米哈游)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="game_mihoyo_tag">原神・星鉄・ZZZ</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="gz88MAnl5bHxYMBiEMTLjK">
+                            <span class="site-card-tag" data-i18n="game_mihoyo_tag" data-page-node-id="tH2Vf0FFEFMmikAzOCqPe6">原神・星鉄・ZZZ</span>
+                            <span class="card-arrow" data-page-node-id="TRuw36LAKiaUUzBq33mghV"><i class="fas fa-chevron-right" data-page-node-id="DyZCqssL4pAjPlezCHtX8R"></i></span>
                         </div>
                     </div>
                 </div>
                 <!-- KURO GAMES -->
-                <div class="site-card game-trigger" data-game="kuro">
-                    <div class="site-card-img-wrap">
+                <div class="site-card game-trigger" data-game="kuro" data-page-node-id="rjdMuD5aBMW6dUV8XiJteC">
+                    <div class="site-card-img-wrap" data-page-node-id="bdis1XG4YrlMIHttMeKgaG">
                         <!-- IMG_REPLACE_KURO: company logo -->
-                        <img src="kuro.png" alt="KURO GAMES" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                        <img src="kuro.png" alt="KURO GAMES" class="site-card-img" data-page-node-id="nXEBaPuR8QgWKpsaswV38e">
+                        <div class="card-overlay" data-page-node-id="TfbPjapKGwGybbevS3k2oS"></div>
+                        <span class="card-visit-btn" data-page-node-id="vnVgofsJWxNtGWL8V9g7Ev"><i class="fas fa-gamepad" data-page-node-id="a16pNEXqv5oJtT7iD7k7bn"></i> <span data-i18n="card_detail" data-page-node-id="DrQuLM7DvO1qTKCBLgGoT5">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="site-card-content" data-page-node-id="oH82r8rl9fwFFZOMdHTubE">
+                        <h3 class="site-card-title" data-page-node-id="6FESWOwJxjIjIXU0DY9I8w">
+                            <div class="card-icon" data-page-node-id="ZUoHgsoZwZJj4T4z08QI0q"><i class="fas fa-gamepad" data-page-node-id="Sen5itcATjNjFp9UGA6nWN"></i></div>
                             KURO GAMES (庫洛)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="game_kuro_tag">鳴潮・戦双</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="2UPlqcmXcy4WGgEaFk1E3C">
+                            <span class="site-card-tag" data-i18n="game_kuro_tag" data-page-node-id="gQZK8zHLGQ5XRdJcI3sooC">鳴潮・戦双</span>
+                            <span class="card-arrow" data-page-node-id="S0eC3nzqNXhF3PU8QZKf5m"><i class="fas fa-chevron-right" data-page-node-id="7p0lexS7ph5kntYApqpRKF"></i></span>
                         </div>
                     </div>
                 </div>
                 <!-- Hypergryph -->
-                <div class="site-card game-trigger" data-game="hypergryph">
-                    <div class="site-card-img-wrap">
+                <div class="site-card game-trigger" data-game="hypergryph" data-page-node-id="IxKmZHJgFWcNUOHMMa8yTU">
+                    <div class="site-card-img-wrap" data-page-node-id="XBI9ioRob9aofIzrmFSuNB">
                         <!-- IMG_REPLACE_HYPERGRYPH: company logo -->
-                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/Hypergryph.png" alt="Hypergryph" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                        <img src="https://commons.moegirl.org.cn/zh/Special:FilePath/Hypergryph.png" alt="Hypergryph" class="site-card-img" data-page-node-id="UTuxc3f4EFfpafVi3VR2VJ">
+                        <div class="card-overlay" data-page-node-id="biXhE6BDokmceGtv5KJRie"></div>
+                        <span class="card-visit-btn" data-page-node-id="KBoBidqidCIfKv9TCMgTAV"><i class="fas fa-gamepad" data-page-node-id="jOUDZVQeJcCpgD3QxQFYS8"></i> <span data-i18n="card_detail" data-page-node-id="9ccVDug2KkBKeClhkykHy8">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="site-card-content" data-page-node-id="Zotz4qCSduYNRFOwjbQu3R">
+                        <h3 class="site-card-title" data-page-node-id="L7uaVoCtH3BTbUndGWoZaB">
+                            <div class="card-icon" data-page-node-id="i4X070jfRrW8wGgUvyt0G3"><i class="fas fa-gamepad" data-page-node-id="zDntxGMApo8g7WciaLCvXb"></i></div>
                             Hypergryph (鷹角)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="game_hyper_tag">明日方舟・終末地</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="f1BVaG8BPOxNgFYIvMywn8">
+                            <span class="site-card-tag" data-i18n="game_hyper_tag" data-page-node-id="vaznbdKw8ETIdKOMNkf9vJ">明日方舟・終末地</span>
+                            <span class="card-arrow" data-page-node-id="3yZ656iwqFCuhysNEcaWYu"><i class="fas fa-chevron-right" data-page-node-id="xCYBytGQht33Rgkflg9RXg"></i></span>
                         </div>
                     </div>
                 </div>
                 <!-- Ananta (异环) -->
-                <div class="site-card game-trigger" data-game="ananta">
-                    <div class="site-card-img-wrap">
+                <div class="site-card game-trigger" data-game="ananta" data-page-node-id="hzrziO2Z8sClxkPtFqGb6c">
+                    <div class="site-card-img-wrap" data-page-node-id="q82kxhAO9TS5papqQFKXli">
                         <!-- IMG_REPLACE_ANANTA: game key art (not company) -->
-                        <img src="header.jpg" alt="Ananta" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                        <img src="header.jpg" alt="Ananta" class="site-card-img" data-page-node-id="fgX8qxoYZPYRCyHKH8qDeo">
+                        <div class="card-overlay" data-page-node-id="hzuNw7AVlKBQHpzjNvSA2Y"></div>
+                        <span class="card-visit-btn" data-page-node-id="wtXt36vv0Qbye492m87KLv"><i class="fas fa-gamepad" data-page-node-id="zfsyjTbgLGG9LSmkYYucZJ"></i> <span data-i18n="card_detail" data-page-node-id="ZxG80EQ8w6CzD9xTZbJgut">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="site-card-content" data-page-node-id="G7qv9cGUyybbgJjXzn4WaQ">
+                        <h3 class="site-card-title" data-page-node-id="HaD7kfUxwj9Cvncy1u4YIB">
+                            <div class="card-icon" data-page-node-id="CpPq0TnRbz1fHBjBS5lA6Y"><i class="fas fa-gamepad" data-page-node-id="wIlVeNy4NGSu9rw2cCE1As"></i></div>
                             异环 (Ananta)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="game_ananta_tag">超自然都市RPG</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="JxvspwnZItpoq5sY9UeHSE">
+                            <span class="site-card-tag" data-i18n="game_ananta_tag" data-page-node-id="70y5YdMNQxRZ7p8NN8fFsb">超自然都市RPG</span>
+                            <span class="card-arrow" data-page-node-id="9cLlHBLhzUVsf1Mgg2wmY5"><i class="fas fa-chevron-right" data-page-node-id="qPlnuzyO0PTguQRup6QOYv"></i></span>
                         </div>
                     </div>
                 </div>
                 <!-- MICA Team / Sunborn -->
-                <div class="site-card game-trigger" data-game="mica">
-                    <div class="site-card-img-wrap">
+                <div class="site-card game-trigger" data-game="mica" data-page-node-id="q07gx19Vl2Q6XnBXisOe1C">
+                    <div class="site-card-img-wrap" data-page-node-id="LBtzwRPDliP7SHlhYqMvyn">
                         <!-- IMG_REPLACE_MICA: company logo -->
-                        <img src="https://iopwiki.com/images/9/9c/Sunborn_logo.png" alt="Sunborn Network" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-gamepad"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                        <img src="https://iopwiki.com/images/9/9c/Sunborn_logo.png" alt="Sunborn Network" class="site-card-img" data-page-node-id="cZY9inBh2s3emMHBsqIQQp">
+                        <div class="card-overlay" data-page-node-id="AGTlZVxx4mPSgAe1Vjoya6"></div>
+                        <span class="card-visit-btn" data-page-node-id="dDLi2ePl4xp053sq0seGcH"><i class="fas fa-gamepad" data-page-node-id="KsX9OoEiKU3gNMd2HeX5aN"></i> <span data-i18n="card_detail" data-page-node-id="tRQ89TrwxQAHVCzhmBUESI">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="site-card-content" data-page-node-id="LEzdEJXT5gzVGmGrTOarZX">
+                        <h3 class="site-card-title" data-page-node-id="8McTg0OdGpKqJPOMXdAoVL">
+                            <div class="card-icon" data-page-node-id="f6NImUXxvoX3wAGQe5Uljx"><i class="fas fa-gamepad" data-page-node-id="cD4VZq9KWf88jL35kay58c"></i></div>
                             散爆 (MICA Team)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="game_mica_tag">少女前線2</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="EhnUH5W4YrOEe3f0dfuYwP">
+                            <span class="site-card-tag" data-i18n="game_mica_tag" data-page-node-id="4Og6wkqe70r1ANeP8Do5tT">少女前線2</span>
+                            <span class="card-arrow" data-page-node-id="c7J67mXvg0IDHZ92VmVaE9"><i class="fas fa-chevron-right" data-page-node-id="kgebDYCtgeg5BK1SoiiF2m"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="video" class="site-section">
-            <h2 class="section-title" data-i18n="sec_video">動画エンタテインメント</h2>
-            <p class="section-subtitle" data-i18n="sec_video_sub">中国を代表する動画・短動画プラットフォーム</p>
-            <div class="site-grid">
-                <div class="site-card" data-detail="bilibili">
-                    <div class="site-card-img-wrap">
-                        <img src="bilibili.png" alt="Bilibili" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+        <section id="video" class="site-section" data-page-node-id="EQgON5V6qwOIuAYJFFEL2a">
+            <h2 class="section-title" data-i18n="sec_video" data-page-node-id="yh3oL8EvVBYDD8Fx10jgby">動画エンタテインメント</h2>
+            <p class="section-subtitle" data-i18n="sec_video_sub" data-page-node-id="ewhfMzMjxRNjBGVPPwxNBD">中国を代表する動画・短動画プラットフォーム</p>
+            <div class="site-grid" data-page-node-id="71gyCb14HnxibhlU5z91P3">
+                <div class="site-card" data-detail="bilibili" data-page-node-id="leKXqpLYe2XQnPv4FltQUF">
+                    <div class="site-card-img-wrap" data-page-node-id="dgh11R7vTgKRAe6JTIdJwD">
+                        <img src="bilibili.png" alt="Bilibili" class="site-card-img" data-page-node-id="r4QNX6fWKwrGOxTKRlcIAX">
+                        <div class="card-overlay" data-page-node-id="B6TZ46rX7ijbBG5SKABUS3"></div>
+                        <span class="card-visit-btn" data-page-node-id="poaNynsAx1D89wWlwv2itu"><i class="fas fa-external-link-alt" data-page-node-id="WjEfULUJh6tLB6Bfxn0TYy"></i> <span data-i18n="card_detail" data-page-node-id="8Q1LlXeulnBFgO2KxEstyH">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-video"></i></div>
+                    <div class="site-card-content" data-page-node-id="P3LdZ50HIxlfqE2a06qplH">
+                        <h3 class="site-card-title" data-page-node-id="Y8XA5QkGt3hpPDURcKQXgF">
+                            <div class="card-icon" data-page-node-id="XUahHsb4n1u4ooLgjOnmYJ"><i class="fas fa-video" data-page-node-id="DI5D2zKaes3A2ASrzxFBUG"></i></div>
                             Bilibili (ビリビリ)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="bili_tag">動画共有</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="jjpawX4GjRiKmyFRE2LC4v">
+                            <span class="site-card-tag" data-i18n="bili_tag" data-page-node-id="fCz2HI4gyeSS0wcidlLzel">動画共有</span>
+                            <span class="card-arrow" data-page-node-id="HQcHJaex8C1MSm4VIvrotg"><i class="fas fa-chevron-right" data-page-node-id="lmZe58YCQC42uzT4PAw1QZ"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="douyin">
-                    <div class="site-card-img-wrap">
-                        <img src="douyin.png" alt="抖音" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="douyin" data-page-node-id="n1YnDgQk5gymygJTqnRn0a">
+                    <div class="site-card-img-wrap" data-page-node-id="1Nvn9jGEhyq12zvS0jX2E9">
+                        <img src="douyin.png" alt="抖音" class="site-card-img" data-page-node-id="HAFSxEeVqZsqiEdp0qLon5">
+                        <div class="card-overlay" data-page-node-id="g3fbVxVJaLREpZjPWdqw3d"></div>
+                        <span class="card-visit-btn" data-page-node-id="X8aqmUQVPBiJNkT6jlOCdG"><i class="fas fa-external-link-alt" data-page-node-id="qQrlH72OeocqPLcoxMp1rx"></i> <span data-i18n="card_detail" data-page-node-id="ob2qaKCOA2crPadbUJPDDE">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-music"></i></div>
+                    <div class="site-card-content" data-page-node-id="BeloocQJYs8VGxf45Fzt4r">
+                        <h3 class="site-card-title" data-page-node-id="EN34hWkmkIBwOSQM1B68rV">
+                            <div class="card-icon" data-page-node-id="fwMI1A02jp2CwIGjExcCWP"><i class="fas fa-music" data-page-node-id="2upFyyh0MZhzRp4GIHJjBt"></i></div>
                             抖音 (Douyin/TikTok)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="douyin_tag">ショート動画</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="35Du20QvPLo4xU8J6YGPFf">
+                            <span class="site-card-tag" data-i18n="douyin_tag" data-page-node-id="1pvr9bg1aPpjdnFnbexxQz">ショート動画</span>
+                            <span class="card-arrow" data-page-node-id="APjmeHkKCOBm0CvtwtJGuf"><i class="fas fa-chevron-right" data-page-node-id="EH5snXri7FG1cgEMRhT0fH"></i></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tutorial Card: Bilibili Guide -->
-                <div class="site-card tutorial-trigger" data-tutorial="bilibili_guide">
-                    <div class="site-card-img-wrap" style="background:linear-gradient(135deg,#00a1d6 0%,#0073b1 100%);display:flex;align-items:center;justify-content:center;">
-                        <div style="font-size:56px;color:rgba(255,255,255,0.9);"><i class="fas fa-book-open"></i></div>
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card tutorial-trigger" data-tutorial="bilibili_guide" data-page-node-id="EmxnmMzShibEn9nTbbuEg8">
+                    <div class="site-card-img-wrap" style="background:linear-gradient(135deg,#00a1d6 0%,#0073b1 100%);display:flex;align-items:center;justify-content:center;" data-page-node-id="bGqxg840aGwpzhdIMWR0iy">
+                        <div style="font-size:56px;color:rgba(255,255,255,0.9);" data-page-node-id="cTkDpDywjrW0toGYtfzG53"><i class="fas fa-book-open" data-page-node-id="GaYRxCUFqRHjVzFMMRCJWA"></i></div>
+                        <div class="card-overlay" data-page-node-id="ZaBuBHyFXAgiFEBVefSjyw"></div>
+                        <span class="card-visit-btn" data-page-node-id="OBWeWh5EQvqzwI8O7TABHx"><i class="fas fa-external-link-alt" data-page-node-id="GpJNOD30vd8ypU9DgX7CFS"></i> <span data-i18n="card_detail" data-page-node-id="p1UPcPlKo5AV4aMLRvNG1f">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon" style="background:#e0f7ff;color:#00a1d6;"><i class="fas fa-book-open"></i></div>
-                            <span data-i18n="tut_bili_card_title">Bilibiliの使い方ガイド</span>
+                    <div class="site-card-content" data-page-node-id="bFKc1oFQQAGUuiaG1h0Tis">
+                        <h3 class="site-card-title" data-page-node-id="CBJWKfYsQtIOedyro5EZYC">
+                            <div class="card-icon" style="background:#e0f7ff;color:#00a1d6;" data-page-node-id="aC2AAOgy0ahnP4oQ9XuMTU"><i class="fas fa-book-open" data-page-node-id="RzHJ2OoJFBXtNdkFuazq2u"></i></div>
+                            <span data-i18n="tut_bili_card_title" data-page-node-id="RiHPQwCkZkBdJWYYmnOdin">Bilibiliの使い方ガイド</span>
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="tut_bili_card_tag">使い方ガイド</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="iR4MSrSWD9cweLqzUSTRCE">
+                            <span class="site-card-tag" data-i18n="tut_bili_card_tag" data-page-node-id="0C066cMeHsFoaHpX4sqxRz">使い方ガイド</span>
+                            <span class="card-arrow" data-page-node-id="PrcE7LtjmzUCaQTt5TIRVg"><i class="fas fa-chevron-right" data-page-node-id="aljd68K6ToHBB5Hw1jPEAc"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="music" class="site-section">
-            <h2 class="section-title" data-i18n="sec_music">音楽ストリーミング</h2>
-            <p class="section-subtitle" data-i18n="sec_music_sub">中国の主要音楽プラットフォーム</p>
-            <div class="site-grid">
-                <div class="site-card" data-detail="qqmusic">
-                    <div class="site-card-img-wrap">
-                        <img src="qqyinyue.jpg" alt="QQ音乐" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+        <section id="music" class="site-section" data-page-node-id="tuajUMhx3qYH6ES2m2gavn">
+            <h2 class="section-title" data-i18n="sec_music" data-page-node-id="IhQSM8SpyFFSTqrGdGZNMI">音楽ストリーミング</h2>
+            <p class="section-subtitle" data-i18n="sec_music_sub" data-page-node-id="tExlFkNWBjwlUMOmaWKIRG">中国の主要音楽プラットフォーム</p>
+            <div class="site-grid" data-page-node-id="d8FCr0EhtS0kpvKJT8NOOc">
+                <div class="site-card" data-detail="qqmusic" data-page-node-id="6lhSeLdRihZCLIZQQ9FWyP">
+                    <div class="site-card-img-wrap" data-page-node-id="SA3yEYa4j6DADwqJUqQWWl">
+                        <img src="qqyinyue.jpg" alt="QQ音乐" class="site-card-img" data-page-node-id="zLuvAKZ0H8q6g0bc7HzdWK">
+                        <div class="card-overlay" data-page-node-id="P0lu1QpzcMgArrH9WD4jLS"></div>
+                        <span class="card-visit-btn" data-page-node-id="2UvmJqbsFVHr7YtE1l3SCR"><i class="fas fa-external-link-alt" data-page-node-id="f09rYhCtnITJaNxe1rpfBR"></i> <span data-i18n="card_detail" data-page-node-id="Ju84Yeimq2QSSjGkkmxIJ2">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-music"></i></div>
+                    <div class="site-card-content" data-page-node-id="HDrwBQVjb9K1HXocj8byRJ">
+                        <h3 class="site-card-title" data-page-node-id="99RrO3SWikik30EEMjeGf2">
+                            <div class="card-icon" data-page-node-id="noQzFelwD3D5HslLgiQNIi"><i class="fas fa-music" data-page-node-id="TJKiGPop8BFcqd9yfKnpk2"></i></div>
                             QQ音楽
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="qqmusic_tag">音楽再生</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="hn3N9Rvw092mqokNEeh7bS">
+                            <span class="site-card-tag" data-i18n="qqmusic_tag" data-page-node-id="GJa80lO2Lms6uRUVHnqtFu">音楽再生</span>
+                            <span class="card-arrow" data-page-node-id="HgDCHBJaFxhADv3COnWZqe"><i class="fas fa-chevron-right" data-page-node-id="yjXqVlH4Is5GzpmmFwzJA7"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="neteasemusic">
-                    <div class="site-card-img-wrap">
-                        <img src="wangyiyun.png" alt="网易云音乐" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="neteasemusic" data-page-node-id="rnfDSzEWxsIbX5FWn8Xhyr">
+                    <div class="site-card-img-wrap" data-page-node-id="VzW5SjzPF5AEXBo5I2OQPK">
+                        <img src="wangyiyun.png" alt="网易云音乐" class="site-card-img" data-page-node-id="L5eC2NGpEjys0c20J5XMhY">
+                        <div class="card-overlay" data-page-node-id="y3IlEKp0IxRNtjKXHpS7jE"></div>
+                        <span class="card-visit-btn" data-page-node-id="Y84O1PNw4n2oSWTywWqeBV"><i class="fas fa-external-link-alt" data-page-node-id="ftvphRnu0HAkvG4vd37pba"></i> <span data-i18n="card_detail" data-page-node-id="fobDZIvrROhOIlIxiJ6K4T">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-headphones"></i></div>
+                    <div class="site-card-content" data-page-node-id="Z9mhAIWfEG1yXshQ7s60WS">
+                        <h3 class="site-card-title" data-page-node-id="qo8Rb5yYK9yCyv5AiDEsXk">
+                            <div class="card-icon" data-page-node-id="2reJmbCsdeG7KqBCV3aUQi"><i class="fas fa-headphones" data-page-node-id="Q7NUqZadkaBievgu1unI0f"></i></div>
                             网易云音乐
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="netease_tag">音楽コミュニティ</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="DU5F048o7CHT2FPITbxeCy">
+                            <span class="site-card-tag" data-i18n="netease_tag" data-page-node-id="o8n68J1KPtQXGw6pAjrPrh">音楽コミュニティ</span>
+                            <span class="card-arrow" data-page-node-id="Bu3B1YYrSsM0oFDAYrtkfQ"><i class="fas fa-chevron-right" data-page-node-id="EDsNGjV6UTPxzvB5XjZeaJ"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="shopping" class="site-section">
-            <h2 class="section-title" data-i18n="sec_shopping">ネットショッピング</h2>
-            <p class="section-subtitle" data-i18n="sec_shopping_sub">中国の主要ECプラットフォーム一覧</p>
-            <div class="site-grid">
-                <div class="site-card" data-detail="taobao">
-                    <div class="site-card-img-wrap">
-                        <img src="taobao.png" alt="淘宝" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+        <section id="shopping" class="site-section" data-page-node-id="C08I18IbbNoYMNLhwvq8F9">
+            <h2 class="section-title" data-i18n="sec_shopping" data-page-node-id="sBaDVlhayMA388B75vqcbf">ネットショッピング</h2>
+            <p class="section-subtitle" data-i18n="sec_shopping_sub" data-page-node-id="I70fiSrzirJB9STrR8TCoG">中国の主要ECプラットフォーム一覧</p>
+            <div class="site-grid" data-page-node-id="VWhiEvHpB6WeHIcu2zXr8U">
+                <div class="site-card" data-detail="taobao" data-page-node-id="xUqCujiqiQYkghJPgytdet">
+                    <div class="site-card-img-wrap" data-page-node-id="IueqlHcTud9kqOonCSEpPg">
+                        <img src="taobao.png" alt="淘宝" class="site-card-img" data-page-node-id="GmkqMTBHZpVCp94NSiS1Gp">
+                        <div class="card-overlay" data-page-node-id="taX7mOaqAjslAuGkBRvbJv"></div>
+                        <span class="card-visit-btn" data-page-node-id="YCHpuEnD8pM7fpWYjd3dl9"><i class="fas fa-external-link-alt" data-page-node-id="UH8m43KtnNLgKzEHIz2mDd"></i> <span data-i18n="card_detail" data-page-node-id="cDLgOJMuJm9kzAkEy71qEk">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="site-card-content" data-page-node-id="GBAahjADqHU9VAHZpcHmZ3">
+                        <h3 class="site-card-title" data-page-node-id="lXhpgJsq22T1DJ2kxsJInQ">
+                            <div class="card-icon" data-page-node-id="Az6x3thKWHWKsCFR2OnUwi"><i class="fas fa-shopping-cart" data-page-node-id="DgCJPZNDI4ZoVfCLGGNLih"></i></div>
                             淘宝 (Taobao)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="taobao_tag">オンラインショッピング</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="KnYfotEFTC2Uwp4iWY2wWa">
+                            <span class="site-card-tag" data-i18n="taobao_tag" data-page-node-id="LgG9OCG2wveUeHnlGvnHpU">オンラインショッピング</span>
+                            <span class="card-arrow" data-page-node-id="esR8Itpb1ZvcTcaaXUJTh5"><i class="fas fa-chevron-right" data-page-node-id="IBzMWSvc8M2GSGHV3U3IYd"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="jd">
-                    <div class="site-card-img-wrap">
-                        <img src="jingdong.jpg" alt="京东" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="jd" data-page-node-id="zZ0qjKdhQqCHdySNraJNJf">
+                    <div class="site-card-img-wrap" data-page-node-id="XdW4SCjrPc3j1Nk1ZGXL0C">
+                        <img src="jingdong.jpg" alt="京东" class="site-card-img" data-page-node-id="mBvhNGjz4eHTaUCtBUSOa8">
+                        <div class="card-overlay" data-page-node-id="WKrllffb1lgGR1DypCNYbW"></div>
+                        <span class="card-visit-btn" data-page-node-id="RrLB6eCi5guG2oDvRqQanf"><i class="fas fa-external-link-alt" data-page-node-id="ObWWroTawqhWTqViF5cCKa"></i> <span data-i18n="card_detail" data-page-node-id="baosD5ji0KyIf7t9pykmgs">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-box"></i></div>
+                    <div class="site-card-content" data-page-node-id="aRUlHi8p12iREyq510i8q3">
+                        <h3 class="site-card-title" data-page-node-id="kDBMYBibw2JBbeRBZgmVkg">
+                            <div class="card-icon" data-page-node-id="CPKDsbGlZhILL3ZA1G0q6K"><i class="fas fa-box" data-page-node-id="0frJGB0xkpTEY5cHRqaCe9"></i></div>
                             京东 (JD.com)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="jd_tag">総合ECサイト</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="ydw2Tj4eFR80EYEId3450c">
+                            <span class="site-card-tag" data-i18n="jd_tag" data-page-node-id="KJhxpjh0sL1DqKkVnrZHeJ">総合ECサイト</span>
+                            <span class="card-arrow" data-page-node-id="xneRCl9u71NHykNF4szfWF"><i class="fas fa-chevron-right" data-page-node-id="XYe2BJRAiw6mcvQtyWsL3n"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="xianyu">
-                    <div class="site-card-img-wrap">
-                        <img src="xianyu.jpg" alt="闲鱼" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="xianyu" data-page-node-id="18WDNeIBwfpsEhRxe83Kro">
+                    <div class="site-card-img-wrap" data-page-node-id="yJm2Z5KGUvNkvW2E2WTNVM">
+                        <img src="xianyu.jpg" alt="闲鱼" class="site-card-img" data-page-node-id="COwlBWEJzx7uEGkw5qhatF">
+                        <div class="card-overlay" data-page-node-id="bOvWJnRaMHfAZltTkI45KC"></div>
+                        <span class="card-visit-btn" data-page-node-id="wJryK2gJBuOWcZZ73LGmaS"><i class="fas fa-external-link-alt" data-page-node-id="PpLVmqAQP8cUxRNkPL6iKL"></i> <span data-i18n="card_detail" data-page-node-id="yaxqKXFboqT3bAtSmLvMIK">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-recycle"></i></div>
+                    <div class="site-card-content" data-page-node-id="a7bGytbPq8MGS84wJeNLfd">
+                        <h3 class="site-card-title" data-page-node-id="FcDNt7gncHhAw1o5qCS6Oh">
+                            <div class="card-icon" data-page-node-id="K5t6w2QZ4VVqQiw6DwjRaC"><i class="fas fa-recycle" data-page-node-id="QjG1rxlmC4jK8VwEIXjAzm"></i></div>
                             闲鱼 (Xianyu)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="xianyu_tag">フリマサービス</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="TllxTRiJ1QIzGqLm26GBu6">
+                            <span class="site-card-tag" data-i18n="xianyu_tag" data-page-node-id="fehndWzxNdlQkwQUaDxLHu">フリマサービス</span>
+                            <span class="card-arrow" data-page-node-id="cXKRpYRSNPDaBszFwZ4CGD"><i class="fas fa-chevron-right" data-page-node-id="NAWIkvk5677br7CDJByue7"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="pdd">
-                    <div class="site-card-img-wrap">
-                        <img src="pinduoudo.jpg" alt="拼多多" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="pdd" data-page-node-id="JOOxvVhOozgQ2e6T70wXSP">
+                    <div class="site-card-img-wrap" data-page-node-id="iqux1xJImr41pfQwX21oAY">
+                        <img src="pinduoudo.jpg" alt="拼多多" class="site-card-img" data-page-node-id="kj4LwOFbw8zJVfIeZxJeoG">
+                        <div class="card-overlay" data-page-node-id="bzl6ZAWu7538mozUUINSs6"></div>
+                        <span class="card-visit-btn" data-page-node-id="7Y3WvFz5ual2pw9BcU2nep"><i class="fas fa-external-link-alt" data-page-node-id="Cq9Ac2BExDXusQqZuJzDFf"></i> <span data-i18n="card_detail" data-page-node-id="NlyK5Z6SKBl1W22tIcfyyo">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <div class="site-card-content" data-page-node-id="EnMClR9sxat8noMQCGrPnK">
+                        <h3 class="site-card-title" data-page-node-id="Y1FilhIOEsrD7P2zWoqZwG">
+                            <div class="card-icon" data-page-node-id="fUCaMYybxNpBI45VWscWms"><i class="fas fa-users" data-page-node-id="ik3zHhnzhLjADUvUdbl7WE"></i></div>
                             拼多多 (Pinduoduo)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="pdd_tag">グループ購入</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="2iyLiWq5fSN60zgbXwBqGF">
+                            <span class="site-card-tag" data-i18n="pdd_tag" data-page-node-id="H1E5HoJfyhW3h04BjTIt57">グループ購入</span>
+                            <span class="card-arrow" data-page-node-id="mpzxBF0za2EP1UK6nsiHqS"><i class="fas fa-chevron-right" data-page-node-id="QJJBfqtwWsCGXJwpFU7Gyw"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="social" class="site-section">
-            <h2 class="section-title" data-i18n="sec_social">ソーシャルメディア</h2>
-            <p class="section-subtitle" data-i18n="sec_social_sub">中国の主要SNSプラットフォーム</p>
-            <div class="site-grid">
-                <div class="site-card" data-detail="weibo">
-                    <div class="site-card-img-wrap">
-                        <img src="weibo.png" alt="微博" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+        <section id="social" class="site-section" data-page-node-id="BmHo1VVcQz4GpNUuetzkWW">
+            <h2 class="section-title" data-i18n="sec_social" data-page-node-id="9v2OcMValHaOLHNHNFiINQ">ソーシャルメディア</h2>
+            <p class="section-subtitle" data-i18n="sec_social_sub" data-page-node-id="odD2CoITk0prO0eUfClNU3">中国の主要SNSプラットフォーム</p>
+            <div class="site-grid" data-page-node-id="1kHq5ZUo4Fhggm6XVIDn8p">
+                <div class="site-card" data-detail="weibo" data-page-node-id="tklvz4Fnfo8Z4BuXgPszeO">
+                    <div class="site-card-img-wrap" data-page-node-id="oAd5SVRb5wiKjfWtwwJMy5">
+                        <img src="weibo.png" alt="微博" class="site-card-img" data-page-node-id="GEdeBUv93OhurURdeanDEV">
+                        <div class="card-overlay" data-page-node-id="Krc2MhOS35BUtFNT1npoMP"></div>
+                        <span class="card-visit-btn" data-page-node-id="5S7DxXQVckSy4Z66cPy70T"><i class="fas fa-external-link-alt" data-page-node-id="Aal2A3z0pby4egC123fWkx"></i> <span data-i18n="card_detail" data-page-node-id="8uxEpUHglhgHbJCFnd1rAk">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-comment"></i></div>
+                    <div class="site-card-content" data-page-node-id="043RTLAU8YB9yj3NlXShDb">
+                        <h3 class="site-card-title" data-page-node-id="Se1QFuBkkBxK2j4oyOEYk5">
+                            <div class="card-icon" data-page-node-id="u2iRJJtEnHTeoVxyQ90o2h"><i class="fas fa-comment" data-page-node-id="vSjQGXMn8mLpCKOKWR6jyY"></i></div>
                             微博 (Weibo)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="weibo_tag">マイクロブログ</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="rLHUDcqOXbcAqM7Zyx14US">
+                            <span class="site-card-tag" data-i18n="weibo_tag" data-page-node-id="BVtuVM6sDT2XgppmzllHxd">マイクロブログ</span>
+                            <span class="card-arrow" data-page-node-id="zZTwUJoYiu0FYwkrcmDEHp"><i class="fas fa-chevron-right" data-page-node-id="M2ujN824IvAsocfYEZH9Vm"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="xiaohongshu">
-                    <div class="site-card-img-wrap">
-                        <img src="xiaohongshu.png" alt="小红书" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="xiaohongshu" data-page-node-id="XwePzMBqRA1NJFjevuD2Ih">
+                    <div class="site-card-img-wrap" data-page-node-id="iJVJQ1ejJAjx7u6JJy3DmZ">
+                        <img src="xiaohongshu.png" alt="小红书" class="site-card-img" data-page-node-id="sdqHe6MjRQ4WjviEo15YrM">
+                        <div class="card-overlay" data-page-node-id="0rRRRsFv47R85SAeLxG4pT"></div>
+                        <span class="card-visit-btn" data-page-node-id="pesFCw7tMOkUNBE9DYAxjz"><i class="fas fa-external-link-alt" data-page-node-id="YPokSAyPEUJSf4K6GAM5Tt"></i> <span data-i18n="card_detail" data-page-node-id="7Fd2cHDiTZjFdfbm4X3AxE">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-book"></i></div>
+                    <div class="site-card-content" data-page-node-id="Dd3ACZA7q4EWGwCQdxwlbg">
+                        <h3 class="site-card-title" data-page-node-id="APeQsRpcz2Q9suaDP5lHhu">
+                            <div class="card-icon" data-page-node-id="pdf25L1CziHFLXtzYKxytC"><i class="fas fa-book" data-page-node-id="En21L6xdGqfGC2sbz6sfc4"></i></div>
                             小红书 (Xiaohongshu/RED)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="xhs_tag">ライフスタイル</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="pgPDh094KtGvO834zMWatH">
+                            <span class="site-card-tag" data-i18n="xhs_tag" data-page-node-id="emIotEh0XniHsqNCMkUXtn">ライフスタイル</span>
+                            <span class="card-arrow" data-page-node-id="sKaisZG3JBTcyD0ohNkU6N"><i class="fas fa-chevron-right" data-page-node-id="qnyogJVafwtOrAQbLqH8Bs"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="map" class="site-section">
-            <h2 class="section-title" data-i18n="sec_map">地図・ナビゲーション</h2>
-            <p class="section-subtitle" data-i18n="sec_map_sub">中国の主要マップサービス</p>
-            <div class="site-grid">
-                <div class="site-card" data-detail="amap">
-                    <div class="site-card-img-wrap">
-                        <img src="gaode.png" alt="高德地图" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+        <section id="map" class="site-section" data-page-node-id="3AufdpmtdzlfQUzd9d9bXB">
+            <h2 class="section-title" data-i18n="sec_map" data-page-node-id="Fl7HnFDFs75NYDKIo5bPET">地図・ナビゲーション</h2>
+            <p class="section-subtitle" data-i18n="sec_map_sub" data-page-node-id="ktyklx0FZoGXL5NAItNtHA">中国の主要マップサービス</p>
+            <div class="site-grid" data-page-node-id="RhCKLuE1iIscSwW0QaY4AU">
+                <div class="site-card" data-detail="amap" data-page-node-id="ot4aR4uQWiX8mvUHKhBGLk">
+                    <div class="site-card-img-wrap" data-page-node-id="ytQZ05RxjqnH5HXxf3uv48">
+                        <img src="gaode.png" alt="高德地图" class="site-card-img" data-page-node-id="BFRO1OBd471vbLkDLvHVeP">
+                        <div class="card-overlay" data-page-node-id="qXELGWgToBkszXLeaiYn5p"></div>
+                        <span class="card-visit-btn" data-page-node-id="S0JCoX2P4dWICVJ6bHop3H"><i class="fas fa-external-link-alt" data-page-node-id="lyvfoST1ovRUbIJGOJLCCd"></i> <span data-i18n="card_detail" data-page-node-id="i61W1Q2O7h1QGQjx4m6gw7">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="site-card-content" data-page-node-id="wzTKDcr0yquUJPY2fILDoV">
+                        <h3 class="site-card-title" data-page-node-id="PK7BLtKCDwlEqaJylZ5QuB">
+                            <div class="card-icon" data-page-node-id="uiHXKIv6dnHMghRsLfx0jB"><i class="fas fa-map-marker-alt" data-page-node-id="2SnyxqiNEXpHpaFRbapCQ8"></i></div>
                             高德地图 (Amap)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="amap_tag">地図サービス</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="ksKydZVUscleDkLXxBWJcS">
+                            <span class="site-card-tag" data-i18n="amap_tag" data-page-node-id="IT5s6S6w9wx3OxQc685lyQ">地図サービス</span>
+                            <span class="card-arrow" data-page-node-id="QxAjIgeN1AkZRXExHPheIG"><i class="fas fa-chevron-right" data-page-node-id="pCn9paJvVCv71eDvLLv5CE"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="site-card" data-detail="baidumap">
-                    <div class="site-card-img-wrap">
-                        <img src="baiduditu.jpg" alt="百度地图" class="site-card-img">
-                        <div class="card-overlay"></div>
-                        <span class="card-visit-btn"><i class="fas fa-external-link-alt"></i> <span data-i18n="card_detail">詳細を見る</span></span>
+                <div class="site-card" data-detail="baidumap" data-page-node-id="Xr5kMIs0eOuBr9HbaGIe9i">
+                    <div class="site-card-img-wrap" data-page-node-id="T5gEDbyH4kS1BiJtB8c2qr">
+                        <img src="baiduditu.jpg" alt="百度地图" class="site-card-img" data-page-node-id="3dws90fcXmkw0cL0HS0Rne">
+                        <div class="card-overlay" data-page-node-id="cmLECKq6JPidjp4BQgkASE"></div>
+                        <span class="card-visit-btn" data-page-node-id="uahp4EPo0xmCrtS7TujK9k"><i class="fas fa-external-link-alt" data-page-node-id="TrUMzwtWFPRavDaQiabvws"></i> <span data-i18n="card_detail" data-page-node-id="mhEkd4BJkHvB2ejXmvutOv">詳細を見る</span></span>
                     </div>
-                    <div class="site-card-content">
-                        <h3 class="site-card-title">
-                            <div class="card-icon"><i class="fas fa-map"></i></div>
+                    <div class="site-card-content" data-page-node-id="yEEqsEo81r1E3vrnBDaATT">
+                        <h3 class="site-card-title" data-page-node-id="he2u9fJEkaR1hxFtYiOPTm">
+                            <div class="card-icon" data-page-node-id="MCzBXPl6lPoD9BeXWo70dv"><i class="fas fa-map" data-page-node-id="e3eVYAsemn9AO4BaDwXPyM"></i></div>
                             百度地图 (Baidu Map)
                         </h3>
-                        <div class="card-footer">
-                            <span class="site-card-tag" data-i18n="baidu_tag">ナビゲーション</span>
-                            <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+                        <div class="card-footer" data-page-node-id="QNZRikoTar27aoxzUqZBMt">
+                            <span class="site-card-tag" data-i18n="baidu_tag" data-page-node-id="8B9JNqr14gnRQqVBT7pOWZ">ナビゲーション</span>
+                            <span class="card-arrow" data-page-node-id="QNKZIK1NU1r5krtc4ZLJ6U"><i class="fas fa-chevron-right" data-page-node-id="7rTTQcTWIIs704IIsFq2Hk"></i></span>
                         </div>
                     </div>
                 </div>
@@ -2223,139 +2318,139 @@
     </main>
 
     <!-- NEWS MODAL -->
-    <div class="news-modal" id="newsModal">
-        <div class="news-modal-content" id="newsModalContent">
-            <div class="news-modal-header" id="newsModalHeader">
-                <button class="news-modal-close" id="closeNewsModal"><i class="fas fa-times"></i></button>
-                <div class="news-modal-meta" id="newsModalMeta"></div>
-                <h2 class="news-modal-title" id="newsModalTitle"></h2>
+    <div class="news-modal" id="newsModal" data-page-node-id="9id4QeXKDO1RdCBI3Yi3m3">
+        <div class="news-modal-content" id="newsModalContent" data-page-node-id="dzLkRGYEUQxB2a9MV7DHJd">
+            <div class="news-modal-header" id="newsModalHeader" data-page-node-id="vU8Hr8M6jQ2Ij3I8UAZnQT">
+                <button class="news-modal-close" id="closeNewsModal" data-page-node-id="jg9rNPj45CZOJOZr6Juetc"><i class="fas fa-times" data-page-node-id="2wZuzFJmohcaHmsZHGC1Dg"></i></button>
+                <div class="news-modal-meta" id="newsModalMeta" data-page-node-id="6VRub0ZMGzZ1r7FOYNs77Q"></div>
+                <h2 class="news-modal-title" id="newsModalTitle" data-page-node-id="MQix34iHRtAwcVrWHu0HQf"></h2>
             </div>
             <!-- ★ 图片替换位置：把下面 src 中的占位路径换成实际新闻图片路径即可 ★ -->
-            <div class="news-modal-img-wrap" id="newsModalImgWrap" style="display:none;">
-                <img src="" alt="" id="newsModalImg" style="width:100%;max-height:320px;object-fit:cover;">
+            <div class="news-modal-img-wrap" id="newsModalImgWrap" style="display:none;" data-page-node-id="sgCWY2m9ZbcsDJFHbmveKg">
+                <img src="" alt="" id="newsModalImg" style="width:100%;max-height:320px;object-fit:cover;" data-page-node-id="l39RcxLsDTGoOlb4Bj2T14">
             </div>
-            <div class="news-modal-body" id="newsModalBody"></div>
+            <div class="news-modal-body" id="newsModalBody" data-page-node-id="xLlh7VLPEHBiB5UsAQzCbK"></div>
         </div>
     </div>
 
     <!-- ABOUT PAGE -->
-    <div class="about-page" id="aboutPage">
-        <div class="about-close" id="closeAbout"><i class="fas fa-times"></i></div>
-        <div class="about-hero">
-            <h1 class="about-title" data-i18n="about_title">サイト紹介</h1>
-            <p class="about-subtitle" data-i18n="about_subtitle">中国ウェブサービス総合ガイド</p>
+    <div class="about-page" id="aboutPage" data-page-node-id="Z3TFXrcc2Ot0tzklFQCGUs">
+        <div class="about-close" id="closeAbout" data-page-node-id="DOt69k0XsfVdl2QAx0sDSU"><i class="fas fa-times" data-page-node-id="HkswM5DIBMo6XVUw9DMfzB"></i></div>
+        <div class="about-hero" data-page-node-id="swVNpQxGzRw4O8309Fj4yi">
+            <h1 class="about-title" data-i18n="about_title" data-page-node-id="6dLmvweunCksvqaLtCa8pS">サイト紹介</h1>
+            <p class="about-subtitle" data-i18n="about_subtitle" data-page-node-id="tCLnoVBDdblXpyHi4d5N8T">中国ウェブサービス総合ガイド</p>
         </div>
-        <div class="about-container">
-            <div class="about-grid">
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-info-circle"></i></div>
-                <div class="about-card-text">
-                    <div class="about-card-title" data-i18n="about_c1_title">サイト概要</div>
-                    <p class="about-text" data-i18n="about_c1_text">本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。中国の主要ウェブサービスを日本語でわかりやすく紹介しています。</p>
+        <div class="about-container" data-page-node-id="t0cZr3tlQS1xh20etor51l">
+            <div class="about-grid" data-page-node-id="fFOJHlzPF9GmizyU69mGPG">
+            <div class="about-card" data-page-node-id="Ln0G6EYeOZ1odZZ60tnmxH">
+                <div class="about-card-icon" data-page-node-id="6abEMDSo6drAMDmIsRgEPm"><i class="fas fa-info-circle" data-page-node-id="3D6UkPUz3CbX47KoyXk5kB"></i></div>
+                <div class="about-card-text" data-page-node-id="x2PkPtAt0Q5aexAAxtgZxY">
+                    <div class="about-card-title" data-i18n="about_c1_title" data-page-node-id="65EmEIWckngyUSUmCs1Ex8">サイト概要</div>
+                    <p class="about-text" data-i18n="about_c1_text" data-page-node-id="DQlIkaJmepz01i6hZrQk0o">本サイトは、中国の現地生活・文化・情報に興味のある方を対象に運営しています。中国の主要ウェブサービスを日本語でわかりやすく紹介しています。</p>
                 </div>
             </div>
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-flask"></i></div>
-                <div class="about-card-text">
-                    <div class="about-card-title" data-i18n="about_c2_title">現在の状況</div>
-                    <p class="about-text" data-i18n="about_c2_text">現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。今後、さらなるサイト情報を順次追加・更新してまいります。</p>
+            <div class="about-card" data-page-node-id="guhwFWG3IiPTTC3ceMEwe2">
+                <div class="about-card-icon" data-page-node-id="o2MIHXekfOtUAM2EJ7FAru"><i class="fas fa-flask" data-page-node-id="Wy3kGbjkYZbb22ZsDkS8zF"></i></div>
+                <div class="about-card-text" data-page-node-id="KHemWes7x1wGqbaeQObaKE">
+                    <div class="about-card-title" data-i18n="about_c2_title" data-page-node-id="aV86HyMFgfDrH6dINYvlKn">現在の状況</div>
+                    <p class="about-text" data-i18n="about_c2_text" data-page-node-id="xCm4eAycqUYKTVVPMF68KG">現在、サイトは試験運用中のバージョンであり、すべてのコンテンツは正式版ではありません。今後、さらなるサイト情報を順次追加・更新してまいります。</p>
                 </div>
             </div>
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-bullhorn"></i></div>
-                <div class="about-card-text">
-                    <div class="about-card-title" data-i18n="about_c3_title">広告・スポンサー</div>
-                    <p class="about-text" data-i18n="about_c3_text">現在、サイト内に掲載企業からの広告は一切掲載しておらず、中国文化の対外発信を純粋な目的として運営しています。</p>
+            <div class="about-card" data-page-node-id="WhQSzr4pbdHhTfEG6OSgBA">
+                <div class="about-card-icon" data-page-node-id="VgKE42fMtAkvFKNIRPvi4X"><i class="fas fa-bullhorn" data-page-node-id="VkAlwHHlaShbC3R54Neh6j"></i></div>
+                <div class="about-card-text" data-page-node-id="t4GdwbpXGLIRbgRpwM7XQS">
+                    <div class="about-card-title" data-i18n="about_c3_title" data-page-node-id="acnSHsdRsCYPiFXcZPgEhG">広告・スポンサー</div>
+                    <p class="about-text" data-i18n="about_c3_text" data-page-node-id="ZNJj1whykuPLkLtDDiPNEk">現在、サイト内に掲載企業からの広告は一切掲載しておらず、中国文化の対外発信を純粋な目的として運営しています。</p>
                 </div>
             </div>
-            <div class="about-card">
-                <div class="about-card-icon"><i class="fas fa-sync-alt"></i></div>
-                <div class="about-card-text">
-                    <div class="about-card-title" data-i18n="about_c4_title">更新方針</div>
-                    <p class="about-text" data-i18n="about_c4_text">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
+            <div class="about-card" data-page-node-id="wSxJlN1mIeMslXPNCHAHAn">
+                <div class="about-card-icon" data-page-node-id="VZkAm3XMN9UWsTZrI7fTN6"><i class="fas fa-sync-alt" data-page-node-id="LccX1lzVtVw1T8u5VsRRQm"></i></div>
+                <div class="about-card-text" data-page-node-id="PJOAyDEWH8HgF2dGMg4OUd">
+                    <div class="about-card-title" data-i18n="about_c4_title" data-page-node-id="y2Fb6tlm8BaSvhELK6FlXc">更新方針</div>
+                    <p class="about-text" data-i18n="about_c4_text" data-page-node-id="qYqGXacPd1SeIA4sM645z0">サイトは随時更新してまいりますので、どのようなご意見・ご感想でも歓迎いたします。</p>
                 </div>
             </div>
             </div>
-            <div class="about-contact">
-                <div class="about-contact-title"><i class="fas fa-envelope"></i> <span data-i18n="about_contact_title">お問い合わせ</span></div>
-                <p class="about-contact-email"><span data-i18n="about_contact_text">ご意見・ご要望またはビジネス関連のお問い合わせは</span><br><a href="mailto:tuiochi@petalmail.com">tuiochi@petalmail.com</a> <span data-i18n="about_contact_suffix">までご連絡ください。</span></p>
+            <div class="about-contact" data-page-node-id="7KNxi0wq20c3uqBxCLvLx5">
+                <div class="about-contact-title" data-page-node-id="y2Qow5OWmLHJ7hc10cDUYR"><i class="fas fa-envelope" data-page-node-id="KhTLnyDSm6SZDDMVewwzRS"></i> <span data-i18n="about_contact_title" data-page-node-id="mz4kZxUWMp5Q5fBJO5pEL3">お問い合わせ</span></div>
+                <p class="about-contact-email" data-page-node-id="8dRH6EUPUbU3LhOvFeZONc"><span data-i18n="about_contact_text" data-page-node-id="ASmLGEEsmyjIbLTUiPPDyX">ご意見・ご要望またはビジネス関連のお問い合わせは</span><br data-page-node-id="jUWpJHCSY3GLeTCdXo7WaD"><a href="mailto:tuiochi@petalmail.com" data-page-node-id="imNATmattYR0zJkrhm411Z">tuiochi@petalmail.com</a> <span data-i18n="about_contact_suffix" data-page-node-id="KGA3eriwXOooQV9ssbayYK">までご連絡ください。</span></p>
             </div>
         </div>
     </div>
 
     <!-- DETAIL MODAL -->
-    <div class="detail-page" id="detailPage">
-        <div class="detail-content">
-            <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
-            <div class="detail-img-wrap">
-                <img src="" alt="" class="detail-img" id="detailImg">
-                <div class="detail-img-overlay"></div>
+    <div class="detail-page" id="detailPage" data-page-node-id="d5qVI8MOkdYvRgX5pXh7fw">
+        <div class="detail-content" data-page-node-id="FpDEaqHY4vqpudUoOYsZ7m">
+            <button class="close-btn" id="closeBtn" data-page-node-id="wMN9GsTeNiIoyLGYp8gTft"><i class="fas fa-times" data-page-node-id="IqYE72hmPQGjk8TczvBS2B"></i></button>
+            <div class="detail-img-wrap" data-page-node-id="VLUiwsIZO26MOWttcewSlI">
+                <img src="" alt="" class="detail-img" id="detailImg" data-page-node-id="i6r5C54Q4KVnKepClIAhG6">
+                <div class="detail-img-overlay" data-page-node-id="6d2Xn6tmENFHhmoOoyhvif"></div>
             </div>
-            <div class="detail-body">
-                <div class="detail-header">
-                    <div class="detail-icon" id="detailIcon"><i class="fas fa-globe"></i></div>
-                    <div>
-                        <h2 class="detail-title" id="detailTitle"></h2>
-                        <span class="detail-tag" id="detailTag"></span>
+            <div class="detail-body" data-page-node-id="fWKYH4BQt09WKepeBHsonk">
+                <div class="detail-header" data-page-node-id="E3BTORZgd7S75ExSr3Vewi">
+                    <div class="detail-icon" id="detailIcon" data-page-node-id="rVHA8EsCoDKr5Dwsf7qsfN"><i class="fas fa-globe" data-page-node-id="68yZHX2xD8WL7j5JcSQVyz"></i></div>
+                    <div data-page-node-id="FHAZdrjtDQoQDDAr2PXoOz">
+                        <h2 class="detail-title" id="detailTitle" data-page-node-id="PEvGc8x01dOlUrOUyPeoH6"></h2>
+                        <span class="detail-tag" id="detailTag" data-page-node-id="X6wLC3JBjb1Ep2bXGKjE5k"></span>
                     </div>
                 </div>
-                <div class="detail-divider"></div>
-                <p class="detail-desc" id="detailDesc"></p>
-                <a href="#" target="_blank" class="detail-link" id="detailLink">
-                    <i class="fas fa-external-link-alt"></i> <span id="detailLinkText" data-i18n="detail_visit">公式サイトを訪問</span>
+                <div class="detail-divider" data-page-node-id="6XPZ7TjomfIFBIRO0I3tEe"></div>
+                <p class="detail-desc" id="detailDesc" data-page-node-id="T3jLnTGggg5tRahVGapMlQ"></p>
+                <a href="#" target="_blank" class="detail-link" id="detailLink" data-page-node-id="U4DZx0SvOifmrcwVc9hYJH">
+                    <i class="fas fa-external-link-alt" data-page-node-id="rlhLpQGgqILUB1m5wdLSSX"></i> <span id="detailLinkText" data-i18n="detail_visit" data-page-node-id="Q4e0GZJvJHvpwCltqPBFq8">公式サイトを訪問</span>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- TUTORIAL MODAL -->
-    <div class="tutorial-modal" id="tutorialModal">
-        <div class="tutorial-modal-content">
-            <div class="tutorial-modal-header">
-                <button class="tutorial-modal-close" id="closeTutorialModal"><i class="fas fa-times"></i></button>
-                <h2 class="tutorial-modal-title" id="tutorialModalTitle"></h2>
-                <div class="tutorial-modal-meta" id="tutorialModalMeta"></div>
+    <div class="tutorial-modal" id="tutorialModal" data-page-node-id="WVx3CAH4koG3DcXh7qitMD">
+        <div class="tutorial-modal-content" data-page-node-id="awBt9uSmhDWJokn0KpqTOy">
+            <div class="tutorial-modal-header" data-page-node-id="OAmu5KnSfTbYvt8NXkekdX">
+                <button class="tutorial-modal-close" id="closeTutorialModal" data-page-node-id="TudBzeJLfIrmqLReWdza9r"><i class="fas fa-times" data-page-node-id="HEALH4p16DFvY1bKbXMgLl"></i></button>
+                <h2 class="tutorial-modal-title" id="tutorialModalTitle" data-page-node-id="v3Cl5pHOyKfpHAvuxduAoE"></h2>
+                <div class="tutorial-modal-meta" id="tutorialModalMeta" data-page-node-id="0mud9QIV2s2aP3oQeRKtK8"></div>
             </div>
-            <div class="tutorial-modal-body" id="tutorialModalBody"></div>
+            <div class="tutorial-modal-body" id="tutorialModalBody" data-page-node-id="IgB6DO7BYhIHXdriOp7XQW"></div>
         </div>
     </div>
 
     <!-- GAME MODAL -->
-    <div class="game-modal" id="gameModal">
-        <div class="game-modal-content">
-            <div class="game-modal-header">
-                <button class="game-modal-close" id="closeGameModal"><i class="fas fa-times"></i></button>
-                <h2 class="game-modal-title" id="gameModalTitle"></h2>
-                <div class="game-modal-subtitle" id="gameModalSubtitle"></div>
+    <div class="game-modal" id="gameModal" data-page-node-id="edqTZxdgIHinn2Y1kZqTKC">
+        <div class="game-modal-content" data-page-node-id="sJSNwHmX0ocl1HVKz5BN8N">
+            <div class="game-modal-header" data-page-node-id="MtZRnEbx6qT0P28i8UP2ZZ">
+                <button class="game-modal-close" id="closeGameModal" data-page-node-id="rFrOheBUD7ONhIQepQGQ1b"><i class="fas fa-times" data-page-node-id="PC39qe5cjmIX4Wtn1kRJBj"></i></button>
+                <h2 class="game-modal-title" id="gameModalTitle" data-page-node-id="A7P3pHKgEor9NVU44XPEEg"></h2>
+                <div class="game-modal-subtitle" id="gameModalSubtitle" data-page-node-id="3OPoEAxo7RjMabZ7NjakeE"></div>
             </div>
-            <div class="game-modal-body" id="gameModalBody"></div>
+            <div class="game-modal-body" id="gameModalBody" data-page-node-id="knsY3IBnurAMxP2jGUCkmJ"></div>
         </div>
     </div>
 
-    <footer id="mainFooter">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-logo">
-                    <div class="footer-logo-icon"><i class="fas fa-globe-asia" style="color:white"></i></div>
-                    <span data-i18n="site_title">CtW.web</span>
+    <footer id="mainFooter" data-page-node-id="VBhEKm6GWdzga8i2BCn0hK">
+        <div class="container" data-page-node-id="nR4L4jTC9NysJaaRzTOrdX">
+            <div class="footer-inner" data-page-node-id="QBc1HWyIFxQ0KHhkLoqz22">
+                <div class="footer-logo" data-page-node-id="gxV0UEB1VbEuict2c98U98">
+                    <div class="footer-logo-icon" data-page-node-id="824xS9KZb1HnTQBBkSBx89"><i class="fas fa-globe-asia" style="color:white" data-page-node-id="zcHaPeIB3d4yHFTPEiSWum"></i></div>
+                    <span data-i18n="site_title" data-page-node-id="jMngAG5yHfra1nNVIsG7ON">CtW.web</span>
                 </div>
-                <ul class="footer-links">
-                    <li><a href="#" id="footerAbout"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">サイト紹介</span></a></li>
-                    <li><a href="mailto:tuiochi@petalmail.com"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">お問い合わせ</span></a></li>
+                <ul class="footer-links" data-page-node-id="cZFH0IbKD87JzsekDyig9C">
+                    <li data-page-node-id="ph8Zj4GTX9mEnXIG1iE8ym"><a href="#" id="footerAbout" data-page-node-id="yMEgjL2CHkdijHSDHeRz7R"><i class="fas fa-info-circle" data-page-node-id="8zF2nUFmcUYU9f7xCFSVCb"></i> <span data-i18n="nav_about" data-page-node-id="ikfpnKTQLuCxoYDTJjGvlg">サイト紹介</span></a></li>
+                    <li data-page-node-id="xdhDebRnGVB6Pyym2kUCOP"><a href="mailto:tuiochi@petalmail.com" data-page-node-id="Ir7786b6YcDokBHOhKQffE"><i class="fas fa-envelope" data-page-node-id="zriQ6dovJTDlDJdrKyRh2j"></i> <span data-i18n="footer_contact" data-page-node-id="kCF4oPSD9x3TEqDBHa88IC">お問い合わせ</span></a></li>
                 </ul>
-                <div class="footer-divider"></div>
-                <p class="copyright" data-i18n="footer_copy">© 2026 CtW.web — 中国文化の対外発信を目的として運営</p>
+                <div class="footer-divider" data-page-node-id="Py8dMWZrdAVLCg6hQKmPvT"></div>
+                <p class="copyright" data-i18n="footer_copy" data-page-node-id="PQoFkNkqpE2hdjkGdiwW8q">© 2026 CtW.web — 中国文化の対外発信を目的として運営</p>
             </div>
         </div>
     </footer>
 
-    <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <div class="back-to-top" data-page-node-id="9gf3rZR0WUs3GxNyPZjYiB"><i class="fas fa-arrow-up" data-page-node-id="3ONnUOkXvQY6MzTn6JI9mq"></i></div>
 
     <!-- Phone Compare floating button -->
-    <a href="phones.html" target="_blank" rel="noopener" class="phone-fab" id="phoneFab">
-        <i class="fas fa-mobile-alt"></i>
-        <span data-i18n="nav_phones">スマホ比較</span>
-        <span class="phone-fab-close" id="phoneFabClose" title="閉じる"><i class="fas fa-times"></i></span>
+    <a href="phones.html" target="_blank" rel="noopener" class="phone-fab" id="phoneFab" data-page-node-id="B4kVJM56LQ22vh1BK1G2Io">
+        <i class="fas fa-mobile-alt" data-page-node-id="M4ifEG0xjGs5ITzCGyz6mW"></i>
+        <span data-i18n="nav_phones" data-page-node-id="xMGoO1r71xhsKN2anhQS3I">スマホ比較</span>
+        <span class="phone-fab-close" id="phoneFabClose" title="閉じる" data-page-node-id="HONdvgAtt2NrlsnEpSr5WB"><i class="fas fa-times" data-page-node-id="UlgytBcWzDW2U2BJrlgfUc"></i></span>
     </a>
 
     <script>
@@ -3278,18 +3373,18 @@
 .fb-mail:hover{background:#ffeded}
 @media(max-width:480px){.fb-entry{right:14px;bottom:14px;padding:10px 16px;font-size:12.5px}.fb-entry.up{bottom:134px}.fb-card{max-height:92vh}}
 </style>
-<a class="fb-entry" id="fbEntry" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener" title="ご意見・ご要望"><span id="fbEntryLabel">ご意見</span></a>
-<div class="fb-mask" id="fbMask" role="dialog" aria-modal="true" aria-labelledby="fbTitle">
-<div class="fb-card">
-<div class="fb-head"><h3 id="fbTitle">ご意見・ご要望</h3><button class="fb-x" id="fbClose" type="button" aria-label="閉じる">&#10005;</button></div>
-<div class="fb-body">
-<p class="fb-lbl" id="fbL1"></p>
-<p class="fb-txt" id="fbT1"></p>
-<a class="fb-btn" id="fbBtn" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener"></a>
-<div class="fb-div"></div>
-<p class="fb-lbl" id="fbL2"></p>
-<p class="fb-txt" id="fbT2"></p>
-<a class="fb-mail" href="mailto:tuiochi@petalmail.com">tuiochi@petalmail.com</a>
+<a class="fb-entry" id="fbEntry" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener" title="ご意見・ご要望" data-page-node-id="OPmhj8MbqYVXurYhYkMDAm"><span id="fbEntryLabel" data-page-node-id="X5UyTjAF3eBNgQAADrEVxb">ご意見</span></a>
+<div class="fb-mask" id="fbMask" role="dialog" aria-modal="true" aria-labelledby="fbTitle" data-page-node-id="LkxKySkbOoo4wm8zND5wJ2">
+<div class="fb-card" data-page-node-id="G5GNTV1YYfAWqgOXNQsVAv">
+<div class="fb-head" data-page-node-id="mYut1eDkx0JzZUwLslYJE8"><h3 id="fbTitle" data-page-node-id="yleFnubASzELVowWM4TbLP">ご意見・ご要望</h3><button class="fb-x" id="fbClose" type="button" aria-label="閉じる" data-page-node-id="KmaunqQVxMkZO7vjRV0sQP">&#10005;</button></div>
+<div class="fb-body" data-page-node-id="sIfj8KyI6v6awvaoh9Gu3Z">
+<p class="fb-lbl" id="fbL1" data-page-node-id="qjEBicTjwRbLxxPThHuP1w"></p>
+<p class="fb-txt" id="fbT1" data-page-node-id="OHTZWsWsQyKDDWDOsqhqrT"></p>
+<a class="fb-btn" id="fbBtn" href="https://forms.gle/F2fCfzX7r4ZD7ujH9" target="_blank" rel="noopener" data-page-node-id="scRUXuKbBu2FcG4UdJBGSK"></a>
+<div class="fb-div" data-page-node-id="nc0gGMmH3zbn80NOg2yHiw"></div>
+<p class="fb-lbl" id="fbL2" data-page-node-id="RG1JRGiZfydIEuzRisubgN"></p>
+<p class="fb-txt" id="fbT2" data-page-node-id="N3kjvXoWqP4O8zQPkOexMH"></p>
+<a class="fb-mail" href="mailto:tuiochi@petalmail.com" data-page-node-id="hui3CowfYMoytClb1arRVT">tuiochi@petalmail.com</a>
 </div>
 </div>
 </div>
