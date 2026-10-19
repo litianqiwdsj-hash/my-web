@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /web.html
+Disallow: /web.txt
+Disallow: /gen_pages.py
+
 Sitemap: https://webctwguid.com/sitemap.xml
