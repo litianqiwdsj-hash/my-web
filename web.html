@@ -212,10 +212,11 @@
         }
 
         /* ========== NAV MENU ========== */
+        /* nav-compact: 10 项 + 语言键 + X 需装进 1200px 容器 */
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 4px;
+            gap: 1px;
             align-items: center;
         }
 
@@ -224,12 +225,12 @@
             color: var(--text-muted);
             font-weight: 500;
             font-size: 14px;
-            padding: 8px 14px;
+            padding: 8px 9px;
             border-radius: var(--radius-sm);
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             white-space: nowrap;
         }
 
@@ -1645,7 +1646,41 @@
             color: var(--primary);
         }
 
+        /* X (Twitter) */
+.x-link{width:30px;height:30px;border-radius:9px;background:#0f1419;color:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;text-decoration:none;transition:background .2s,transform .2s}
+.x-link:hover{background:#000;transform:translateY(-1px)}
+.x-link svg{width:13px;height:13px;display:block}
+.header-right{display:flex;align-items:center;gap:9px;flex-shrink:0}
+
+
         /* ========== RESPONSIVE ========== */
+        /* nav-compact: 中间宽度退化为两行，导航单独一行横向滚动 */
+        @media (max-width: 1239px) and (min-width: 769px) {
+            .header-content {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px 0;
+                gap: 8px;
+            }
+            .header-right {
+                order: 2;
+                margin-left: auto;
+            }
+            .nav-menu {
+                order: 3;
+                width: 100%;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+                padding-bottom: 2px;
+            }
+            .nav-menu::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         @media (max-width: 900px) {
             .nav-menu {
                 gap: 2px;
@@ -1686,6 +1721,11 @@
             }
 
             .lang-switch {
+                order: 2;
+                margin-left: auto;
+            }
+
+            .header-right {
                 order: 2;
                 margin-left: auto;
             }
@@ -1847,9 +1887,12 @@
                     <li class="nav-item special" data-page-node-id="CXRsOqy6XNapIzbIVpbAcX"><a href="#" id="openAbout" data-page-node-id="Isc3QwlnCutrZUbbCAtCFH"><i class="fas fa-info-circle" data-page-node-id="SUqGj8iEHWD9N0301sUCnh"></i> <span data-i18n="nav_about" data-page-node-id="WXbwsyHxCXN4SrIhjHfBue">サイト紹介</span></a></li>
                 </ul>
                 <!-- Language Switch -->
-                <div class="lang-switch" id="langSwitch" data-page-node-id="4ALedAiT6JIKKn6kI9pA3r">
-                    <button class="lang-btn active" data-lang="ja" data-page-node-id="ed8Wq1TmU3d3wpO0Nmoi8F">JA</button>
-                    <button class="lang-btn" data-lang="en" data-page-node-id="GVrK2B4erY9ggzcjqgUKbb">EN</button>
+                <div class="header-right">
+                    <div class="lang-switch" id="langSwitch" data-page-node-id="4ALedAiT6JIKKn6kI9pA3r">
+                        <button class="lang-btn active" data-lang="ja" data-page-node-id="ed8Wq1TmU3d3wpO0Nmoi8F">JA</button>
+                        <button class="lang-btn" data-lang="en" data-page-node-id="GVrK2B4erY9ggzcjqgUKbb">EN</button>
+                    </div>
+                    <a class="x-link" href="https://x.com/webctwguid" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）" title="X（旧Twitter）"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                 </div>
             </div>
         </div>

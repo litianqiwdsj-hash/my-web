@@ -56,6 +56,10 @@ img{max-width:100%}
 .g-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500}
 .g-back:hover{color:var(--blue-dark)}
 .lang-switch{display:flex;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:3px;gap:2px}
+.x-link{width:30px;height:30px;border-radius:9px;background:#0f1419;color:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;text-decoration:none;transition:background .2s,transform .2s}
+.x-link:hover{background:#000;transform:translateY(-1px)}
+.x-link svg{width:13px;height:13px;display:block}
+.header-right{display:flex;align-items:center;gap:9px;flex-shrink:0}
 .lang-btn{padding:5px 13px;border-radius:16px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;line-height:1}
 .lang-btn.active{background:var(--blue);color:#fff}
 
@@ -120,9 +124,12 @@ img{max-width:100%}
 <header class="g-bar">
   <div class="g-bar-inner">
     <a href="index.html" class="g-back"><i class="fas fa-arrow-left"></i> <span data-i18n="back">ホームに戻る</span></a>
+    <div class="header-right">
     <div class="lang-switch">
       <button class="lang-btn active" data-lang="ja">JA</button>
       <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="x-link" href="https://x.com/webctwguid" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）" title="X（旧Twitter）"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     </div>
   </div>
 </header>
